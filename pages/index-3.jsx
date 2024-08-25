@@ -371,7 +371,7 @@ const Index3 = () => {
               {/*=== CTA Content Box ===*/}
               <div className="cta-content-box text-white">
                 <h2 className="mb-35">
-                  Ready to Travel With Real Adventure and Enjoy Natural
+                  Readys to Travel With Real Adventure and Enjoy Natural
                 </h2>
                 <Link legacyBehavior href="/about">
                   <a className="main-btn secondary-btn">
