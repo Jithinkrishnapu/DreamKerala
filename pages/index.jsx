@@ -1,5 +1,6 @@
 import BoatBanner from "@/src/components/boatBanner/boatBanner";
 import BookingForm from "@/src/components/bookingform/BookingForm";
+import Features from "@/src/components/features";
 import GallerySection from "@/src/components/GallerySection";
 import SliderComponent from "@/src/components/sliderComponent/SliderComponent";
 import TariffComponent from "@/src/components/tariffComponent/TariffComponent";
@@ -34,12 +35,11 @@ const Index = () => {
                     {/*=== Hero Content ===*/}
                     <div className="hero-content text-white">
                       <h1 data-animation="fadeInDown" data-delay=".4s">
-                        Travel &amp; Adventure Camping
+                        Andaman &amp; Nicobar islands
                       </h1>
                       <div className="text-button d-flex align-items-center">
                         <p data-animation="fadeInLeft" data-delay=".5s">
-                          Nunc et dui nullam aliquam eget velit. Consectetur
-                          nulla convallis viverra quisque eleifend
+                        Explore stunning beaches, vibrant marine life, and unforgettable adventures in Andaman & Nicobar.
                         </p>
                         <div
                           className="hero-button"
@@ -60,7 +60,7 @@ const Index = () => {
                     {/*=== Hero Image ===*/}
                     <div className="hero-image" data-animation="fadeInRight">
                       <img
-                        src="assets/images/hero/hero-one_img-1.jpg"
+                        src="assets/images/hero/hero-one_img-3.png"
                         alt="Hero Image"
                       />
                     </div>
@@ -320,108 +320,19 @@ const Index = () => {
       </section>
       {/*====== End Services Section ======*/}
       {/*====== Start Features Section ======*/}
-      <section className="features-section pb-60">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-4 col-lg-6 col-md-12">
-              {/*=== Fancy Icon Box ===*/}
-              <div className="fancy-icon-box mb-30 wow fadeInUp">
-                <div className="icon">
-                  <i className="flaticon-rabbit" />
-                </div>
-                <div className="text">
-                  <h4 className="title">Best Security</h4>
-                  <p>
-                    we denounce with righteous indignation and dislike men who
-                    are so beguiled
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-4 col-lg-6 col-md-12">
-              {/*=== Fancy Icon Box ===*/}
-              <div className="fancy-icon-box mb-30 wow fadeInUp">
-                <div className="icon">
-                  <i className="flaticon-wifi-router" />
-                </div>
-                <div className="text">
-                  <h4 className="title">Free Internet</h4>
-                  <p>
-                    we denounce with righteous indignation and dislike men who
-                    are so beguiled
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-4 col-lg-6 col-md-12">
-              {/*=== Fancy Icon Box ===*/}
-              <div className="fancy-icon-box mb-30 wow fadeInUp">
-                <div className="icon">
-                  <i className="flaticon-solar-energy" />
-                </div>
-                <div className="text">
-                  <h4 className="title">Solar Energy</h4>
-                  <p>
-                    we denounce with righteous indignation and dislike men who
-                    are so beguiled
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-4 col-lg-6 col-md-12">
-              {/*=== Fancy Icon Box ===*/}
-              <div className="fancy-icon-box mb-30 wow fadeInUp">
-                <div className="icon">
-                  <i className="flaticon-cycling" />
-                </div>
-                <div className="text">
-                  <h4 className="title">Mountain Biking</h4>
-                  <p>
-                    we denounce with righteous indignation and dislike men who
-                    are so beguiled
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-4 col-lg-6 col-md-12">
-              {/*=== Fancy Icon Box ===*/}
-              <div className="fancy-icon-box mb-30 wow fadeInUp">
-                <div className="icon">
-                  <i className="flaticon-fishing" />
-                </div>
-                <div className="text">
-                  <h4 className="title">Swimming &amp; Fishing </h4>
-                  <p>
-                    we denounce with righteous indignation and dislike men who
-                    are so beguiled
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-4 col-lg-6 col-md-12">
-              {/*=== Fancy Icon Box ===*/}
-              <div className="fancy-icon-box mb-30 wow fadeInUp">
-                <div className="icon">
-                  <i className="flaticon-gym" />
-                </div>
-                <div className="text">
-                  <h4 className="title">GYM and Yoga</h4>
-                  <p>
-                    we denounce with righteous indignation and dislike men who
-                    are so beguiled
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
+
+
       {/*====== End Features Section ======*/}
       {/*====== Start CTA Section ======*/}
+      <div className="mb-40">
       <BoatBanner/>
+      </div>
       {/*====== End CTA Section ======*/}
       {/*====== Start Fact Section ======*/}
-      
+      <div className="container">
+      <Features/>
+      </div>
       {/*====== End Fact Section ======*/}
       {/*====== Start Testimonial Section ======*/}
       
@@ -515,8 +426,7 @@ const Index = () => {
                   <h4 className="widget-title">About</h4>
                   <div className="footer-content">
                     <p>
-                      To take trivial example which us ever undertakes laborious
-                      physica exercise except obsome
+                    Discover effortless travel with our top-notch cab rentals and exciting tour packages, tailored for you.
                     </p>
                     <a href="#" className="footer-logo">
                       <img
@@ -549,24 +459,11 @@ const Index = () => {
                         <a href="#">Small Cabin Wood</a>
                       </li>
                     </ul>
-                    <ul className="footer-widget-nav">
-                      <li>
-                        <a href="#">Need a Career ?</a>
-                      </li>
-                      <li>
-                        <a href="#">Latest News &amp; Blog</a>
-                      </li>
-                      <li>
-                        <a href="#">Core Features</a>
-                      </li>
-                      <li>
-                        <a href="#">Meet Our teams</a>
-                      </li>
-                    </ul>
+                    
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6">
+              <div style={{color:'white'}} className="col-lg-4 col-md-6">
                 {/*=== Footer Widget ===*/}
                 <div className="footer-widget footer-newsletter-widget mb-40 pl-lg-100 wow fadeInUp">
                   <h4 className="widget-title">Newsletter</h4>
@@ -601,7 +498,7 @@ const Index = () => {
                 {/*=== Footer Text ===*/}
                 <div className="footer-text">
                   <p>
-                    Copy@ 2023 <span style={{ color: "#F7921E" }}>GoWilds</span>
+                    Copyright@ 2024 <span style={{ color: "black" }}>Dream Holidays</span>
                     , All Right Reserved
                   </p>
                 </div>

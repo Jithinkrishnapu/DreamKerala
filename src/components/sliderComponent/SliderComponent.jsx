@@ -13,7 +13,7 @@ import {
 export const features = [
     {
       title: "24hrs Taxi Service",
-      imgSrc: "assets/images/features/feat-1.jpg",
+      imgSrc: "assets/images/features/taxi-img.jpg",
       description: "Round-the-clock taxi service available every day of the week."
     },
     {

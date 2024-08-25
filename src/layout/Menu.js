@@ -22,27 +22,8 @@ const DeskTopMenu = () => {
       />
       <nav className="main-menu d-none d-xl-block">
         <ul>
-          <li className="menu-item has-children">
-            <a href="#">
-              Home
-              <span className="dd-trigger">
-                <i className="far fa-angle-down" />
-              </span>
-            </a>
-            <ul className="sub-menu">
-              <li>
-                <Link href="/">Home 01</Link>
-              </li>
-              <li>
-                <Link href="/">Home 02</Link>
-              </li>
-              <li>
-                <Link href="/">Home 03</Link>
-              </li>
-              <li>
-                <Link href="/">Home 04</Link>
-              </li>
-            </ul>
+          <li className="menu-item ">
+            <a href="#">Home</a>
           </li>
           <li className="menu-item has-children">
             <a href="#">
@@ -77,58 +58,10 @@ const DeskTopMenu = () => {
             </ul>
           </li>
           <li className="menu-item has-children">
-            <a href="#">
-              Blog
-              <span className="dd-trigger">
-                <i className="far fa-angle-down" />
-              </span>
-            </a>
-            <ul className="sub-menu">
-              <li>
-                <Link href="blog-list">Blog List</Link>
-              </li>
-              <li>
-                <Link href="blog-details">Blog Details</Link>
-              </li>
-            </ul>
+            <a href="about">About us</a>
           </li>
           <li className="menu-item has-children">
-            <a href="#">
-              Pages
-              <span className="dd-trigger">
-                <i className="far fa-angle-down" />
-              </span>
-            </a>
-            <ul className="sub-menu">
-              <li>
-                <Link href="about">About Us</Link>
-              </li>
-              <li>
-                <Link href="gallery">Our Gallery</Link>
-              </li>
-              <li>
-                <Link href="events">Our Events</Link>
-              </li>
-              <li>
-                <Link href="shop">Our Shop</Link>
-              </li>
-              <li>
-                <Link href="product-details">Product Details</Link>
-              </li>
-              <li>
-                <Link href="contact">Contact</Link>
-              </li>
-            </ul>
-          </li>
-          <li className="menu-item search-item">
-            <div
-              className="search-btn"
-              data-bs-toggle="modal"
-              data-bs-target="#search-modal"
-              onClick={() => setSearchModal(true)}
-            >
-              <i className="far fa-search" />
-            </div>
+            <a href="about">Contact us</a>
           </li>
         </ul>
       </nav>
