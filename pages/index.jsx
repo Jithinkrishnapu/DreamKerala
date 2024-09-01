@@ -15,6 +15,7 @@ import {
 } from "@/src/sliderProps";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import { useEffect, useState, useTransition } from "react";
 
 import Slider from "react-slick";
 import { useState } from "react";
@@ -27,6 +28,31 @@ const Index = () => {
 
   // const handleClose = () => setShow(false);
   const handleShowModal = () => setShowModal(true);
+
+  const [data, setData] = useState([]);
+  const [error, setError] = useState(null);
+  const [isPending, startTransition] = useTransition();
+
+  useEffect(() => {
+    startTransition(async () => {
+      try {
+        const response = await fetch('/api/carousel');
+        if (!response.ok) {
+          throw new Error('Error fetching carousel data');
+        }
+        const result = await response.json();
+        setData(result);
+      } catch (err) {
+        setError(err.message);
+      }
+    });
+  }, [startTransition]);
+
+  if(isPending){
+    // console.log(isPending)
+    <div>Loading......</div>
+  }
+
   return (
     <Layout header={1} noFooter>
       {/*====== Start Hero Section ======*/}
@@ -36,19 +62,20 @@ const Index = () => {
           {/*=== Hero Slider ===*/}
           <Slider {...home1Slider} className="hero-slider-one">
             {/*=== Single Slider ===*/}
-            <div className="single-slider">
+            {data?.map((val,index)=>{
+              return (
+                <div className="single-slider">
               <div className="container-fluid">
                 <div className="row align-items-center">
                   <div className="col-xl-6">
                     {/*=== Hero Content ===*/}
                     <div className="hero-content text-white">
                       <h1 data-animation="fadeInDown" data-delay=".4s">
-                        Andaman &amp; Nicobar islands
+                        {val?.properties?.Headline?.rich_text[0]?.plain_text}
                       </h1>
                       <div className="text-button d-flex align-items-center">
                         <p data-animation="fadeInLeft" data-delay=".5s">
-                          Explore stunning beaches, vibrant marine life, and
-                          unforgettable adventures in Andaman & Nicobar.
+                         {val?.properties?.Description?.rich_text[0]?.plain_text}
                         </p>
                         <div
                           className="hero-button"
@@ -69,7 +96,8 @@ const Index = () => {
                     {/*=== Hero Image ===*/}
                     <div className="hero-image" data-animation="fadeInRight">
                       <img
-                        src="assets/images/hero/hero-one_img-3.png"
+                        loading="lazy"
+                        src={val?.properties?.images?.files[0]?.file?.url}
                         alt="Hero Image"
                       />
                     </div>
@@ -77,48 +105,9 @@ const Index = () => {
                 </div>
               </div>
             </div>
+              )
+            })}
             {/*=== Single Slider ===*/}
-            <div className="single-slider">
-              <div className="container-fluid">
-                <div className="row align-items-center">
-                  <div className="col-xl-6">
-                    {/*=== Hero Content ===*/}
-                    <div className="hero-content text-white">
-                      <h1 data-animation="fadeInDown" data-delay=".4s">
-                        Travel &amp; Adventure Tour
-                      </h1>
-                      <div className="text-button d-flex align-items-center">
-                        <p data-animation="fadeInLeft" data-delay=".5s">
-                          Nunc et dui nullam aliquam eget velit. Consectetur
-                          nulla convallis viverra quisque eleifend
-                        </p>
-                        <div
-                          className="hero-button"
-                          data-animation="fadeInRight"
-                          data-delay=".6s"
-                        >
-                          <Link legacyBehavior href="/about">
-                            <a className="main-btn primary-btn">
-                              Explore More
-                              <i className="fas fa-paper-plane" />
-                            </a>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-6">
-                    {/*=== Hero Image ===*/}
-                    <div className="hero-image" data-animation="fadeInRight">
-                      <img
-                        src="assets/images/hero/hero-one_img-2.jpg"
-                        alt="Hero Image"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </Slider>
         </div>
       </section>
