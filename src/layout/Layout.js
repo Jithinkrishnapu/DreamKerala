@@ -7,9 +7,6 @@ import Footer from "./Footer";
 import Header from "./header/Index";
 const Layout = ({ header, children, footerBG, noFooter, extraClass }) => {
   useEffect(() => {
-    niceSelect();
-  }, []);
-  useEffect(() => {
     animation();
   }, []);
   return (
