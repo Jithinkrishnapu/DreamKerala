@@ -9,7 +9,7 @@ function TariffComponent() {
         {
           eventKey: 'tab1',
           title: 'AC Sedan',
-          imgSrc: 'assets/images/gallery/activity.jpg',
+          imgSrc: 'assets/images/gallery/sedan.jpeg',
           description: 'Sit amet consectetur velit integer tincidunt scelerisque. Sodales volutpat neque fermeny malesuada scelerisque massa lacus',
           checkList: [
             'Family Camping',
@@ -20,7 +20,7 @@ function TariffComponent() {
         {
           eventKey: 'tab2',
           title: 'Ertiga',
-          imgSrc: 'assets/images/gallery/activity.jpg',
+          imgSrc: 'assets/images/gallery/ertiga.jpeg',
           description: 'Sit amet consectetur velit integer tincidunt scelerisque. Sodales volutpat neque fermeny malesuada scelerisque massa lacus',
           checkList: [
             'Family Camping',
@@ -52,7 +52,7 @@ function TariffComponent() {
         },
         {
           eventKey: 'tab5',
-          title: 'Mountain Hiking',
+          title: 'Mini Coach',
           imgSrc: 'assets/images/gallery/activity.jpg',
           description: 'Sit amet consectetur velit integer tincidunt scelerisque. Sodales volutpat neque fermeny malesuada scelerisque massa lacus',
           checkList: [
@@ -63,7 +63,7 @@ function TariffComponent() {
         },
         {
           eventKey: 'tab6',
-          title: 'Mountain Hiking',
+          title: 'Large Coach',
           imgSrc: 'assets/images/gallery/activity.jpg',
           description: 'Sit amet consectetur velit integer tincidunt scelerisque. Sodales volutpat neque fermeny malesuada scelerisque massa lacus',
           checkList: [

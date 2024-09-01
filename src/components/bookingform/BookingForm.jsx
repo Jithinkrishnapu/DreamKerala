@@ -1,4 +1,4 @@
-import React from 'react'
+import DropdownComponent from '../DropdownComponent'
 
 function BookingForm() {
   return (
@@ -10,10 +10,15 @@ function BookingForm() {
               <div className="booking-content-box mb-50 wow fadeInLeft">
                 <div className="section-title mb-50">
                   <span className="sub-title">Availability</span>
-                  <h2>Booking Your Best Tour Camping Availability</h2>
+                  <h2>Book Your Dream Cab or Tour with Ease</h2>
                 </div>
                 <form className="booking-form">
                   <div className="row">
+                  <div className="col-md-6">
+                      <div className="form_group">
+                       <DropdownComponent/>
+                      </div>
+                    </div>
                     <div className="col-md-6">
                       <div className="form_group">
                         <label>
@@ -51,21 +56,7 @@ function BookingForm() {
                         />
                       </div>
                     </div>
-                    <div className="col-md-6">
-                      <div className="form_group">
-                        <select className="wide">
-                          <option data-display="Accommodations">
-                            Accommodations
-                          </option>
-                          <option value={1}>Classic Tent</option>
-                          <option value={1}>Forest Camping</option>
-                          <option value={1}>Small Trailer</option>
-                          <option value={1}>Tree House Tent</option>
-                          <option value={1}>Tent Camping</option>
-                          <option value={1}>Couple Tent</option>
-                        </select>
-                      </div>
-                    </div>
+                   
                     <div className="col-md-12">
                       <textarea
                         name="comments"
