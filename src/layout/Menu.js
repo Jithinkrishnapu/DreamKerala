@@ -23,39 +23,39 @@ const DeskTopMenu = () => {
       <nav className="main-menu d-none d-xl-block">
         <ul>
           <li className="menu-item ">
-            <a href="#">Home</a>
+            <a href="/">Home</a>
           </li>
           <li className="menu-item has-children">
             <a href="#">
               Tours
               <span className="dd-trigger">
-                <i className="far fa-angle-down" />
+                {/* <i className="far fa-angle-down" /> */}
               </span>
             </a>
-            <ul className="sub-menu">
+            {/* <ul className="sub-menu">
               <li>
                 <Link href="/">Tours</Link>
               </li>
               <li>
                 <Link href="/">Tours Details</Link>
               </li>
-            </ul>
+            </ul> */}
           </li>
           <li className="menu-item has-children">
-            <a href="#">
+            <a href="destination-details">
               Destination
               <span className="dd-trigger">
-                <i className="far fa-angle-down" />
+                {/* <i className="far fa-angle-down" /> */}
               </span>
             </a>
-            <ul className="sub-menu">
+            {/* <ul className="sub-menu">
               <li>
                 <Link href="destination">Destination</Link>
               </li>
               <li>
                 <Link href="destination-details">Destination Details</Link>
               </li>
-            </ul>
+            </ul> */}
           </li>
           <li className="menu-item has-children">
             <a href="about">About us</a>

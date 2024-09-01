@@ -43,7 +43,7 @@ const Header = ({ header }) => {
     case 4:
       return <Header4 />;
     default:
-      return <DefaultHeader />;
+      return <Header1 />;
   }
 };
 export default Header;

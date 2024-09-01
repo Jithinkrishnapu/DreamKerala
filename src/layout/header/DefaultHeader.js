@@ -30,7 +30,7 @@ const DefaultHeader = () => {
                         </div>
                         <div className="info">
                           <span className="title">Office Address</span>
-                          <h5>583 Main Street, USA</h5>
+                          <h5>583 Main Streetz, USA</h5>
                         </div>
                       </div>
                     </div>
