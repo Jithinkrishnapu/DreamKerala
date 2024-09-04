@@ -123,6 +123,14 @@ const DestinationDetails = () => {
                   </span>
                 </li>
               </ul>
+              <div className="col-lg-12 my-4">
+                  <div className="form_group text-start">
+                    <button type="submit" className="main-btn primary-btn">
+                      Book Now
+                      <i className="fas fa-paper-plane" />
+                    </button>
+                  </div>
+                </div>
             </div>
             <div className="gallery-area wow fadeInUp">
               <Slider {...sliderActive3Item} className="slider-active-3-item">
@@ -182,6 +190,7 @@ const DestinationDetails = () => {
           </div>
         </div>
       </section>
+      
       {/*====== End Destination Details Section ======*/}
       {/*====== Start CTA Section ======*/}
       <section

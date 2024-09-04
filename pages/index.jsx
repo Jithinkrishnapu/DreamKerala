@@ -1,7 +1,9 @@
 import BoatBanner from "@/src/components/boatBanner/boatBanner";
 import BookingForm from "@/src/components/bookingform/BookingForm";
 import Features from "@/src/components/features";
+import FormModal from "@/src/components/modal/ModalComponent";
 import GallerySection from "@/src/components/GallerySection";
+import Popupform from "@/src/components/popupform/Popupform";
 import SliderComponent from "@/src/components/sliderComponent/SliderComponent";
 import TariffComponent from "@/src/components/tariffComponent/TariffComponent";
 import Layout from "@/src/layout/Layout";
@@ -15,10 +17,16 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 
 import Slider from "react-slick";
+import { useState } from "react";
+import ModalComponent from "@/src/components/modal/ModalComponent";
 const Counter = dynamic(() => import("@/src/components/Counter"), {
   ssr: false,
 });
 const Index = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  // const handleClose = () => setShow(false);
+  const handleShowModal = () => setShowModal(true);
   return (
     <Layout header={1} noFooter>
       {/*====== Start Hero Section ======*/}
@@ -39,7 +47,8 @@ const Index = () => {
                       </h1>
                       <div className="text-button d-flex align-items-center">
                         <p data-animation="fadeInLeft" data-delay=".5s">
-                        Explore stunning beaches, vibrant marine life, and unforgettable adventures in Andaman & Nicobar.
+                          Explore stunning beaches, vibrant marine life, and
+                          unforgettable adventures in Andaman & Nicobar.
                         </p>
                         <div
                           className="hero-button"
@@ -114,7 +123,18 @@ const Index = () => {
         </div>
       </section>
       {/*====== End Hero Section ======*/}
+
+      {/*====== Modal Popup form  ======*/}
+
+      <ModalComponent showModal={showModal} setShowModal={setShowModal}>
+        <Popupform />
+      </ModalComponent>
+      
+      {/*====== Modal Popup form  ======*/}
+
+      {/*====== End Hero Section ======*/}
       {/*====== Start About Section ======*/}
+
       <section className="about-section pt-100">
         <div className="container-fluid">
           <div className="row justify-content-center">
@@ -123,10 +143,7 @@ const Index = () => {
               <div className="about-content-box text-center mb-55 wow fadeInDown">
                 <div className="section-title mb-30">
                   <span className="sub-title">Dream Kerala</span>
-                  <h2>
-                    Your Gateway to Kerala's Enchanting
-                    Wonders
-                  </h2>
+                  <h2>Your Gateway to Kerala's Enchanting Wonders</h2>
                 </div>
                 <p>
                   Discover the magic of Kerala with DreamKerala, your premier
@@ -138,15 +155,14 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <SliderComponent/>
+          <SliderComponent />
         </div>
       </section>
       {/*====== End Hero Section ======*/}
       {/*====== Start Booking Section ======*/}
-      <BookingForm/>
+      <BookingForm />
       {/*====== End Hero Section ======*/}
       {/*====== Start Activity Section ======*/}
-      
 
       <TariffComponent />
 
@@ -163,35 +179,32 @@ const Index = () => {
               </div>
             </div>
           </div>
-          
         </div>
       </section>
       {/*====== End Services Section ======*/}
       {/*====== Start Features Section ======*/}
-      
-
 
       {/*====== End Features Section ======*/}
       {/*====== Start CTA Section ======*/}
       <div className="mb-40">
-      <BoatBanner/>
+        <BoatBanner />
       </div>
       {/*====== End CTA Section ======*/}
       {/*====== Start Fact Section ======*/}
       <div className="container">
-      <Features/>
+        <Features />
       </div>
       {/*====== End Fact Section ======*/}
       {/*====== Start Testimonial Section ======*/}
-      
+
       {/*====== End Testimonial Section ======*/}
       {/*====== Start Blog Section ======*/}
-      
+
       {/*====== End Blog Section ======*/}
       {/*====== Start Gallery Section ======*/}
       <GallerySection />
       {/*====== End Gallery Section ======*/}
-      <footer className="main-footer black-bg pt-230">
+      <footer className="main-footer  pt-230">
         <div className="container">
           {/*=== Footer Top ===*/}
           <div className="footer-top pt-40 wow fadeInUp">
@@ -204,11 +217,11 @@ const Index = () => {
                   </div>
                   <div className="info">
                     <span className="title">Location</span>
-                    <p>55 Main Street, Australia</p>
+                    <p>Near Kochi Airport, Thrissur Guruvayoor.</p>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-3 col-sm-6">
+              <div className="col-lg-3 col-sm-6 me-4">
                 {/*=== Single Info Item ===*/}
                 <div className="single-info-item mb-40">
                   <div className="icon">
@@ -217,7 +230,9 @@ const Index = () => {
                   <div className="info">
                     <span className="title">Email</span>
                     <p>
-                      <a href="mailto:support@gmail.com">support@gmail.com</a>
+                      <a href="mailto:support@gmail.com">
+                        Dreamkeralaholidays24@gmail.com
+                      </a>
                     </p>
                   </div>
                 </div>
@@ -231,14 +246,15 @@ const Index = () => {
                   <div className="info">
                     <span className="title">Hotline</span>
                     <p>
-                      <a href="tel:+000(123)456898">+000 (123) 456 898</a>
+                      <a href="tel:+000(123)456898">+91 90484 59086</a>
+                      <a href="tel:+000(123)456898">+91 95671 32777</a>
                     </p>
                   </div>
                 </div>
               </div>
               <div className="col-lg-3 col-sm-6">
                 {/*=== Social Box ===*/}
-                <div className="social-box mb-40 float-lg-end">
+                <div className="social-box mb-40 float-lg-start">
                   <ul className="social-link">
                     <li>
                       <a href="#">
@@ -274,7 +290,8 @@ const Index = () => {
                   <h4 className="widget-title">About</h4>
                   <div className="footer-content">
                     <p>
-                    Discover effortless travel with our top-notch cab rentals and exciting tour packages, tailored for you.
+                      Discover effortless travel with our top-notch cab rentals
+                      and exciting tour packages, tailored for you.
                     </p>
                     <a href="#" className="footer-logo">
                       <img
@@ -307,11 +324,10 @@ const Index = () => {
                         <a href="#">Small Cabin Wood</a>
                       </li>
                     </ul>
-                    
                   </div>
                 </div>
               </div>
-              <div style={{color:'white'}} className="col-lg-4 col-md-6">
+              <div style={{ color: "white" }} className="col-lg-4 col-md-6">
                 {/*=== Footer Widget ===*/}
                 <div className="footer-widget footer-newsletter-widget mb-40 pl-lg-100 wow fadeInUp">
                   <h4 className="widget-title">Newsletter</h4>
@@ -346,8 +362,9 @@ const Index = () => {
                 {/*=== Footer Text ===*/}
                 <div className="footer-text">
                   <p>
-                    Copyright@ 2024 <span style={{ color: "black" }}>Dream Holidays</span>
-                    , All Right Reserved
+                    Copyright@ 2024{" "}
+                    <span style={{ color: "black" }}>Dream Holidays</span>, All
+                    Right Reserved
                   </p>
                 </div>
               </div>

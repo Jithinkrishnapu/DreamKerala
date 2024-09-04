@@ -6,32 +6,32 @@ function Features() {
         {
           icon: 'flaticon-rabbit',
           title: 'Best Service',
-          description: 'We denounce with righteous indignation and dislike men who are so beguiled.',
+          description: 'We take pride in delivering outstanding service and ensuring a seamless experience.',
         },
         {
           icon: 'flaticon-wifi-router',
           title: 'Quality guarantee',
-          description: 'We denounce with righteous indignation and dislike men who are so beguiled.',
+          description: 'We promise top-quality service and maintain high standards for your satisfaction.',
         },
         {
           icon: 'flaticon-solar-energy',
           title: 'Best price',
-          description: 'We denounce with righteous indignation and dislike men who are so beguiled.',
+          description: 'Get the best value with our competitive pricing and exceptional service.',
         },
         {
           icon: 'flaticon-cycling',
           title: 'Satisfaction guarantee',
-          description: 'We denounce with righteous indignation and dislike men who are so beguiled.',
+          description: 'Your satisfaction is our priority; we strive to exceed your expectations.',
         },
         {
           icon: 'flaticon-fishing',
-          title: 'Swimming & Fishing',
-          description: 'We denounce with righteous indignation and dislike men who are so beguiled.',
+          title: 'Flexible Booking',
+          description: 'Enjoy the convenience of flexible booking options that fit your travel plans and needs',
         },
         {
           icon: 'flaticon-gym',
-          title: 'GYM and Yoga',
-          description: 'We denounce with righteous indignation and dislike men who are so beguiled.',
+          title: '24/7 Support',
+          description: 'Our dedicated support team is available around the clock to assist with any inquiries or issues',
         },
       ];
       

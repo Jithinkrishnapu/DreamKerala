@@ -28,7 +28,7 @@ const Contact = () => {
                 </div>
                 <div className="info">
                   <span className="title">Office Location</span>
-                  <p>55 Main Street, 2nd Floor New York City</p>
+                  <p>Near Kochi Airport, Thrissur Guruvayoor.</p>
                 </div>
               </div>
             </div>
@@ -41,13 +41,11 @@ const Contact = () => {
                 <div className="info">
                   <span className="title">Email Address</span>
                   <p>
-                    <a href="mailto:supportinfo@gmail.com">
-                      supportinfo@gmail.com
+                    <a style={{fontSize:'large'}} href="mailto:Dreamkeralaholidays24@gmail.com">
+                    Dreamkeralaholidays24@gmail.com
                     </a>
                   </p>
-                  <p>
-                    <a href="mailto:traveladventure.net">traveladventure.net</a>
-                  </p>
+                  
                 </div>
               </div>
             </div>
@@ -60,10 +58,10 @@ const Contact = () => {
                 <div className="info">
                   <span className="title">Hotline</span>
                   <p>
-                    <a href="tel:+000(123)45688">+000 (123) 456 88</a>
+                    <a href="tel:+000(123)45688">+91 95671 32777</a>
                   </p>
                   <p>
-                    <a href="tel:+8596320">+859 63 20</a>
+                    <a href="tel:+8596320">+91 90484 59086</a>
                   </p>
                 </div>
               </div>
@@ -76,7 +74,7 @@ const Contact = () => {
       <section className="contact-page-map pb-100 wow fadeInUp">
         {/*=== Map Box ===*/}
         <div className="map-box">
-          <iframe src="https://maps.google.com/maps?q=new%20york&t=&z=13&ie=UTF8&iwloc=&output=embed" />
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31374.170757239248!2d76.04085675!3d10.59704235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba79461cd1b5745%3A0x96c6ecd0de2d2b4!2sGuruvayur%2C%20Kerala!5e0!3m2!1sen!2sin!4v1725264365636!5m2!1sen!2sin" />
         </div>
       </section>
       {/*====== End Contact Map Section ======*/}
