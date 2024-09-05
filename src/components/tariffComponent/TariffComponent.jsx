@@ -1,5 +1,6 @@
 import React from 'react'
 import { Nav, Tab } from "react-bootstrap";
+import TariffTable from './TariffTable';
 
 function TariffComponent() {
 
@@ -31,7 +32,7 @@ function TariffComponent() {
         {
           eventKey: 'tab3',
           title: 'Innova',
-          imgSrc: 'assets/images/gallery/activity.jpg',
+          imgSrc: 'assets/images/gallery/innova.jpeg',
           description: 'Sit amet consectetur velit integer tincidunt scelerisque. Sodales volutpat neque fermeny malesuada scelerisque massa lacus',
           checkList: [
             'Family Camping',
@@ -42,7 +43,7 @@ function TariffComponent() {
         {
           eventKey: 'tab4',
           title: 'Tempo Traveller',
-          imgSrc: 'assets/images/gallery/activity.jpg',
+          imgSrc: 'assets/images/gallery/traveller.jpg',
           description: 'Sit amet consectetur velit integer tincidunt scelerisque. Sodales volutpat neque fermeny malesuada scelerisque massa lacus',
           checkList: [
             'Family Camping',
@@ -110,7 +111,7 @@ function TariffComponent() {
             </Nav>
           </div>
         </div>
-        <div className="col-lg-8">
+        <div className="col-lg-8 justify-content-center align-items-center d-flex ">
           {/*=== Tab Content ===*/}
           <Tab.Content className="tab-content mb-50 wow fadeInRight">
             {tabData.map((tab) => (
@@ -118,23 +119,9 @@ function TariffComponent() {
                 <div className="row align-items-center">
                   <div className="col-md-6">
                     {/*=== Activity Content Box ===*/}
-                    <div className="activity-content-box pl-lg-40">
-                      <div className="icon">
-                        <i className="flaticon-camp" />
-                      </div>
-                      <h3 className="title">
-                        Real Adventure &amp; Enjoy Your Dream Tours
-                      </h3>
-                      <p>{tab.description}</p>
-                      <ul className="check-list">
-                        {tab.checkList.map((item, index) => (
-                          <li key={index}>
-                            <i className="fas fa-badge-check" />
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    <div className="activity-content-box">
+                    <TariffTable selectedModel={tab?.eventKey || "tab1"} />
+                    </div> 
                   </div>
                   <div className="col-md-6">
                     {/*=== Activity Image Box ===*/}
