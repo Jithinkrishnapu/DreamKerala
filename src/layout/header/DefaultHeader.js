@@ -12,7 +12,8 @@ const DefaultHeader = () => {
               <div className="site-brading">
                 <Link legacyBehavior href="/index-3">
                   <a className="brand-logo">
-                    <img src="assets/images/logo/logo-black.png" alt="Logo" />
+                    <img src="assets/images/logo/logo-test.png
+                    " alt="Logo" />
                   </a>
                 </Link>
               </div>
@@ -29,7 +30,7 @@ const DefaultHeader = () => {
                         </div>
                         <div className="info">
                           <span className="title">Office Address</span>
-                          <h5>583 Main Street, USA</h5>
+                          <h5>583 Main Streetz, USA</h5>
                         </div>
                       </div>
                     </div>
@@ -44,7 +45,7 @@ const DefaultHeader = () => {
                           <span className="title">Email Address</span>
                           <h5>
                             <a href="mailto:support@gmail.com">
-                              support@gmail.com
+                            Dreamkeralaholidays24@gmail.com
                             </a>
                           </h5>
                         </div>
@@ -92,7 +93,7 @@ const DefaultHeader = () => {
                 <Link legacyBehavior href="/">
                   <a className="brand-logo">
                     <img
-                      src="assets/images/logo/logo-black.png"
+                      src="assets/images/logo/logo-test.png"
                       alt="Site Logo"
                     />
                   </a>

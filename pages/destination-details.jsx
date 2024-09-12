@@ -123,6 +123,14 @@ const DestinationDetails = () => {
                   </span>
                 </li>
               </ul>
+              <div className="col-lg-12 my-4">
+                  <div className="form_group text-start">
+                    <button type="submit" className="main-btn primary-btn">
+                      Book Now
+                      <i className="fas fa-paper-plane" />
+                    </button>
+                  </div>
+                </div>
             </div>
             <div className="gallery-area wow fadeInUp">
               <Slider {...sliderActive3Item} className="slider-active-3-item">
@@ -182,6 +190,7 @@ const DestinationDetails = () => {
           </div>
         </div>
       </section>
+      
       {/*====== End Destination Details Section ======*/}
       {/*====== Start CTA Section ======*/}
       <section
@@ -220,270 +229,10 @@ const DestinationDetails = () => {
       </section>
       {/*====== End CTA Section ======*/}
       {/*====== Start Places Section ======*/}
-      <section className="places-seciton pt-95 pb-100">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              {/*====== Section Title ======*/}
-              <div className="section-title text-center mb-45 wow fadeInDown">
-                <h2>Popular Tours</h2>
-              </div>
-            </div>
-          </div>
-          <Slider
-            {...sliderActive3ItemDot}
-            className="slider-active-3-item-dot wow fadeInUp"
-          >
-            {/*=== Single Place Item ===*/}
-            <div className="single-place-item mb-60">
-              <div className="place-img">
-                <img src="assets/images/place/place-1.jpg" alt="Place Image" />
-              </div>
-              <div className="place-content">
-                <div className="info">
-                  <ul className="ratings">
-                    <li>
-                      <i className="fas fa-star" />
-                    </li>
-                    <li>
-                      <i className="fas fa-star" />
-                    </li>
-                    <li>
-                      <i className="fas fa-star" />
-                    </li>
-                    <li>
-                      <i className="fas fa-star" />
-                    </li>
-                    <li>
-                      <i className="fas fa-star" />
-                    </li>
-                    <li>
-                      <a href="#">(4.9)</a>
-                    </li>
-                  </ul>
-                  <h4 className="title">
-                    <Link legacyBehavior href="/tour-details">
-                      <a>Man and Woman Walks on Dock</a>
-                    </Link>
-                  </h4>
-                  <p className="location">
-                    <i className="fas fa-map-marker-alt" />
-                    North Province, Maldives
-                  </p>
-                  <p className="price">
-                    <i className="fas fa-usd-circle" />
-                    Price<span className="currency">$</span>93.65
-                  </p>
-                  <div className="meta">
-                    <span>
-                      <i className="far fa-clock" />
-                      05 Days
-                    </span>
-                    <span>
-                      <i className="far fa-user" />
-                      25
-                    </span>
-                    <span>
-                      <Link legacyBehavior href="/tour-details">
-                        <a>
-                          Details
-                          <i className="far fa-long-arrow-right" />
-                        </a>
-                      </Link>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*=== Single Place Item ===*/}
-            <div className="single-place-item mb-60">
-              <div className="place-img">
-                <img src="assets/images/place/place-2.jpg" alt="Place Image" />
-              </div>
-              <div className="place-content">
-                <div className="info">
-                  <ul className="ratings">
-                    <li>
-                      <i className="fas fa-star" />
-                    </li>
-                    <li>
-                      <i className="fas fa-star" />
-                    </li>
-                    <li>
-                      <i className="fas fa-star" />
-                    </li>
-                    <li>
-                      <i className="fas fa-star" />
-                    </li>
-                    <li>
-                      <i className="fas fa-star" />
-                    </li>
-                    <li>
-                      <a href="#">(4.9)</a>
-                    </li>
-                  </ul>
-                  <h4 className="title">
-                    <Link legacyBehavior href="/tour-details">
-                      <a>Trees Under White Clouds during Daytime</a>
-                    </Link>
-                  </h4>
-                  <p className="location">
-                    <i className="fas fa-map-marker-alt" />
-                    North Province, Maldives
-                  </p>
-                  <p className="price">
-                    <i className="fas fa-usd-circle" />
-                    Price<span className="currency">$</span>93.65
-                  </p>
-                  <div className="meta">
-                    <span>
-                      <i className="far fa-clock" />
-                      05 Days
-                    </span>
-                    <span>
-                      <i className="far fa-user" />
-                      25
-                    </span>
-                    <span>
-                      <Link legacyBehavior href="/tour-details">
-                        <a>
-                          Details
-                          <i className="far fa-long-arrow-right" />
-                        </a>
-                      </Link>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*=== Single Place Item ===*/}
-            <div className="single-place-item mb-60">
-              <div className="place-img">
-                <img src="assets/images/place/place-3.jpg" alt="Place Image" />
-              </div>
-              <div className="place-content">
-                <div className="info">
-                  <ul className="ratings">
-                    <li>
-                      <i className="fas fa-star" />
-                    </li>
-                    <li>
-                      <i className="fas fa-star" />
-                    </li>
-                    <li>
-                      <i className="fas fa-star" />
-                    </li>
-                    <li>
-                      <i className="fas fa-star" />
-                    </li>
-                    <li>
-                      <i className="fas fa-star" />
-                    </li>
-                    <li>
-                      <a href="#">(4.9)</a>
-                    </li>
-                  </ul>
-                  <h4 className="title">
-                    <Link legacyBehavior href="/tour-details">
-                      <a>Body of Water Near Mountain</a>
-                    </Link>
-                  </h4>
-                  <p className="location">
-                    <i className="fas fa-map-marker-alt" />
-                    North Province, Maldives
-                  </p>
-                  <p className="price">
-                    <i className="fas fa-usd-circle" />
-                    Price<span className="currency">$</span>93.65
-                  </p>
-                  <div className="meta">
-                    <span>
-                      <i className="far fa-clock" />
-                      05 Days
-                    </span>
-                    <span>
-                      <i className="far fa-user" />
-                      25
-                    </span>
-                    <span>
-                      <Link legacyBehavior href="/tour-details">
-                        <a>
-                          Details
-                          <i className="far fa-long-arrow-right" />
-                        </a>
-                      </Link>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*=== Single Place Item ===*/}
-            <div className="single-place-item mb-60">
-              <div className="place-img">
-                <img src="assets/images/place/place-4.jpg" alt="Place Image" />
-              </div>
-              <div className="place-content">
-                <div className="info">
-                  <ul className="ratings">
-                    <li>
-                      <i className="fas fa-star" />
-                    </li>
-                    <li>
-                      <i className="fas fa-star" />
-                    </li>
-                    <li>
-                      <i className="fas fa-star" />
-                    </li>
-                    <li>
-                      <i className="fas fa-star" />
-                    </li>
-                    <li>
-                      <i className="fas fa-star" />
-                    </li>
-                    <li>
-                      <a href="#">(4.9)</a>
-                    </li>
-                  </ul>
-                  <h4 className="title">
-                    <Link legacyBehavior href="/tour-details">
-                      <a>Man Standing on a Rock</a>
-                    </Link>
-                  </h4>
-                  <p className="location">
-                    <i className="fas fa-map-marker-alt" />
-                    North Province, Maldives
-                  </p>
-                  <p className="price">
-                    <i className="fas fa-usd-circle" />
-                    Price<span className="currency">$</span>93.65
-                  </p>
-                  <div className="meta">
-                    <span>
-                      <i className="far fa-clock" />
-                      05 Days
-                    </span>
-                    <span>
-                      <i className="far fa-user" />
-                      25
-                    </span>
-                    <span>
-                      <Link legacyBehavior href="/tour-details">
-                        <a>
-                          Details
-                          <i className="far fa-long-arrow-right" />
-                        </a>
-                      </Link>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Slider>
-        </div>
-      </section>
+      
       {/*====== End Places Section ======*/}
       {/*====== Start Gallery Section ======*/}
-      <GallerySection />
+      {/* <GallerySection /> */}
     </Layout>
   );
 };

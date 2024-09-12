@@ -90,20 +90,7 @@ const Footer = ({ bg, extraClass }) => {
                       <a href="#">Small Cabin Wood</a>
                     </li>
                   </ul>
-                  <ul className="footer-widget-nav">
-                    <li>
-                      <a href="#">Need a Career ?</a>
-                    </li>
-                    <li>
-                      <a href="#">Latest News &amp; Blog</a>
-                    </li>
-                    <li>
-                      <a href="#">Core Features</a>
-                    </li>
-                    <li>
-                      <a href="#">Meet Our teams</a>
-                    </li>
-                  </ul>
+                 
                 </div>
               </div>
             </div>
@@ -142,7 +129,7 @@ const Footer = ({ bg, extraClass }) => {
               {/*=== Footer Text ===*/}
               <div className="footer-text">
                 <p>
-                  Copy@ 2023 <span style={{ color: "#F7921E" }}>GoWilds</span>,
+                  Copy@ 2024 <span style={{ color: "white" }}>Dream Kerala Holidays</span>,
                   All Right Reserved
                 </p>
               </div>

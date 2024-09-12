@@ -8,104 +8,12 @@ const About = () => {
   return (
     <Layout extraClass={"pt-160"}>
       <PageBanner pageTitle={"About Us"} />
-      {/*====== Start Features Section ======*/}
-      <section className="features-section pt-100 pb-50">
-        <div className="container">
-          <div className="row align-items-xl-center">
-            <div className="col-xl-5">
-              {/*=== Features Content Box ===*/}
-              <div className="features-content-box pr-lg-70 mb-50 wow fadeInLeft">
-                {/*=== Section Title ===*/}
-                <div className="section-title mb-30">
-                  <span className="sub-title">Availability</span>
-                  <h2>Explore GoWilds Real Adventure &amp; Travels</h2>
-                </div>
-                <p className="mb-30">
-                  Sit amet consectetur integer tincidunt sceleries noda lesry
-                  volutpat neque fermentum malesuada scelequecy leocras odio
-                  blandit rhoncus eues feugiat
-                </p>
-                <a href="#" className="main-btn filled-btn">
-                  Learn More
-                  <i className="far fa-paper-plane" />
-                </a>
-              </div>
-            </div>
-            <div className="col-xl-7">
-              <div className="features-item-area mb-20 pl-lg-70">
-                <div className="row">
-                  <div className="col-md-6">
-                    {/*=== Fancy Icon Box ===*/}
-                    <div className="fancy-icon-box-two mb-30 wow fadeInUp">
-                      <div className="icon">
-                        <i className="flaticon-camping" />
-                      </div>
-                      <div className="text">
-                        <h3 className="title">Tent Camping</h3>
-                        <p>
-                          Sit amet consectetur integ tincidunt scelerie nodermen
-                          malesuada sceleris massa
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    {/*=== Fancy Icon Box ===*/}
-                    <div className="fancy-icon-box-two mb-30 wow fadeInUp">
-                      <div className="icon">
-                        <i className="flaticon-biking-mountain" />
-                      </div>
-                      <div className="text">
-                        <h3 className="title">Mountain Biking</h3>
-                        <p>
-                          Sit amet consectetur integ tincidunt scelerie nodermen
-                          malesuada sceleris massa
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    {/*=== Fancy Icon Box ===*/}
-                    <div className="fancy-icon-box-two mb-30 wow fadeInUp">
-                      <div className="icon">
-                        <i className="flaticon-fishing-2" />
-                      </div>
-                      <div className="text">
-                        <h3 className="title">Fishing &amp; Boat</h3>
-                        <p>
-                          Sit amet consectetur integ tincidunt scelerie nodermen
-                          malesuada sceleris massa
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    {/*=== Fancy Icon Box ===*/}
-                    <div className="fancy-icon-box-two mb-30 wow fadeInUp">
-                      <div className="icon">
-                        <i className="flaticon-caravan" />
-                      </div>
-                      <div className="text">
-                        <h3 className="title">RV Caravan Tent</h3>
-                        <p>
-                          Sit amet consectetur integ tincidunt scelerie nodermen
-                          malesuada sceleris massa
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/*====== End Features Section ======*/}
+      
       {/*====== Start We Section ======*/}
       <section className="who-we-section">
         <div className="container">
           <div className="row align-items-xl-center">
-            <div className="col-lg-6 order-2 order-lg-1">
+            <div className="col-lg-6 order-2 order-lg-1 mt-5">
               {/*=== We Image Box ===*/}
               <div className="we-image-box text-center text-lg-left wow fadeInDown">
                 <img
@@ -115,18 +23,15 @@ const About = () => {
                 />
               </div>
             </div>
-            <div className="col-lg-6 order-1 order-lg-2">
+            <div className="col-lg-6 order-1 order-lg-2 mt-5">
               {/*=== We Content Box ===*/}
               <div className="we-one_content-box">
                 <div className="section-title mb-30 wow fadeInUp">
                   <span className="sub-title">Who We Are</span>
-                  <h2>Great Opportunity For Adventure &amp; Travels</h2>
+                  <h2>Dream Kerala Holidays &amp; Travels</h2>
                 </div>
                 <p className="wow fadeInDown">
-                  Set perspiciatis unde omnis iste natus error voluptatem
-                  accusantium doloremue laudantium totam rem aperiam eaque quae
-                  abillo inventore veritatis et quasi architecto beatae vitae
-                  dicta sunt explicabo.
+                Dream Kerala Holidays offers premier vehicle rental services and curated tour packages to help you explore the enchanting beauty of Kerala. Whether you're looking to rent a vehicle for a leisurely road trip or seeking a complete tour experience, we provide tailored solutions to make your journey seamless and memorable.
                 </p>
                 <div className="skill-wrapper wow fadeInUp">
                   <div className="single-skill-circle text-center">
@@ -134,7 +39,7 @@ const About = () => {
                       <div className="line" />
                       <span className="number">60%</span>
                     </div>
-                    <h5>Saticfied Clients</h5>
+                    <h5>Satisfied Clients</h5>
                   </div>
                   <div className="single-skill-circle text-center">
                     <div className="inner-circle">
@@ -394,8 +299,7 @@ const About = () => {
                     <div className="content">
                       <h4>Safety First Always</h4>
                       <p>
-                        Set perspiciatis unde omnis estenatus voluptatem
-                        accusantium laudantium totarem aperiae
+                      Your safety is our top priority. We ensure all our vehicles and tour services adhere to the highest safety standards for a worry-free experience.
                       </p>
                     </div>
                   </div>
@@ -411,8 +315,7 @@ const About = () => {
                     <div className="content">
                       <h4>Low Price &amp; Friendly</h4>
                       <p>
-                        Quis autem vel eum iure reprehenderit voluptate velit
-                        esse nihile molestiae consequatur.
+                      Enjoy competitive rates and exceptional service. We offer affordable tour packages and vehicle rentals without compromising on quality.
                       </p>
                     </div>
                   </div>
@@ -428,8 +331,7 @@ const About = () => {
                     <div className="content">
                       <h4>Trusted Travel Guide</h4>
                       <p>
-                        At vero accusamus dignissimos ducimus blanditiis
-                        praesentium voluptatum deleniti atque quos
+                      Rely on our expert guides for an authentic travel experience. We provide insightful, reliable, and engaging tours tailored to your interests.
                       </p>
                     </div>
                   </div>
@@ -495,270 +397,9 @@ const About = () => {
         </div>
       </section>
       {/*====== End CTA Section ======*/}
-      {/*====== Start Testimonial Section ======*/}
-      <section className="testimonial-section pt-60 pb-60">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-8">
-              {/*=== Section Title ===*/}
-              <div className="section-title text-center mb-60 wow fadeInDown">
-                <span className="sub-title">Testimonials</span>
-                <h2>What Our Traveler Say About Our Tour Services</h2>
-              </div>
-            </div>
-          </div>
-          <div className="row align-items-xl-center">
-            <div className="col-xl-5 col-lg-12 order-2 order-xl-1">
-              {/*=== Testimonial Image ===*/}
-              <div className="testimonial-one_image-box mb-40 wow fadeInLeft">
-                <img
-                  src="assets/images/testimonial/testimonial-1.jpg"
-                  alt="Testimonial Image"
-                />
-              </div>
-            </div>
-            <div className="col-xl-7 col-lg-12 order-1 order-xl-2">
-              {/*=== Testimonial Slider ===*/}
-              <Slider
-                {...testimonialSliderOne}
-                className="testimonial-slider-one pl-lg-55 mb-40 wow fadeInRight"
-              >
-                {/*=== Testimonial Item ===*/}
-                <div className="gw-testimonial-item">
-                  <div className="testimonial-inner-content">
-                    <div className="quote-rating-box">
-                      <div className="icon">
-                        <img
-                          src="assets/images/testimonial/quote.png"
-                          alt="quote icon"
-                        />
-                      </div>
-                      <div className="ratings-box">
-                        <h4>Quality Services</h4>
-                        <ul className="ratings">
-                          <li>
-                            <i className="fas fa-star" />
-                          </li>
-                          <li>
-                            <i className="fas fa-star" />
-                          </li>
-                          <li>
-                            <i className="fas fa-star" />
-                          </li>
-                          <li>
-                            <i className="fas fa-star" />
-                          </li>
-                          <li>
-                            <i className="fas fa-star" />
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <p>
-                      To take a trivial example which of usev undertakes
-                      laborious physical exercise excepto obtain advantage from
-                      has any right to find fault with man who chooses to enjoy
-                    </p>
-                    <div className="author-thumb-title">
-                      <div className="author-thumb">
-                        <img
-                          src="assets/images/testimonial/author-1.jpg"
-                          alt="Author Image"
-                        />
-                      </div>
-                      <div className="author-title">
-                        <h3 className="title">Douglas D. Hall</h3>
-                        <p className="position">CEO &amp; Founder</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/*=== Testimonial Item ===*/}
-                <div className="gw-testimonial-item">
-                  <div className="testimonial-inner-content">
-                    <div className="quote-rating-box">
-                      <div className="icon">
-                        <img
-                          src="assets/images/testimonial/quote.png"
-                          alt="quote icon"
-                        />
-                      </div>
-                      <div className="ratings-box">
-                        <h4>Quality Services</h4>
-                        <ul className="ratings">
-                          <li>
-                            <i className="fas fa-star" />
-                          </li>
-                          <li>
-                            <i className="fas fa-star" />
-                          </li>
-                          <li>
-                            <i className="fas fa-star" />
-                          </li>
-                          <li>
-                            <i className="fas fa-star" />
-                          </li>
-                          <li>
-                            <i className="fas fa-star" />
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <p>
-                      To take a trivial example which of usev undertakes
-                      laborious physical exercise excepto obtain advantage from
-                      has any right to find fault with man who chooses to enjoy
-                    </p>
-                    <div className="author-thumb-title">
-                      <div className="author-thumb">
-                        <img
-                          src="assets/images/testimonial/author-1.jpg"
-                          alt="Author Image"
-                        />
-                      </div>
-                      <div className="author-title">
-                        <h3 className="title">Douglas D. Hall</h3>
-                        <p className="position">CEO &amp; Founder</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/*=== Testimonial Item ===*/}
-                <div className="gw-testimonial-item">
-                  <div className="testimonial-inner-content">
-                    <div className="quote-rating-box">
-                      <div className="icon">
-                        <img
-                          src="assets/images/testimonial/quote.png"
-                          alt="quote icon"
-                        />
-                      </div>
-                      <div className="ratings-box">
-                        <h4>Quality Services</h4>
-                        <ul className="ratings">
-                          <li>
-                            <i className="fas fa-star" />
-                          </li>
-                          <li>
-                            <i className="fas fa-star" />
-                          </li>
-                          <li>
-                            <i className="fas fa-star" />
-                          </li>
-                          <li>
-                            <i className="fas fa-star" />
-                          </li>
-                          <li>
-                            <i className="fas fa-star" />
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <p>
-                      To take a trivial example which of usev undertakes
-                      laborious physical exercise excepto obtain advantage from
-                      has any right to find fault with man who chooses to enjoy
-                    </p>
-                    <div className="author-thumb-title">
-                      <div className="author-thumb">
-                        <img
-                          src="assets/images/testimonial/author-1.jpg"
-                          alt="Author Image"
-                        />
-                      </div>
-                      <div className="author-title">
-                        <h3 className="title">Douglas D. Hall</h3>
-                        <p className="position">CEO &amp; Founder</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Slider>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/*====== End Testimonial Section ======*/}
+      
       {/*====== Start Partners Section ======*/}
-      <section className="partners-section">
-        <div className="container">
-          {/*=== Partners Slider ===*/}
-          <Slider
-            {...partnerSliderOne}
-            className="partner-slider-one pt-80 pb-70 wow fadeInUp"
-          >
-            {/*=== Partner Item ===*/}
-            <div className="single-partner-item">
-              <div className="partner-img">
-                <a href="#">
-                  <img
-                    src="assets/images/partner/partner-1.png"
-                    alt="Partner Image"
-                  />
-                </a>
-              </div>
-            </div>
-            {/*=== Partner Item ===*/}
-            <div className="single-partner-item">
-              <div className="partner-img">
-                <a href="#">
-                  <img
-                    src="assets/images/partner/partner-2.png"
-                    alt="Partner Image"
-                  />
-                </a>
-              </div>
-            </div>
-            {/*=== Partner Item ===*/}
-            <div className="single-partner-item">
-              <div className="partner-img">
-                <a href="#">
-                  <img
-                    src="assets/images/partner/partner-3.png"
-                    alt="Partner Image"
-                  />
-                </a>
-              </div>
-            </div>
-            {/*=== Partner Item ===*/}
-            <div className="single-partner-item">
-              <div className="partner-img">
-                <a href="#">
-                  <img
-                    src="assets/images/partner/partner-4.png"
-                    alt="Partner Image"
-                  />
-                </a>
-              </div>
-            </div>
-            {/*=== Partner Item ===*/}
-            <div className="single-partner-item">
-              <div className="partner-img">
-                <a href="#">
-                  <img
-                    src="assets/images/partner/partner-5.png"
-                    alt="Partner Image"
-                  />
-                </a>
-              </div>
-            </div>
-            {/*=== Partner Item ===*/}
-            <div className="single-partner-item">
-              <div className="partner-img">
-                <a href="#">
-                  <img
-                    src="assets/images/partner/partner-4.png"
-                    alt="Partner Image"
-                  />
-                </a>
-              </div>
-            </div>
-          </Slider>
-        </div>
-      </section>
-      {/*====== End Partners Section ======*/}
-      {/*====== Start Gallery Section ======*/}
-      <GallerySection />
+      
     </Layout>
   );
 };

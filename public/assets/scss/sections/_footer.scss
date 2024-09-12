@@ -7,7 +7,7 @@
 .black-bg{
     & .footer-copyright,
     & .footer-widget{
-        color: #E1E1E1;
+        color: black;
     }
     .footer-widget{
         & h4.widget-title{
@@ -36,7 +36,7 @@
                 @extend %white-color;
             }
             & p{
-                color: #E1E1E1;
+                color: black;
                 &:hover{
                     & a{
                         @extend %primary-color;
