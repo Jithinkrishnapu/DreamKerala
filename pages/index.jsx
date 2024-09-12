@@ -1,6 +1,5 @@
-import BoatBanner from "@/src/components/boatBanner/boatBanner";
-import BookingForm from "@/src/components/bookingform/BookingForm";
-import Features from "@/src/components/features";
+import BookingForm from "../src/components/bookingform/BookingForm";
+import Features from "../src/components/Features";
 import FormModal from "@/src/components/modal/ModalComponent";
 import GallerySection from "@/src/components/GallerySection";
 import Popupform from "@/src/components/popupform/Popupform";
@@ -19,6 +18,7 @@ import { useEffect, useState, useTransition } from "react";
 
 import Slider from "react-slick";
 import ModalComponent from "@/src/components/modal/ModalComponent";
+import BoatBanner from "../src/components/boatBanner/BoatBanner";
 const Counter = dynamic(() => import("@/src/components/Counter"), {
   ssr: false,
 });
