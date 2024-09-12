@@ -5,10 +5,7 @@ import VideoPopup from "../components/VideoPopup";
 import { animation } from "../utils";
 import Footer from "./Footer";
 import Header from "./header/Index";
-const Layout = ({ header, children, footerBG, noFooter, extraClass }) => {
-  useEffect(() => {
-    niceSelect();
-  }, []);
+const Layout = ({ header, children, footerBG, noFooter, extraClass,setShowModal }) => {
   useEffect(() => {
     animation();
   }, []);
@@ -16,7 +13,7 @@ const Layout = ({ header, children, footerBG, noFooter, extraClass }) => {
     <Fragment>
       <VideoPopup />
       <ImageView />
-      <Header header={header} />
+      <Header setShowModal={setShowModal} header={header} />
       {children}
       {!noFooter && <Footer bg={footerBG} extraClass={extraClass} />}
     </Fragment>
