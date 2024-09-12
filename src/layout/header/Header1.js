@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Menu from "../Menu";
+import { Button } from "react-bootstrap";
 
-const Header1 = () => {
+const Header1 = ({setShowModal}) => {
   return (
     <header className="header-area header-one transparent-header">
       {/*====== Header Navigation ======*/}
@@ -65,12 +66,12 @@ const Header1 = () => {
             {/*====== Nav Right Item ======*/}
             <div className="nav-right-item">
               <div className="menu-button d-xl-block d-none">
-                <Link legacyBehavior href="/contact">
+                <button className="bg-transparent" onClick={()=>setShowModal(true)} >
                   <a className="main-btn primary-btn">
                     Book Now
                     <i className="fas fa-paper-plane" />
                   </a>
-                </Link>
+                </button>
               </div>
               <div className="navbar-toggler">
                 <span />
