@@ -1,5 +1,6 @@
 import React from "react";
 import { useFormik } from "formik";
+import DropdownComponent from "../DropdownComponent";
 
 const validate = (values) => {
   const errors = {};
@@ -50,7 +51,7 @@ function Popupform() {
       <div className="row justify-content-center">
         <div className="col-lg-10">
           <div className="contact-area wow fadeInUp">
-            <form onSubmit={formik.handleSubmit} className="contact-form">
+            {/* <form onSubmit={formik.handleSubmit} className="contact-form">
               <div className="row">
                 <div className="col-lg-6">
                   <div className="form_group">
@@ -146,7 +147,66 @@ function Popupform() {
                   </div>
                 </div>
               </div>
-            </form>
+            </form> */}
+             <form className="booking-form">
+                  <div className="row">
+                  <div className="col-md-6">
+                      <div className="form_group">
+                       <DropdownComponent/>
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="form_group">
+                        <input
+                          type="text"
+                          className="form_control"
+                          placeholder="Pick up"
+                        />
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="form_group">
+                        <input
+                          type="text"
+                          className="form_control"
+                          placeholder="Drop off"
+                        />
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="form_group">
+                        <label>
+                          <i className="far fa-user-alt" />
+                        </label>
+                        <input
+                          type="text"
+                          className="form_control"
+                          placeholder="Guest"
+                          name="text"
+                        />
+                      </div>
+                    </div>
+                   
+                    <div className="col-md-12">
+                      <textarea
+                        name="comments"
+                        placeholder="Comments"
+                        className="form_control"
+                        cols={8}
+                        rows={3}
+                        defaultValue={""}
+                      />
+                    </div>
+                    <div className="col-lg-12">
+                  <div className="form_group text-center">
+                    <button type="submit" className="main-btn primary-btn">
+                      Book Now
+                      <i className="fas fa-paper-plane" />
+                    </button>
+                  </div>
+                </div>
+                  </div>
+                </form>
           </div>
         </div>
       </div>

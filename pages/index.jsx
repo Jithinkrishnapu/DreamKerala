@@ -18,7 +18,6 @@ import Link from "next/link";
 import { useEffect, useState, useTransition } from "react";
 
 import Slider from "react-slick";
-import { useState } from "react";
 import ModalComponent from "@/src/components/modal/ModalComponent";
 const Counter = dynamic(() => import("@/src/components/Counter"), {
   ssr: false,
@@ -54,7 +53,7 @@ const Index = () => {
   }
 
   return (
-    <Layout header={1} noFooter>
+    <Layout header={1} setShowModal={(val)=>setShowModal(val)} noFooter>
       {/*====== Start Hero Section ======*/}
       <section className="hero-section">
         {/*=== Hero Wrapper ===*/}
@@ -73,7 +72,7 @@ const Index = () => {
                       <h1 data-animation="fadeInDown" data-delay=".4s">
                         {val?.properties?.Headline?.rich_text[0]?.plain_text}
                       </h1>
-                      <div className="text-button d-flex align-items-center">
+                      <div onClick={handleShowModal} className="text-button d-flex align-items-center">
                         <p data-animation="fadeInLeft" data-delay=".5s">
                          {val?.properties?.Description?.rich_text[0]?.plain_text}
                         </p>
@@ -144,7 +143,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <SliderComponent />
+          <SliderComponent setShowModal={(val)=>setShowModal(val)}  />
         </div>
       </section>
       {/*====== End Hero Section ======*/}

@@ -6,7 +6,7 @@ import Header1 from "./Header1";
 import Header2 from "./Header2";
 import Header3 from "./Header3";
 import Header4 from "./Header4";
-const Header = ({ header }) => {
+const Header = ({ header,setShowModal }) => {
   useEffect(() => {
     stickyNav();
   }, []);
@@ -35,7 +35,7 @@ const Header = ({ header }) => {
   }, [width]);
   switch (header) {
     case 1:
-      return <Header1 />;
+      return <Header1 setShowModal={setShowModal} />;
     case 2:
       return <Header2 />;
     case 3:
