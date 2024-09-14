@@ -10,7 +10,7 @@ function TariffComponent() {
         {
           eventKey: 'tab1',
           title: 'AC Sedan',
-          imgSrc: 'assets/images/gallery/sedan.jpeg',
+          imgSrc: 'assets/images/gallery/sedan.png',
           description: 'Sit amet consectetur velit integer tincidunt scelerisque. Sodales volutpat neque fermeny malesuada scelerisque massa lacus',
           checkList: [
             'Family Camping',
@@ -21,7 +21,7 @@ function TariffComponent() {
         {
           eventKey: 'tab2',
           title: 'Ertiga',
-          imgSrc: 'assets/images/gallery/ertiga.jpeg',
+          imgSrc: 'assets/images/gallery/ertiga.png',
           description: 'Sit amet consectetur velit integer tincidunt scelerisque. Sodales volutpat neque fermeny malesuada scelerisque massa lacus',
           checkList: [
             'Family Camping',
@@ -32,7 +32,7 @@ function TariffComponent() {
         {
           eventKey: 'tab3',
           title: 'Innova',
-          imgSrc: 'assets/images/gallery/innova.jpeg',
+          imgSrc: 'assets/images/gallery/innova.png',
           description: 'Sit amet consectetur velit integer tincidunt scelerisque. Sodales volutpat neque fermeny malesuada scelerisque massa lacus',
           checkList: [
             'Family Camping',
@@ -43,7 +43,7 @@ function TariffComponent() {
         {
           eventKey: 'tab4',
           title: 'Tempo Traveller',
-          imgSrc: 'assets/images/gallery/traveller.jpg',
+          imgSrc: 'assets/images/gallery/traveller.png',
           description: 'Sit amet consectetur velit integer tincidunt scelerisque. Sodales volutpat neque fermeny malesuada scelerisque massa lacus',
           checkList: [
             'Family Camping',
@@ -54,7 +54,7 @@ function TariffComponent() {
         {
           eventKey: 'tab5',
           title: 'Mini Coach',
-          imgSrc: 'assets/images/gallery/activity.jpg',
+          imgSrc: 'assets/images/gallery/mini.png',
           description: 'Sit amet consectetur velit integer tincidunt scelerisque. Sodales volutpat neque fermeny malesuada scelerisque massa lacus',
           checkList: [
             'Family Camping',
@@ -65,7 +65,7 @@ function TariffComponent() {
         {
           eventKey: 'tab6',
           title: 'Large Coach',
-          imgSrc: 'assets/images/gallery/activity.jpg',
+          imgSrc: 'assets/images/gallery/coach.png',
           description: 'Sit amet consectetur velit integer tincidunt scelerisque. Sodales volutpat neque fermeny malesuada scelerisque massa lacus',
           checkList: [
             'Family Camping',
@@ -84,8 +84,8 @@ function TariffComponent() {
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-xl-7">
-                <div className="section-title text-center mb-50 wow fadeInDown">
-                  <span className="sub-title text-white">Affordable and Flexible Pricing</span>
+                <div  className="section-title text-center mb-50 wow fadeInDown">
+                  <span style={{background:'#2E709E'}} className="sub-title text-white">Affordable and Flexible Pricing</span>
                   <h2>Explore Your Destination with Ease and Comfort</h2>
                 </div>
               </div>
