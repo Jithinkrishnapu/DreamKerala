@@ -1,16 +1,14 @@
-import GallerySection from "@/src/components/GallerySection";
 import PageBanner from "@/src/components/PageBanner";
 import Layout from "@/src/layout/Layout";
-import { partnerSliderOne, testimonialSliderOne } from "@/src/sliderProps";
 import Link from "next/link";
-import Slider from "react-slick";
+
 const About = () => {
   return (
     <Layout extraClass={"pt-160"}>
-      <PageBanner pageTitle={"About Us"} />
+      {/* <PageBanner pageTitle={"About Us"} /> */}
       
       {/*====== Start We Section ======*/}
-      <section className="who-we-section">
+      <section className="who-we-section pt-100">
         <div className="container">
           <div className="row align-items-xl-center">
             <div className="col-lg-6 order-2 order-lg-1 mt-5">
@@ -169,7 +167,7 @@ const About = () => {
                 </h2>
                 <Link legacyBehavior href="/about">
                   <a className="main-btn primary-btn">
-                    Check Availability
+                    Book Now
                     <i className="far fa-paper-plane" />
                   </a>
                 </Link>

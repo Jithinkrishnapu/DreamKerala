@@ -4,7 +4,7 @@ function Features() {
 
     const featuresData = [
         {
-          icon: 'flaticon-rabbit',
+          icon: 'flaticon-hand',
           title: 'Best Service',
           description: 'We take pride in delivering outstanding service and ensuring a seamless experience.',
         },

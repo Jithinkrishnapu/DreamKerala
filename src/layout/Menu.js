@@ -71,27 +71,27 @@ const MobileMenu = () => {
     <nav className="main-menu d-block d-xl-none">
       <ul>
         <li className="menu-item has-children">
-          <a href="#">
+          <a href="/">
             Home
           </a>
         </li>
         <li className="menu-item has-children">
-          <a href="#">
+          <a href="gallery">
             Our Gallery
           </a>
         </li>
         <li className="menu-item has-children">
-          <a href="#">
+          <a href="destination">
             Destination
           </a>
         </li>
         <li className="menu-item has-children">
-          <a href="#">
+          <a href="about">
             About us
           </a>
         </li>
         <li className="menu-item has-children">
-          <a href="#">
+          <a href="contact">
             Contact us
           </a>
         </li>

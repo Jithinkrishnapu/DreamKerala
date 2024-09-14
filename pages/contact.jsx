@@ -4,9 +4,8 @@ import Layout from "@/src/layout/Layout";
 const Contact = () => {
   return (
     <Layout extraClass={"pt-160"}>
-      <PageBanner pageTitle={"Contact Us"} />
       {/*====== Start Info Section ======*/}
-      <section className="contact-info-section pt-100 pb-60">
+      <section className="contact-info-section pt-150 pb-60">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-xl-8">
@@ -41,11 +40,13 @@ const Contact = () => {
                 <div className="info">
                   <span className="title">Email Address</span>
                   <p>
-                    <a style={{fontSize:'large'}} href="mailto:Dreamkeralaholidays24@gmail.com">
-                    Dreamkeralaholidays24@gmail.com
+                    <a
+                      style={{ fontSize: "large" }}
+                      href="mailto:Dreamkeralaholidays24@gmail.com"
+                    >
+                      Dreamkeralaholidays24@gmail.com
                     </a>
                   </p>
-                  
                 </div>
               </div>
             </div>
@@ -164,10 +165,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-      {/*====== End Contact Section ======*/}
-      {/*====== Start Gallery Section ======*/}
-      <GallerySection />
-      {/*====== End Gallery Section ======*/}
     </Layout>
   );
 };
