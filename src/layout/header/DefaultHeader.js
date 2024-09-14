@@ -100,7 +100,7 @@ const DefaultHeader = () => {
                 </Link>
               </div>
               {/*=== Nav Search ===*/}
-              <div className="nav-search mb-30 d-block d-xl-none ">
+              {/* <div className="nav-search mb-30 d-block d-xl-none ">
                 <form>
                   <div className="form_group">
                     <input
@@ -115,7 +115,7 @@ const DefaultHeader = () => {
                     </button>
                   </div>
                 </form>
-              </div>
+              </div> */}
               {/*====== Main Menu ======*/}
               <Menu />
               {/*====== Menu Button ======*/}

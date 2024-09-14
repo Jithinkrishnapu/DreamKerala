@@ -85,7 +85,7 @@ function TariffComponent() {
             <div className="row justify-content-center">
               <div className="col-xl-7">
                 <div  className="section-title text-center mb-50 wow fadeInDown">
-                  <span style={{background:'#2E709E'}} className="sub-title text-white">Affordable and Flexible Pricing</span>
+                  <span  className="sub-title text-white">Affordable and Flexible Pricing</span>
                   <h2>Explore Your Destination with Ease and Comfort</h2>
                 </div>
               </div>
