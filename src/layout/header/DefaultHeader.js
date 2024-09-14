@@ -4,7 +4,7 @@ const DefaultHeader = () => {
   return (
     <header className="header-area header-three">
       {/*====== Header Top Bar ======*/}
-      <div className="header-top-bar pt-30 pb-30">
+      <div className="header-top-bar  pb-30">
         <div className="container-fluid">
           <div className="row">
             <div className="col-xl-3 d-none d-xl-block">

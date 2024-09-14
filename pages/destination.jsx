@@ -1,16 +1,10 @@
-import GallerySection from "@/src/components/GallerySection";
-import PageBanner from "@/src/components/PageBanner";
 import Layout from "@/src/layout/Layout";
 import { destinationPlaces } from "@/src/utils/constants";
-import Link from "next/link";
 const Destination = () => {
   return (
     <Layout extraClass={"pt-160"}>
-      <PageBanner pageTitle={"Destination"} />
-      {/*====== Start Booking Section ======*/}
-
       {/*====== Start Destination Section ======*/}
-      <section className="destination-section pb-100">
+      <section className="destination-section pt-100 pb-90">
         <div className="container mt-5">
           <div className="row justify-content-center">
             <div className="row">
@@ -31,7 +25,7 @@ const PlaceItem = ({ imgSrc, title, price, toursCount, colClasses }) => (
     <div className="single-place-item-two mb-30 wow fadeInUp">
       <div className="place-img">
         <img src={imgSrc} alt="Place Image" />
-          <span className="tour-count">{toursCount}</span>
+        <span className="tour-count">{toursCount}</span>
         <div className="place-content">
           <div className="info text-white">
             <h3 className="title mb-10">{title}</h3>

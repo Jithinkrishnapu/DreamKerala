@@ -4,9 +4,8 @@ import { galleryItems } from "@/src/utils/constants";
 const Gallery = () => {
   return (
     <Layout>
-      <PageBanner pageTitle={"Gallery"} />
       {/*====== Start Gallery Section ======*/}
-      <section className="gallery-area pt-100 pb-70">
+      <section className="gallery-area pt-150 pb-70">
         <div className="container">
           <div className="row">
             {galleryItems.map((item, index) => (
