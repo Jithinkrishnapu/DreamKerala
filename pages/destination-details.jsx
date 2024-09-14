@@ -2,9 +2,37 @@ import GallerySection from "@/src/components/GallerySection";
 import PageBanner from "@/src/components/PageBanner";
 import Layout from "@/src/layout/Layout";
 import { sliderActive3Item, sliderActive3ItemDot } from "@/src/sliderProps";
+import { Client } from "@notionhq/client";
 import Link from "next/link";
+import { useEffect, useTransition } from "react";
 import Slider from "react-slick";
 const DestinationDetails = () => {
+
+  // const [isPending, startTransition] = useTransition();
+
+  // useEffect(() => {
+  //   startTransition(async () => {
+  //     try {
+  //       const response = await fetch('/api/destination');
+  //       if (!response.ok) {
+  //         throw new Error('Error fetching carousel data');
+  //       }
+  //       const result = await response.json()
+  //       fetchPageData('1740c4ae-8920-4c0d-8ee8-29b057ca349c')
+  //     } catch (err) {
+  //     }
+  //   });
+  // }, [startTransition]);
+
+
+  // const fetchPageData = async (pageId) => {
+  //   const response = await fetch(`/api/pages`);
+  //   const data = await response.json();
+  //   console.log(data)
+  //   return data;
+  // };
+
+
   return (
     <Layout extraClass={"pt-160"}>
       <PageBanner pageTitle={"Destination Details"} />
@@ -132,6 +160,20 @@ const DestinationDetails = () => {
                   </div>
                 </div>
             </div>
+
+            
+
+            <div>
+      <iframe
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS4CR1n9CkKhqREw5e2OVpIjgpa00ppWLYa1GJMDWeV4x6OTKrWMn2SJUmcfB9qBi_VKRdv0xrCIx6m/pubhtml?gid=0&amp;single=true&range=A9:D18&amp;widget=true&amp;headers=false"
+        width="100%"
+        height="600px"
+        style={{ border: 'none' }}
+        allowFullScreen
+      ></iframe>
+    </div>
+
+
             <div className="gallery-area wow fadeInUp">
               <Slider {...sliderActive3Item} className="slider-active-3-item">
                 {/*=== Single Gallery Item ===*/}
