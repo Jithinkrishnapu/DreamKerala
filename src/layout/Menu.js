@@ -53,7 +53,7 @@ const DeskTopMenu = () => {
             <a href="about">About us</a>
           </li>
           <li className="menu-item has-children">
-            <a href="about">Contact us</a>
+            <a href="contact">Contact us</a>
           </li>
         </ul>
       </nav>

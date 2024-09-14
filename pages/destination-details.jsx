@@ -190,49 +190,7 @@ const DestinationDetails = () => {
           </div>
         </div>
       </section>
-      
-      {/*====== End Destination Details Section ======*/}
-      {/*====== Start CTA Section ======*/}
-      <section
-        className="cta-bg overlay bg_cover pt-150 pb-150"
-        style={{ backgroundImage: "url(assets/images/bg/cta-bg2.jpg)" }}
-      >
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-xl-7 col-lg-8">
-              {/*=== CTA Content Box ===*/}
-              <div className="cta-content-box text-white wow fadeInLeft">
-                <h2 className="mb-35">
-                  Ready to Travel With Real Adventure and Enjoy Natural
-                </h2>
-                <Link legacyBehavior href="/about">
-                  <a className="main-btn primary-btn">
-                    Check Availability
-                    <i className="far fa-paper-plane" />
-                  </a>
-                </Link>
-              </div>
-            </div>
-            <div className="col-xl-5 col-lg-4">
-              {/*=== Play Box ===*/}
-              <div className="play-box text-lg-end text-center wow fadeInRight">
-                <a
-                  href="https://www.youtube.com/watch?v=ibuUmMhD2Pg"
-                  className="video-popup"
-                >
-                  <i className="fas fa-play" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/*====== End CTA Section ======*/}
-      {/*====== Start Places Section ======*/}
-      
-      {/*====== End Places Section ======*/}
-      {/*====== Start Gallery Section ======*/}
-      {/* <GallerySection /> */}
+     
     </Layout>
   );
 };

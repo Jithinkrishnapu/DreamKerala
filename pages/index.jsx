@@ -19,6 +19,7 @@ import { useEffect, useState, useTransition } from "react";
 import Slider from "react-slick";
 import ModalComponent from "@/src/components/modal/ModalComponent";
 import BoatBanner from "../src/components/boatBanner/BoatBanner";
+import PopularServices from "@/src/components/popularServices/PopularServices";
 const Counter = dynamic(() => import("@/src/components/Counter"), {
   ssr: false,
 });
@@ -35,9 +36,9 @@ const Index = () => {
   useEffect(() => {
     startTransition(async () => {
       try {
-        const response = await fetch('/api/carousel');
+        const response = await fetch("/api/carousel");
         if (!response.ok) {
-          throw new Error('Error fetching carousel data');
+          throw new Error("Error fetching carousel data");
         }
         const result = await response.json();
         setData(result);
@@ -47,13 +48,13 @@ const Index = () => {
     });
   }, [startTransition]);
 
-  if(isPending){
+  if (isPending) {
     // console.log(isPending)
-    <div>Loading......</div>
+    <div>Loading......</div>;
   }
 
   return (
-    <Layout header={1} setShowModal={(val)=>setShowModal(val)} noFooter>
+    <Layout header={1} setShowModal={(val) => setShowModal(val)} noFooter>
       {/*====== Start Hero Section ======*/}
       <section className="hero-section">
         {/*=== Hero Wrapper ===*/}
@@ -61,50 +62,62 @@ const Index = () => {
           {/*=== Hero Slider ===*/}
           <Slider {...home1Slider} className="hero-slider-one">
             {/*=== Single Slider ===*/}
-            {data?.map((val,index)=>{
+            {data?.map((val, index) => {
               return (
                 <div className="single-slider">
-              <div className="container-fluid">
-                <div className="row align-items-center">
-                  <div className="col-xl-6">
-                    {/*=== Hero Content ===*/}
-                    <div className="hero-content text-white">
-                      <h1 data-animation="fadeInDown" data-delay=".4s">
-                        {val?.properties?.Headline?.rich_text[0]?.plain_text}
-                      </h1>
-                      <div onClick={handleShowModal} className="text-button d-flex align-items-center">
-                        <p data-animation="fadeInLeft" data-delay=".5s">
-                         {val?.properties?.Description?.rich_text[0]?.plain_text}
-                        </p>
+                  <div className="container-fluid">
+                    <div className="row align-items-center">
+                      <div className="col-xl-6">
+                        {/*=== Hero Content ===*/}
+                        <div className="hero-content text-white">
+                          <h1 data-animation="fadeInDown" data-delay=".4s">
+                            {
+                              val?.properties?.Headline?.rich_text[0]
+                                ?.plain_text
+                            }
+                          </h1>
+                          <div
+                            onClick={handleShowModal}
+                            className="text-button d-flex align-items-center"
+                          >
+                            <p data-animation="fadeInLeft" data-delay=".5s">
+                              {
+                                val?.properties?.Description?.rich_text[0]
+                                  ?.plain_text
+                              }
+                            </p>
+                            <div
+                              className="hero-button"
+                              data-animation="fadeInRight"
+                              data-delay=".6s"
+                            >
+                              <Link legacyBehavior href="/about">
+                                <a className="main-btn primary-btn">
+                                  Explore More
+                                  <i className="fas fa-paper-plane" />
+                                </a>
+                              </Link>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-xl-6">
+                        {/*=== Hero Image ===*/}
                         <div
-                          className="hero-button"
+                          className="hero-image"
                           data-animation="fadeInRight"
-                          data-delay=".6s"
                         >
-                          <Link legacyBehavior href="/about">
-                            <a className="main-btn primary-btn">
-                              Explore More
-                              <i className="fas fa-paper-plane" />
-                            </a>
-                          </Link>
+                          <img
+                            loading="lazy"
+                            src={val?.properties?.images?.files[0]?.file?.url}
+                            alt="Hero Image"
+                          />
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="col-xl-6">
-                    {/*=== Hero Image ===*/}
-                    <div className="hero-image" data-animation="fadeInRight">
-                      <img
-                        loading="lazy"
-                        src={val?.properties?.images?.files[0]?.file?.url}
-                        alt="Hero Image"
-                      />
-                    </div>
-                  </div>
                 </div>
-              </div>
-            </div>
-              )
+              );
             })}
             {/*=== Single Slider ===*/}
           </Slider>
@@ -117,7 +130,7 @@ const Index = () => {
       <ModalComponent showModal={showModal} setShowModal={setShowModal}>
         <Popupform />
       </ModalComponent>
-      
+
       {/*====== Modal Popup form  ======*/}
 
       {/*====== End Hero Section ======*/}
@@ -143,7 +156,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <SliderComponent setShowModal={(val)=>setShowModal(val)}  />
+          <SliderComponent setShowModal={(val) => setShowModal(val)} />
         </div>
       </section>
       {/*====== End Hero Section ======*/}
@@ -155,24 +168,16 @@ const Index = () => {
       <TariffComponent />
 
       {/*====== End Activity Section ======*/}
-      {/*====== Start Services Section ======*/}
-      <section className="services-seciton pt-100">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-8 col-lg-10">
-              {/*=== Section Title ===*/}
-              <div className="section-title text-center mb-60 wow fadeInDown">
-                <span className="sub-title">Popular Services</span>
-                <h2>Amazing Adventure Camping Services for Enjoyed</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/*====== End Services Section ======*/}
-      {/*====== Start Features Section ======*/}
 
-      {/*====== End Features Section ======*/}
+
+      {/*====== Start Popular Services Section ======*/}
+     
+     <PopularServices/>
+
+      
+      {/*====== End Popular Services Section ======*/}
+
+
       {/*====== Start CTA Section ======*/}
       <div className="mb-40">
         <BoatBanner />
@@ -296,21 +301,14 @@ const Index = () => {
                   <h4 className="widget-title">Services</h4>
                   <div className="footer-content">
                     <ul className="footer-widget-nav">
-                      <li>
-                        <a href="#">Caravan Soler Tent</a>
-                      </li>
-                      <li>
-                        <a href="#">Family Tent Camping</a>
-                      </li>
-                      <li>
-                        <a href="#">Classic Tent Camping</a>
-                      </li>
-                      <li>
-                        <a href="#">Wild Tent Camping</a>
-                      </li>
-                      <li>
-                        <a href="#">Small Cabin Wood</a>
-                      </li>
+                      <li>24hrs Taxi Service</li>
+                      <li>Call Drivers</li>
+                      <li>Tour Packages</li>
+                      <li>Tour Operators</li>
+                      <li>Hotel Bookings</li>
+                      <li>Houseboat Booking</li>
+                      <li>Camping</li>
+                      <li>Trekking</li>
                     </ul>
                   </div>
                 </div>
