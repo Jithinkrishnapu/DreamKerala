@@ -1,5 +1,6 @@
 import GallerySection from "@/src/components/GallerySection";
 import PageBanner from "@/src/components/PageBanner";
+import PopularActivities from "@/src/components/popularActivities/PopularActivities";
 import Layout from "@/src/layout/Layout";
 import { sliderActive3Item, sliderActive3ItemDot } from "@/src/sliderProps";
 import { Client } from "@notionhq/client";
@@ -161,7 +162,7 @@ const DestinationDetails = () => {
                 </div>
             </div>
 
-            
+            <PopularActivities/>
 
             <div>
       <iframe
