@@ -34,7 +34,7 @@ const DeskTopMenu = () => {
             </a>
           </li>
           <li className="menu-item has-children">
-            <a href="destination-details">
+            <a href="destination">
               Destination
               <span className="dd-trigger">
                 {/* <i className="far fa-angle-down" /> */}

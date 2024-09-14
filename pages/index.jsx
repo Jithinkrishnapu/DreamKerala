@@ -288,7 +288,7 @@ const Index = () => {
                     </p>
                     <a href="#" className="footer-logo">
                       <img
-                        src="assets/images/logo/logo-test.png"
+                        src="assets/images/logo/logo-black.png"
                         alt="Site Logo"
                       />
                     </a>
