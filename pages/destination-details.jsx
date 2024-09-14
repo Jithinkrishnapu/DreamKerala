@@ -1,6 +1,7 @@
 import GallerySection from "@/src/components/GallerySection";
 import PageBanner from "@/src/components/PageBanner";
 import PopularActivities from "@/src/components/popularActivities/PopularActivities";
+import VehicleTable from "@/src/components/VehicleTable";
 import Layout from "@/src/layout/Layout";
 import { sliderActive3Item, sliderActive3ItemDot } from "@/src/sliderProps";
 import { Client } from "@notionhq/client";
@@ -9,29 +10,80 @@ import { useEffect, useTransition } from "react";
 import Slider from "react-slick";
 const DestinationDetails = () => {
 
-  // const [isPending, startTransition] = useTransition();
+  const [isPending, startTransition] = useTransition();
+  
+  useEffect(() => {
+    startTransition(async () => {
+      try {
+        const response = await fetch('/api/destination');
+        if (!response.ok) {
+          throw new Error('Error fetching carousel data');
+        }
+        const result = await response.json()
+      } catch (err) {
+      }
+    });
+  }, [startTransition]);
 
-  // useEffect(() => {
-  //   startTransition(async () => {
-  //     try {
-  //       const response = await fetch('/api/destination');
-  //       if (!response.ok) {
-  //         throw new Error('Error fetching carousel data');
-  //       }
-  //       const result = await response.json()
-  //       fetchPageData('1740c4ae-8920-4c0d-8ee8-29b057ca349c')
-  //     } catch (err) {
-  //     }
-  //   });
-  // }, [startTransition]);
-
-
-  // const fetchPageData = async (pageId) => {
-  //   const response = await fetch(`/api/pages`);
-  //   const data = await response.json();
-  //   console.log(data)
-  //   return data;
-  // };
+  const data = {
+    "headers": [
+      "Vehicle",
+      "Passengers",
+      "Rates"
+    ],
+    "rows": [
+      {
+        "vehicle": "Swift Dzire/Toyota Etios/Similar AC",
+        "passengers": 3,
+        "rate": 7500
+      },
+      {
+        "vehicle": "Renault Lodgy/Ertiga AC",
+        "passengers": 5,
+        "rate": 8500
+      },
+      {
+        "vehicle": "Toyota Innova AC",
+        "passengers": 6,
+        "rate": 9500
+      },
+      {
+        "vehicle": "Toyota Innova Crysta AC",
+        "passengers": 6,
+        "rate": 10800
+      },
+      {
+        "vehicle": "Executive Tempo Traveller AC (10-12)",
+        "passengers": "10-12",
+        "rate": 12500
+      },
+      {
+        "vehicle": "Urbania AC",
+        "passengers": 15,
+        "rate": 20700
+      },
+      {
+        "vehicle": "Executive Tempo Traveller AC (17)",
+        "passengers": 17,
+        "rate": 14000
+      },
+      {
+        "vehicle": "Executive Tempo Traveller AC (20)",
+        "passengers": 20,
+        "rate": 17000
+      },
+      {
+        "vehicle": "Executive Tempo Traveller AC (26)",
+        "passengers": 26,
+        "rate": 19000
+      },
+      {
+        "vehicle": "Executive Bus AC",
+        "passengers": 34,
+        "rate": 28000
+      }
+    ]
+  }
 
 
   return (
@@ -165,13 +217,7 @@ const DestinationDetails = () => {
             <PopularActivities/>
 
             <div>
-      <iframe
-        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS4CR1n9CkKhqREw5e2OVpIjgpa00ppWLYa1GJMDWeV4x6OTKrWMn2SJUmcfB9qBi_VKRdv0xrCIx6m/pubhtml?gid=0&amp;single=true&range=A9:D18&amp;widget=true&amp;headers=false"
-        width="100%"
-        height="600px"
-        style={{ border: 'none' }}
-        allowFullScreen
-      ></iframe>
+ {/* <VehicleTable data={data} /> */}
     </div>
 
 
