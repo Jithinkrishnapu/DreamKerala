@@ -111,4 +111,65 @@ export const serviceTypes = [
     }
   ];
   
+
+  // gallery images
+
+  export const galleryItems = [
+    {
+      imgSrc: "assets/images/gallery/gallery-2.jpg",
+      altText: "Gallery Image",
+      linkHref: "assets/images/gallery/gallery-2.jpg",
+      colClasses: "col-lg-4 col-md-6 col-sm-12"
+    },
+    {
+      imgSrc: "assets/images/gallery/gallery-3.jpg",
+      altText: "Gallery Image",
+      linkHref: "assets/images/gallery/gallery-3.jpg",
+      colClasses: "col-lg-4 col-md-6 col-sm-12"
+    },
+    {
+      imgSrc: "assets/images/gallery/gallery-4.jpg",
+      altText: "Gallery Image",
+      linkHref: "assets/images/gallery/gallery-4.jpg",
+      colClasses: "col-lg-4 col-md-6 col-sm-12"
+    },
+    {
+      imgSrc: "assets/images/gallery/gallery-5.jpg",
+      altText: "Gallery Image",
+      linkHref: "assets/images/gallery/gallery-5.jpg",
+      colClasses: "col-lg-4 col-md-6 col-sm-12"
+    },
+    {
+      imgSrc: "assets/images/gallery/gallery-6.jpg",
+      altText: "Gallery Image",
+      linkHref: "assets/images/gallery/gallery-6.jpg",
+      colClasses: "col-lg-4 col-md-6 col-sm-12"
+    }
+  ];
+
+  // Destination detials popular activities
+  
+  export const popularActivites = [
+    {
+      imgSrc: "assets/images/features/feat-5.jpg",
+      title: "Tent Camping",
+      animation: "fadeInUp",
+    },
+    {
+      imgSrc: "assets/images/features/feat-6.jpg",
+      title: "Mountain Biking",
+      animation: "fadeInDown",
+    },
+    {
+      imgSrc: "assets/images/features/feat-7.jpg",
+      title: "Fishing",
+      animation: "fadeInUp",
+    },
+    {
+      imgSrc: "assets/images/features/feat-8.jpg",
+      title: "Kayaking",
+      animation: "fadeInDown",
+    },
+  ];
+  
   
