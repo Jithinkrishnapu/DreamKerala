@@ -155,7 +155,7 @@ function BookingForm() {
                     </div>
                   </div>
 
-                  <div className="col-md-12">
+                  <div className="col-md-12 mt-20">
                     <textarea
                       id="comments"
                       name="comments"
