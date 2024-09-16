@@ -27,7 +27,7 @@ const Destination = () => {
   return (
     <Layout extraClass={"pt-160"}>
       {/*====== Start Destination Section ======*/}
-      <section className="destination-section pt-100 pb-90 px-30">
+      <section className="destination-section pt-120 pb-90 px-30">
       <div className="section-title text-center mb-50">
               <h2>Amazing Adventure Camping Services for Enjoyed</h2>
             </div> 
@@ -36,7 +36,7 @@ const Destination = () => {
           <div className="d-flex flex-row gap-5 justify-content-center flex-wrap" >
           {data?.map((val) => {
             return (
-              <div className="single-service-item-three mw-25 mb-40">
+              <div  className="single-service-item-three mw-25 col-10 col-md-3 mb-40">
                 <div className="content">
                   <h3 className="title">
                     <a href="#">
@@ -64,6 +64,7 @@ const Destination = () => {
               </div>
             );
           })}
+         
          </div>
         {/* </Slider> */}
       </section>
