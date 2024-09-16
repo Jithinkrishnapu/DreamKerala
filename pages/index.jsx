@@ -82,15 +82,25 @@ const Index = () => {
                               data-animation="fadeInRight"
                               data-delay=".6s"
                             >
-                              <Link
-                                legacyBehavior
-                                href={`/about/${"destinationDetailId"}`}
-                              >
-                                <a className="main-btn primary-btn">
-                                  Explore More
-                                  <i className="fas fa-paper-plane" />
-                                </a>
-                              </Link>
+                              {val?.properties?.slug?.rich_text[0]
+                                ?.plain_text ? (
+                                <Link
+                                  legacyBehavior
+                                  href={`/${val?.properties?.slug?.rich_text[0]?.plain_text}`}
+                                >
+                                  <a className="main-btn primary-btn">
+                                    Explore More
+                                    <i className="fas fa-paper-plane" />
+                                  </a>
+                                </Link>
+                              ) : (
+                                <div onClick={() => setShowModal(true)}>
+                                  <a className="main-btn primary-btn">
+                                    Explore More
+                                    <i className="fas fa-paper-plane" />
+                                  </a>
+                                </div>
+                              )}
                             </div>
                           </div>
                         </div>
@@ -166,7 +176,7 @@ const Index = () => {
 
       {/*====== Start CTA Section ======*/}
       <div className="mb-40">
-        <BoatBanner onClick={()=>setShowModal(true)} />
+        <BoatBanner onClick={() => setShowModal(true)} />
       </div>
       {/*====== Start Fact Section ======*/}
       <div className="container">
@@ -181,7 +191,7 @@ const Index = () => {
         <div className="fixed-bottom p-2 text-end d-flex justify-content-end flex-sm-row flex-column">
           <a href="tel:+91 95671 32777">
             <img
-              style={{ height:'70px' }}
+              style={{ height: "70px" }}
               className=""
               src="assets/images/icon/phone-circle.png"
               alt=""
@@ -189,7 +199,7 @@ const Index = () => {
           </a>
           <a href="https://api.whatsapp.com/send?phone=919048459086">
             <img
-              style={{ height:'70px' }}
+              style={{ height: "70px" }}
               src="assets/images/icon/whatsapp.svg"
               alt=""
             />
