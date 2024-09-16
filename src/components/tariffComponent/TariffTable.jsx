@@ -68,7 +68,7 @@ const tariffs = {
 function TariffTable({selectedModel}) {
   // State to manage the selected car mode
   return (
-    <div className="" >  
+    <div style={{background:'white', borderRadius:'12px', border:'none'}} className="" >  
       {/* Table to display tariffs */}
       <Table striped bordered hover>
         <thead>

@@ -74,23 +74,15 @@ const Footer = ({ bg, extraClass }) => {
                 <h4 className="widget-title">Services</h4>
                 <div className="footer-content">
                   <ul className="footer-widget-nav">
-                    <li>
-                      <a href="#">Caravan Soler Tent</a>
-                    </li>
-                    <li>
-                      <a href="#">Family Tent Camping</a>
-                    </li>
-                    <li>
-                      <a href="#">Classic Tent Camping</a>
-                    </li>
-                    <li>
-                      <a href="#">Wild Tent Camping</a>
-                    </li>
-                    <li>
-                      <a href="#">Small Cabin Wood</a>
-                    </li>
+                    <li>24hrs Taxi Service</li>
+                    <li>Call Drivers</li>
+                    <li>Tour Packages</li>
+                    <li>Tour Operators</li>
+                    <li>Hotel Bookings</li>
+                    <li>Houseboat Booking</li>
+                    <li>Camping</li>
+                    <li>Trekking</li>
                   </ul>
-                 
                 </div>
               </div>
             </div>
@@ -129,7 +121,8 @@ const Footer = ({ bg, extraClass }) => {
               {/*=== Footer Text ===*/}
               <div className="footer-text">
                 <p>
-                  Copy@ 2024 <span style={{ color: "white" }}>Dream Kerala Holidays</span>,
+                  Copy@ 2024{" "}
+                  <span style={{ color: "white" }}>Dream Kerala Holidays</span>,
                   All Right Reserved
                 </p>
               </div>

@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 
 const Header1 = ({setShowModal}) => {
   return (
-    <header className="header-area header-one transparent-header">
+    <header style={{background:'#E6A43B'}} className="header-area sticky header-one ">
       {/*====== Header Navigation ======*/}
       <div className="header-navigation navigation-white">
         <div className="nav-overlay" />
@@ -35,22 +35,7 @@ const Header1 = ({setShowModal}) => {
                 </Link>
               </div>
               {/*=== Nav Search ===*/}
-              <div className="nav-search mb-30 d-block d-xl-none ">
-                <form>
-                  <div className="form_group">
-                    <input
-                      type="email"
-                      className="form_control"
-                      placeholder="Search Here"
-                      name="email"
-                      required
-                    />
-                    <button className="search-btn">
-                      <i className="fas fa-search" />
-                    </button>
-                  </div>
-                </form>
-              </div>
+              
               {/*====== main Menu ======*/}
               <Menu />
               {/*====== Menu Button ======*/}
