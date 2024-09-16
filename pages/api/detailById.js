@@ -17,13 +17,14 @@ export default async function handler(req, res) {
 
 // Function to handle GET requests
 async function handleGet(req, res) {
-    try {
+    const {slug} = req.query
+        try {
         const response = await notion.databases.query({
             database_id: NOTION_DB,
             filter: {
-                property: "Status",
+                property: "slug",
                 select: {
-                    equals: "Live"
+                    equals: slug
                 }
             }
         });

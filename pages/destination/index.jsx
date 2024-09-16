@@ -1,17 +1,10 @@
-import React, { useEffect, useState, useTransition } from "react";
-
-import Home3Slider from "@/src/components/sliders/Home3";
 import Layout from "@/src/layout/Layout";
-import {
-  partnerSliderOne,
-  sliderActive3Item,
-  sliderActive3ItemDot,
-} from "@/src/sliderProps";
-import dynamic from "next/dynamic";
-import Link from "next/link";
+import { sliderActive3Item} from "@/src/sliderProps";
+import { destinationPlaces } from "@/src/utils/constants";
+import { useEffect, useState, useTransition } from "react";
 import Slider from "react-slick";
-
-function PopularServices() {
+const Destination = () => {
+  
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
   const [isPending, startTransition] = useTransition();
@@ -30,24 +23,20 @@ function PopularServices() {
       }
     });
   }, [startTransition]);
-
+  
   return (
-    <section className="service-section pt-100 pb-60">
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-xl-7">
-            {/*=== Section Title ===*/}
-            <div className="section-title text-center mb-50">
-              <span className="sub-title">Popular Services</span>
+    <Layout extraClass={"pt-160"}>
+      {/*====== Start Destination Section ======*/}
+      <section className="destination-section pt-100 pb-90 px-30">
+      <div className="section-title text-center mb-50">
               <h2>Amazing Adventure Camping Services for Enjoyed</h2>
-            </div>
-          </div>
-        </div>
-        <Slider {...sliderActive3Item} className="slider-active-3-item">
+            </div> 
+      {/* <Slider {...sliderActive3Item} className="slider-active-3-item"> */}
           {/*=== Service Item ===*/}
-          {data?.slice(0,3)?.map((val) => {
+          <div className="d-flex flex-row gap-5 justify-content-center flex-wrap" >
+          {data?.map((val) => {
             return (
-              <div className="single-service-item-three mb-40">
+              <div className="single-service-item-three mw-25 mb-40">
                 <div className="content">
                   <h3 className="title">
                     <a href="#">
@@ -75,11 +64,29 @@ function PopularServices() {
               </div>
             );
           })}
-         
-        </Slider>
-      </div>
-    </section>
+         </div>
+        {/* </Slider> */}
+      </section>
+    </Layout>
   );
-}
+};
+export default Destination;
 
-export default PopularServices;
+const PlaceItem = ({ imgSrc, title, price, toursCount, colClasses }) => (
+  <div className={colClasses}>
+    <div className="single-place-item-two mb-30 wow fadeInUp">
+      <div className="place-img">
+        <img src={imgSrc} alt="Place Image" />
+        <span className="tour-count">{toursCount}</span>
+        <div className="place-content">
+          <div className="info text-white">
+            <h3 className="title mb-10">{title}</h3>
+            <p className="price">
+              <span className="currency">{price}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
