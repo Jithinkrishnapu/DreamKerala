@@ -1,11 +1,11 @@
 import React from 'react';
+import { Table } from 'react-bootstrap';
 
 function VehicleTable({ data }) {
-
-    console.log(data)
-
   return (
-    <table>
+    <div className='mt-5 mb-5' > 
+        <h4 className='mb-5' >Vehicle Tariffs</h4>
+    <Table striped bordered hover responsive>
       <thead>
         <tr>
           {data.headers.map((header, index) => (
@@ -22,7 +22,8 @@ function VehicleTable({ data }) {
           </tr>
         ))}
       </tbody>
-    </table>
+    </Table>
+    </div>
   );
 }
 

@@ -1,7 +1,7 @@
 import { popularActivites } from "@/src/utils/constants";
 import React from "react";
 
-function PopularActivities() {
+function PopularActivities({images,titles}) {
   return (
     <section className="features-section">
       <div className="container">
@@ -14,17 +14,17 @@ function PopularActivities() {
           </div>
         </div>
         <div className="row">
-          {popularActivites.map((feature, index) => (
+          {images?.map((feature, index) => (
             <div key={index} className="col-xl-3 col-md-6 col-sm-12">
               {/*=== Features Image Item ===*/}
               <div
-                className={`single-features-item-two mb-40 wow ${feature.animation}`}
+                className={`single-features-item-two mb-40 wow fadeInUp`}
               >
                 <div className="img-holder">
-                  <img src={feature.imgSrc} alt={feature.title} />
+                  <img width={'100%'} height={'100%'} src={feature?.file?.url} alt={titles[index]?.name} />
                   <div className="item-overlay">
                     <div className="content">
-                      <h3 className="title">{feature.title}</h3>
+                      <h3 className="title">{titles[index]?.name}</h3>
                     </div>
                   </div>
                 </div>

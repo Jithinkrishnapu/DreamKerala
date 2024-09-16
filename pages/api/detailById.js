@@ -23,7 +23,7 @@ async function handleGet(req, res) {
             database_id: NOTION_DB,
             filter: {
                 property: "slug",
-                select: {
+                rich_text: {
                     equals: slug
                 }
             }

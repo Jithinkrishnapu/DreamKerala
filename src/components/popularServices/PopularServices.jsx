@@ -67,10 +67,11 @@ function PopularServices() {
                     src={val?.properties?.images?.files[0]?.file?.url}
                     alt="service image"
                   />
-                  <a href="#" className="btn-link mb-1">
+                     <Link href={`/${val?.properties?.slug?.rich_text[0]
+                        ?.plain_text}`} className="btn-link mb-1">
                     Read More
                     <i className="far fa-long-arrow-right" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             );
