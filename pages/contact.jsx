@@ -1,4 +1,6 @@
 import BookingForm from "@/src/components/bookingform/BookingForm";
+import DatePicker from "@/src/components/DateTimePicker/DatePicker";
+import TimePicker from "@/src/components/DateTimePicker/TimePicker";
 import DropdownComponent from "@/src/components/DropdownComponent";
 import GallerySection from "@/src/components/GallerySection";
 import ModalComponent from "@/src/components/modal/ModalComponent";
@@ -230,14 +232,7 @@ const Contact = () => {
                     <label>
                       <i className="far fa-date-alt" />
                     </label>
-                    <input
-                      name="Date"
-                      id="time"
-                      required
-                      type="date"
-                      className="form_control"
-                      placeholder="Date"
-                    />
+                   <DatePicker/>
                   </div>
                 </div>
 
@@ -246,14 +241,7 @@ const Contact = () => {
                     <label>
                       <i className="far fa-date-alt" />
                     </label>
-                    <input
-                      name="Time"
-                      id="time"
-                      required
-                      type="time"
-                      className="form_control"
-                      placeholder="Time"
-                    />
+                   <TimePicker/>
                   </div>
                 </div>
 
