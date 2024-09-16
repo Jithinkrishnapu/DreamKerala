@@ -108,8 +108,10 @@ select option {
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
-  text-align: center;
+  text-align: start;
+  padding-left: 23px;
   color: #222;
+  min-height: 2rem;
 }
 
 .date-picker:focus>.placeholder,
@@ -171,7 +173,7 @@ select option {
 
 .time-picker:focus>input[type="time"],
 .time-picker:focus-within>input[type="time"] {
-  color: #00f;
+  color: #F9F9F7
 }
 
 .time-picker:focus,
@@ -187,7 +189,8 @@ select option {
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
-  text-align: center;
+  text-align: start;
+  padding-left: 23px;
   color: #222;
 }
 
