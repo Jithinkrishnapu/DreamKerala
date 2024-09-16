@@ -40,7 +40,7 @@ const About = () => {
                   <div className="single-skill-circle text-center">
                     <div className="inner-circle">
                       <div className="line" />
-                      <span className="number">60%</span>
+                      <span className="number">99%</span>
                     </div>
                     <h5>Satisfied Clients</h5>
                   </div>
@@ -170,12 +170,12 @@ const About = () => {
                 <h2 className="mb-35">
                   Ready to Travel With Real Adventure and Enjoy Natural
                 </h2>
-                <Link legacyBehavior href="/about">
+                <div onClick={()=>setShowModal(true)}>
                   <a className="main-btn primary-btn">
                     Book Now
                     <i className="far fa-paper-plane" />
                   </a>
-                </Link>
+                </div>
               </div>
             </div>
           </div>
