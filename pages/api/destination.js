@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { Client } from '@notionhq/client';
 
 const notion = new Client({ auth: process.env.NOTION_KEY });
-const NOTION_DB = process.env.NOTION_DB;
+const NOTION_DB = process.env.NOTION_DESTINATION_DB;
 
 // Main handler function
 export default async function handler(req, res) {
