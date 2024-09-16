@@ -7,7 +7,7 @@ import TariffComponent from "@/src/components/tariffComponent/TariffComponent";
 import Layout from "@/src/layout/Layout";
 import { home1Slider } from "@/src/sliderProps";
 import Link from "next/link";
-import { useEffect, useState, useTransition } from "react";
+import { useEffect, useLayoutEffect, useState, useTransition } from "react";
 
 import Slider from "react-slick";
 import ModalComponent from "@/src/components/modal/ModalComponent";
@@ -27,7 +27,7 @@ const Index = () => {
   const [error, setError] = useState(null);
   const [isPending, startTransition] = useTransition();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     startTransition(async () => {
       try {
         const response = await fetch("/api/carousel");
