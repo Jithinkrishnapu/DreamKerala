@@ -110,7 +110,9 @@ select option {
   width: 100%;
   text-align: start;
   padding-left: 23px;
-  color: #222;
+  color: #000000 ;
+  opacity:1 !important;
+  font-weight: 500;
   min-height: 2rem;
 }
 
@@ -118,6 +120,7 @@ select option {
 .date-picker:focus-within>.placeholder,
 .date-picker>input[type="date"]:valid+.placeholder {
   display: none;
+  
 }
 
 .date-picker>input[type="date"] {
