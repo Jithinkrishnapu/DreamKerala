@@ -1,6 +1,8 @@
 import GallerySection from "@/src/components/GallerySection";
+import ModalComponent from "@/src/components/modal/ModalComponent";
 import PageBanner from "@/src/components/PageBanner";
 import PopularActivities from "@/src/components/popularActivities/PopularActivities";
+import Popupform from "@/src/components/popupform/Popupform";
 import VehicleTable from "@/src/components/VehicleTable";
 import Layout from "@/src/layout/Layout";
 import { sliderActive3Item, sliderActive3ItemDot } from "@/src/sliderProps";
@@ -12,6 +14,7 @@ import { Row } from "react-bootstrap";
 import Slider from "react-slick";
 
 const DestinationDetails = () => {
+  const [showModal, setShowModal] = useState(false);
   const [details, setDetails] = useState([]);
   const [error, setError] = useState(null);
   const [isPending, startTransition] = useTransition();
@@ -37,7 +40,7 @@ const DestinationDetails = () => {
   }, [startTransition]);
 
   return (
-    <Layout extraClass={"pt-160"}>
+    <Layout header={1} setShowModal={(val) => setShowModal(val)} extraClass={"pt-160"}>
       {/* <PageBanner pageTitle={"Destination Details"} /> */}
       {/*====== Start Destination Details Section ======*/}
       <section className="destination-details-section pt-100 pb-70">
@@ -107,7 +110,7 @@ const DestinationDetails = () => {
               </ul> */}
               <div className="col-lg-12 my-4">
                 <div className="form_group text-start">
-                  <button type="submit" className="main-btn primary-btn">
+                  <button onClick={()=>setShowModal(true)} type="submit" className="main-btn primary-btn">
                     Book Now
                     <i className="fas fa-paper-plane" />
                   </button>
@@ -132,6 +135,9 @@ const DestinationDetails = () => {
           </div>
         </div>
       </section>
+      <ModalComponent showModal={showModal} setShowModal={setShowModal}>
+        <Popupform />
+      </ModalComponent>
     </Layout>
   );
 };
