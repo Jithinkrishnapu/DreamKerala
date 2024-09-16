@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table } from 'react-bootstrap';
+import { Card, ListGroup, Table } from 'react-bootstrap';
 
 function VehicleTable({ data }) {
   return (
@@ -23,6 +23,18 @@ function VehicleTable({ data }) {
         ))}
       </tbody>
     </Table>
+
+    <Card className="bg-light mt-4 text-dark">
+      <Card.Header>Important Notes</Card.Header>
+      <Card.Body>
+        <ListGroup variant="flush">
+          <ListGroup.Item>Above rates are inclusive of toll, parking, and driver bata.</ListGroup.Item>
+          <ListGroup.Item>Above rates are subjected to change during festive/season days.</ListGroup.Item>
+          <ListGroup.Item>Above rates are subjected to change based on availability, changes in fuel rates, etc.</ListGroup.Item>
+        </ListGroup>
+      </Card.Body>
+    </Card>
+
     </div>
   );
 }
