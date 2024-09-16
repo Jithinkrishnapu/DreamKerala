@@ -144,7 +144,7 @@ function BookingForm() {
                     </label>
                     <input
                       name="Date"
-                      id="time"
+                      id="date"
                       required
                       type="date"
                       className="form_control"
