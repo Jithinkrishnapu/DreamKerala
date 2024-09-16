@@ -15,6 +15,8 @@ import BoatBanner from "../src/components/boatBanner/BoatBanner";
 import PopularServices from "@/src/components/popularServices/PopularServices";
 import Footer from "@/src/components/footer/Footer";
 
+import WhatsappIcon from "@/public/assets/images/icon/whatsapp.svg";
+
 const Index = () => {
   const [showModal, setShowModal] = useState(false);
 
@@ -80,7 +82,10 @@ const Index = () => {
                               data-animation="fadeInRight"
                               data-delay=".6s"
                             >
-                              <Link legacyBehavior href={`/about/${'destinationDetailId'}`}>
+                              <Link
+                                legacyBehavior
+                                href={`/about/${"destinationDetailId"}`}
+                              >
                                 <a className="main-btn primary-btn">
                                   Explore More
                                   <i className="fas fa-paper-plane" />
@@ -172,6 +177,25 @@ const Index = () => {
       {/* <GallerySection /> */}
       {/*====== End Gallery Section ======*/}
 
+      <div className="">
+        <div className="fixed-bottom p-2 text-end">
+          <a href="tel:+91 95671 32777">
+            <img
+              style={{ height:'70px' }}
+              className=""
+              src="assets/images/icon/phone-circle.png"
+              alt=""
+            />
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=919526008428">
+            <img
+              style={{ height:'70px' }}
+              src="assets/images/icon/whatsapp.svg"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
       <Footer />
     </Layout>
   );

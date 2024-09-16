@@ -82,10 +82,13 @@ function Footer() {
                     <div className="info">
                       <span className="title">Hotline</span>
                       <p>
-                        <a href="tel:+91 90484 59086">+91 90484 59086</a>
+                        <a href="tel:+91 90484 59086">+91 9048459086</a>
                       </p>
                       <p>
-                        <a href="tel:+91 95671 32777">+91 95671 32777</a>
+                        <a href="tel:+91 95671 32777">+91 9567132777</a>
+                      </p>
+                      <p>
+                      <a href="tel:+91 95671 23104">+91 9567123104</a>
                       </p>
                     </div>
                   </div>
