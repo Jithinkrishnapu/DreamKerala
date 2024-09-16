@@ -106,9 +106,18 @@ function TariffComponent() {
                               selectedModel={tab?.eventKey || "tab1"}
                             />
 
-                            <p style={{background:'#2E709E',borderRadius:5, opacity: 0.9}} className="p-2 text-center">
-                              <span>*NB : </span>Above rates are inclusive of toll, parking &
-                              driver bata.
+                            <p
+                              style={{
+                                background: "#2E709E",
+                                borderRadius: 5,
+                                opacity: 0.9,
+                              }}
+                              className="p-2 text-center"
+                            >
+                              <span>*NB : </span>Above rates include toll,
+                              parking, and driver bata, and are subject to
+                              change due to availability, fuel rates, and
+                              festive or seasonal periods.
                             </p>
                           </div>
                         </div>
