@@ -68,10 +68,7 @@ const Index = () => {
                                 ?.plain_text
                             }
                           </h1>
-                          <div
-                            onClick={handleShowModal}
-                            className="text-button d-flex align-items-center"
-                          >
+                          <div className="text-button d-flex align-items-center">
                             <p data-animation="fadeInLeft" data-delay=".5s">
                               {
                                 val?.properties?.Description?.rich_text[0]
@@ -83,7 +80,7 @@ const Index = () => {
                               data-animation="fadeInRight"
                               data-delay=".6s"
                             >
-                              <Link legacyBehavior href="/about">
+                              <Link legacyBehavior href={`/about/${'destinationDetailId'}`}>
                                 <a className="main-btn primary-btn">
                                   Explore More
                                   <i className="fas fa-paper-plane" />

@@ -8,6 +8,7 @@ import { Client } from "@notionhq/client";
 import Link from "next/link";
 import { useEffect, useTransition } from "react";
 import Slider from "react-slick";
+
 const DestinationDetails = () => {
 
   const [isPending, startTransition] = useTransition();
