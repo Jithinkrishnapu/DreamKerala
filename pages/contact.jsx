@@ -227,7 +227,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mt-md-0 mt-3">
+                <div className="col-md-6 mt-md-0 mt-3 ">
                   <div className="form_group">
                     <label>
                       <i className="far fa-date-alt" />
@@ -236,7 +236,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6">
+                <div className="col-md-6 ">
                   <div className="form_group">
                     <label>
                       <i className="far fa-date-alt" />
@@ -245,7 +245,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="col-md-12">
+                <div className="col-md-12 mt-20">
                   <textarea
                     id="comments"
                     name="comments"
