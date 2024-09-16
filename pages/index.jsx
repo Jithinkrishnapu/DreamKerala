@@ -187,7 +187,7 @@ const Index = () => {
               alt=""
             />
           </a>
-          <a href="https://api.whatsapp.com/send?phone=919526008428">
+          <a href="https://api.whatsapp.com/send?phone=919048459086">
             <img
               style={{ height:'70px' }}
               src="assets/images/icon/whatsapp.svg"

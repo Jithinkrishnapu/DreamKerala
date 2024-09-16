@@ -1,3 +1,5 @@
+import ModalComponent from "@/src/components/modal/ModalComponent";
+import Popupform from "@/src/components/popupform/Popupform";
 import Layout from "@/src/layout/Layout";
 import { sliderActive3Item} from "@/src/sliderProps";
 import { destinationPlaces } from "@/src/utils/constants";
@@ -5,7 +7,7 @@ import Link from "next/link";
 import { useEffect, useState, useTransition } from "react";
 import Slider from "react-slick";
 const Destination = () => {
-  
+  const [showModal, setShowModal] = useState(false);
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
   const [isPending, startTransition] = useTransition();
@@ -26,7 +28,7 @@ const Destination = () => {
   }, [startTransition]);
   
   return (
-    <Layout extraClass={"pt-160"}>
+    <Layout header={1} setShowModal={(val) => setShowModal(val)} extraClass={"pt-160"}>
       {/*====== Start Destination Section ======*/}
       <section className="destination-section pt-120 pb-90 px-30">
       <div className="section-title text-center mb-50">
@@ -70,6 +72,9 @@ const Destination = () => {
          </div>
         {/* </Slider> */}
       </section>
+      <ModalComponent showModal={showModal} setShowModal={setShowModal}>
+        <Popupform />
+      </ModalComponent>
     </Layout>
   );
 };

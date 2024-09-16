@@ -1,10 +1,15 @@
+import ModalComponent from "@/src/components/modal/ModalComponent";
 import PageBanner from "@/src/components/PageBanner";
+import Popupform from "@/src/components/popupform/Popupform";
 import Layout from "@/src/layout/Layout";
 import Link from "next/link";
+import { useState } from "react";
 
 const About = () => {
+  const [showModal, setShowModal] = useState(false);
+
   return (
-    <Layout extraClass={"pt-160"}>
+    <Layout header={1} setShowModal={(val) => setShowModal(val)} extraClass={"pt-160"}>
       {/* <PageBanner pageTitle={"About Us"} /> */}
       
       {/*====== Start We Section ======*/}
@@ -179,7 +184,9 @@ const About = () => {
       {/*====== End CTA Section ======*/}
       
       {/*====== Start Partners Section ======*/}
-      
+      <ModalComponent showModal={showModal} setShowModal={setShowModal}>
+        <Popupform />
+      </ModalComponent>
     </Layout>
   );
 };
