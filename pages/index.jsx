@@ -187,17 +187,17 @@ const Index = () => {
       {/* <GallerySection /> */}
       {/*====== End Gallery Section ======*/}
 
-      <div className="">
-        <div className="fixed-bottom p-2 text-end d-flex justify-content-end flex-sm-row flex-column">
-          <a href="tel:+91 95671 32777">
+      <div  className="">
+        <div  className="fixed-bottom p-2 text-end d-flex gap-2 justify-content-end align-items-end text-end flex-sm-row flex-column">
+          <a style={{width:'fit-content'}} href="tel:+91 95671 32777">
             <img
               style={{ height: "70px" }}
               className=""
-              src="assets/images/icon/phone-circle.png"
+              src="assets/images/icon/phone-call.svg"
               alt=""
             />
           </a>
-          <a href="https://api.whatsapp.com/send?phone=919048459086">
+          <a style={{width:'fit-content'}} href="https://api.whatsapp.com/send?phone=919048459086">
             <img
               style={{ height: "70px" }}
               src="assets/images/icon/whatsapp.svg"
