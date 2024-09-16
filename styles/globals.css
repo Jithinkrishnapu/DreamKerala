@@ -143,8 +143,10 @@ select option {
 
 .time-picker {
   display: inline-block;
-  background: rgba(40, 40, 250, .1);
+  background: #F9F9F7;
+  color: black;
   min-width: 10rem;
+  min-height: 2rem;
   padding: .5rem;
   border-radius: .35rem;
   position: relative;
@@ -152,9 +154,7 @@ select option {
   width: 100%;
   border:1px solid rgba(29, 35, 31, 0.1);
   padding: 19px 25px;
-  background: #F9F9F7;
-  color: black;
-  text-align: center;
+  font-family: 'Prompt';
 }
 
 .time-picker,
@@ -164,16 +164,16 @@ select option {
 }
 
 .time-picker:hover {
-  background: rgba(40, 40, 250, .28);
+  background: #F9F9F7;
 }
 
 .time-picker:active {
-  background: rgba(40, 40, 250, .2);
+  background: #F9F9F7;
 }
 
 .time-picker:focus>input[type="time"],
 .time-picker:focus-within>input[type="time"] {
-  color: #F9F9F7
+  color: #000
 }
 
 .time-picker:focus,
@@ -192,6 +192,7 @@ select option {
   text-align: start;
   padding-left: 23px;
   color: #222;
+  min-height: 2rem;
 }
 
 .time-picker:focus>.placeholder,
@@ -210,10 +211,8 @@ select option {
   width: 100%;
   height: 100%;
   text-align: center;
-  padding-left: 22px;
   top: 50%;
-  left:   
- 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
