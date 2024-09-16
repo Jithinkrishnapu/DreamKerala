@@ -178,7 +178,7 @@ const Index = () => {
       {/*====== End Gallery Section ======*/}
 
       <div className="">
-        <div className="fixed-bottom p-2 text-end">
+        <div className="fixed-bottom p-2 text-end d-flex justify-content-end flex-sm-row flex-column">
           <a href="tel:+91 95671 32777">
             <img
               style={{ height:'70px' }}
