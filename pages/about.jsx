@@ -40,7 +40,7 @@ const About = () => {
                   <div className="single-skill-circle text-center">
                     <div className="inner-circle">
                       <div className="line" />
-                      <span className="number">60%</span>
+                      <span className="number">99%</span>
                     </div>
                     <h5>Satisfied Clients</h5>
                   </div>
