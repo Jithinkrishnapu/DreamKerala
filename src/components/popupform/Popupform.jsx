@@ -64,7 +64,7 @@ function Popupform() {
                     />
                   </div>
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-6 mt-md-0 mt-3">
                   <div className="form_group">
                     <input
                       id="pickup"
@@ -127,11 +127,12 @@ function Popupform() {
                       required={true}
                       options={languageOptions}
                       defaultOption="Language"
+                      className="form_control"
                     />
                   </div>
                 </div>
 
-                <div className="col-md-6">
+                <div className="col-md-6 mt-md-0 mt-3">
                   <div className="form_group">
                     <label>
                       <i className="far fa-date-alt" />

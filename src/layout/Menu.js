@@ -26,7 +26,7 @@ const DeskTopMenu = () => {
             <a href="/">Home</a>
           </li>
           <li className="menu-item has-children">
-            <a href="#">
+            <a href="gallery">
               Our Gallery
               <span className="dd-trigger">
                 {/* <i className="far fa-angle-down" /> */}
@@ -34,7 +34,7 @@ const DeskTopMenu = () => {
             </a>
           </li>
           <li className="menu-item has-children">
-            <a href="destination-details">
+            <a href="destination">
               Destination
               <span className="dd-trigger">
                 {/* <i className="far fa-angle-down" /> */}
@@ -53,7 +53,7 @@ const DeskTopMenu = () => {
             <a href="about">About us</a>
           </li>
           <li className="menu-item has-children">
-            <a href="about">Contact us</a>
+            <a href="contact">Contact us</a>
           </li>
         </ul>
       </nav>
@@ -71,27 +71,27 @@ const MobileMenu = () => {
     <nav className="main-menu d-block d-xl-none">
       <ul>
         <li className="menu-item has-children">
-          <a href="#">
+          <a href="/">
             Home
           </a>
         </li>
         <li className="menu-item has-children">
-          <a href="#">
+          <a href="gallery">
             Our Gallery
           </a>
         </li>
         <li className="menu-item has-children">
-          <a href="#">
+          <a href="destination">
             Destination
           </a>
         </li>
         <li className="menu-item has-children">
-          <a href="#">
+          <a href="about">
             About us
           </a>
         </li>
         <li className="menu-item has-children">
-          <a href="#">
+          <a href="contact">
             Contact us
           </a>
         </li>

@@ -23,7 +23,7 @@ async function handleGet(req, res) {
             filter: {
                 property: "Status",
                 select: {
-                    equals: "Carousel"
+                    equals: "Gallery"
                 }
             }
         });

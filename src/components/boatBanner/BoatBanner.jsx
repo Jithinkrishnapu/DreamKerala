@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-function BoatBanner() {
+function BoatBanner({onClick}) {
   return (
     <section
         className="cta-bg overlay bg_cover pt-140 pb-150"
@@ -14,12 +14,12 @@ function BoatBanner() {
                 <h2 className="mb-35">
                 All Types Of House Boats Available In Reasonable Prices
                 </h2>
-                <Link legacyBehavior href="/about">
+                <div onClick={onClick}>
                   <a className="main-btn primary-btn">
                     Book Now
                     <i className="far fa-paper-plane" />
                   </a>
-                </Link>
+                </div>
               </div>
             </div>
           </div>

@@ -11,6 +11,7 @@ function ModalComponent({ children, showModal, setShowModal }) {
     <>
       <Modal
         size="lg"
+        scrollable
         aria-labelledby="contained-modal-title-vcenter"
         centered
         show={showModal}
