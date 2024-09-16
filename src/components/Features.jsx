@@ -4,32 +4,32 @@ function Features() {
 
     const featuresData = [
         {
-          icon: 'flaticon-hand',
+          icon: 'assets/images/icon/hand-helping.svg',
           title: 'Best Service',
           description: 'We take pride in delivering outstanding service and ensuring a seamless experience.',
         },
         {
-          icon: 'flaticon-wifi-router',
+          icon: 'assets/images/icon/indian-rupee.svg',
           title: 'Quality guarantee',
           description: 'We promise top-quality service and maintain high standards for your satisfaction.',
         },
         {
-          icon: 'flaticon-solar-energy',
+          icon: 'assets/images/icon/gem.svg',
           title: 'Best price',
           description: 'Get the best value with our competitive pricing and exceptional service.',
         },
         {
-          icon: 'flaticon-cycling',
+          icon: 'assets/images/icon/laugh.svg',
           title: 'Satisfaction guarantee',
           description: 'Your satisfaction is our priority; we strive to exceed your expectations.',
         },
         {
-          icon: 'flaticon-fishing',
+          icon: 'assets/images/icon/book-check.svg',
           title: 'Flexible Booking',
           description: 'Enjoy the convenience of flexible booking options that fit your travel plans and needs',
         },
         {
-          icon: 'flaticon-gym',
+          icon: 'assets/images/icon/indian-rupee.svg',
           title: '24/7 Support',
           description: 'Our dedicated support team is available around the clock to assist with any inquiries or issues',
         },
@@ -44,7 +44,8 @@ function Features() {
               {/*=== Fancy Icon Box ===*/}
               <div className="fancy-icon-box mb-30 wow fadeInUp">
                 <div className="icon">
-                  <i className={feature.icon} />
+                  {/* <i className={feature.icon} /> */}
+                  <img src={feature.icon} alt="" />
                 </div>
                 <div className="text">
                   <h4 className="title">{feature.title}</h4>

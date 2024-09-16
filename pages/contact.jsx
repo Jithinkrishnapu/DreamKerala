@@ -59,10 +59,13 @@ const Contact = () => {
                 <div className="info">
                   <span className="title">Hotline</span>
                   <p>
-                    <a href="tel:+000(123)45688">+91 95671 32777</a>
+                    <a href="tel:+91 95671 32777">+91 95671 32777</a>
                   </p>
                   <p>
-                    <a href="tel:+8596320">+91 90484 59086</a>
+                    <a href="tel:+91 90484 59086">+91 90484 59086</a>
+                  </p>
+                  <p>
+                    <a href="tel:+91 95671 23104">+91 95671 23104</a>
                   </p>
                 </div>
               </div>
