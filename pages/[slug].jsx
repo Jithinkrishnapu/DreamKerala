@@ -9,7 +9,7 @@ import { sliderActive3Item, sliderActive3ItemDot } from "@/src/sliderProps";
 import { Client } from "@notionhq/client";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect, useState, useTransition } from "react";
+import { useEffect, useLayoutEffect, useState, useTransition } from "react";
 import { Row } from "react-bootstrap";
 import Slider from "react-slick";
 
@@ -24,7 +24,7 @@ const DestinationDetails = () => {
 
   console.log(slug);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     startTransition(async () => {
       try {
         const response = await fetch(`/api/detailById?slug=${slug}`);
@@ -121,7 +121,7 @@ const DestinationDetails = () => {
             <PopularActivities images={details?.properties?.Activities_Images?.files} titles={details?.properties?.Activities?.multi_select} />
 
             <div>
-              { details?.properties?.table?.rich_text?.length && <VehicleTable data={JSON.parse(details?.properties?.table?.rich_text[0]?.plain_text)} /> }
+              { details?.properties?.table?.rich_text?.length ? <VehicleTable data={JSON.parse(details?.properties?.table?.rich_text[0]?.plain_text)} /> : <></>}
             </div>
 
             <Row className="" >
