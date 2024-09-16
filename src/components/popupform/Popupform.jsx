@@ -1,6 +1,8 @@
 import React from "react";
 import { useFormik } from "formik";
 import DropdownComponent from "../DropdownComponent";
+import TimePicker from "../DateTimePicker/TimePicker";
+import DatePicker from "../DateTimePicker/DatePicker";
 
 const bookingOptions = [
   { value: "24hrs Taxi Service", label: "24hrs Taxi Service" },
@@ -137,14 +139,7 @@ function Popupform() {
                     <label>
                       <i className="far fa-date-alt" />
                     </label>
-                    <input
-                      name="Date"
-                      id="time"
-                      required
-                      type="date"
-                      className="form_control"
-                      placeholder="Date"
-                    />
+                    <DatePicker/>
                   </div>
                 </div>
 
@@ -153,14 +148,7 @@ function Popupform() {
                     <label>
                       <i className="far fa-date-alt" />
                     </label>
-                    <input
-                      name="Time"
-                      id="time"
-                      required
-                      type="time"
-                      className="form_control"
-                      placeholder="Time"
-                    />
+                    <TimePicker/>
                   </div>
                 </div>
 
