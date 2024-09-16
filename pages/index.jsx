@@ -166,7 +166,7 @@ const Index = () => {
 
       {/*====== Start CTA Section ======*/}
       <div className="mb-40">
-        <BoatBanner />
+        <BoatBanner onClick={()=>setShowModal(true)} />
       </div>
       {/*====== Start Fact Section ======*/}
       <div className="container">
