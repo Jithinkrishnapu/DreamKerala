@@ -29,6 +29,7 @@ select {
   border-radius: 5px; /* Rounded corners */
   width: 100%; /* Full width */
   cursor: pointer; /* Cursor style */
+  color: #000;
 }
 
 /* Add a custom arrow (triangle) to the select */
