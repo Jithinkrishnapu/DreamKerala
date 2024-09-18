@@ -83,6 +83,7 @@ const DestinationDetails = () => {
               <div className="row">
                 <div className="col-lg-6">
                   <img
+                    loading="lazy"
                     src={details?.properties?.images?.files[0]?.file?.url}
                     className="rounded mb-40"
                     alt="Features Image"
@@ -90,6 +91,7 @@ const DestinationDetails = () => {
                 </div>
                 <div className="col-lg-6">
                   <img
+                    loading="lazy"
                     src={details?.properties?.images?.files[1]?.file?.url}
                     className="rounded mb-40"
                     alt="Features Image"
@@ -127,7 +129,7 @@ const DestinationDetails = () => {
             <Row className="" >
             {details?.properties?.Gallery?.files?.map((item, index) => (
             <div className="col-lg-4 gallery-img mb-3">
-               <img width={'100%'} height={'100%'} src={item?.file?.url} alt={"image_"+index} />
+               <img loading="lazy" width={'100%'} height={'100%'} src={item?.file?.url} alt={"image_"+index} />
             </div>
             ))}
           </Row>

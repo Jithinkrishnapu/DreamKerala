@@ -96,12 +96,12 @@ function Popupform() {
                       <i className="far fa-user-alt" />
                     </label>
                     <input
-                      name="guest"
-                      id="guest"
+                      name="name"
+                      id="name"
                       required
                       type="text"
                       className="form_control"
-                      placeholder="Guest"
+                      placeholder="Name"
                     />
                   </div>
                 </div>

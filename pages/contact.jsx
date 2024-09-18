@@ -78,7 +78,7 @@ const Contact = () => {
                 </div>
                 <div className="info">
                   <span className="title">Office Location</span>
-                  <p>Near Kochi Airport, Thrissur Guruvayoor.</p>
+                  <p>5C34+W78, Kanjoor-Airport Rd, Nedumbassery, Kerala 683111</p>
                 </div>
               </div>
             </div>
@@ -129,7 +129,7 @@ const Contact = () => {
       <section className="contact-page-map pb-100 wow fadeInUp">
         {/*=== Map Box ===*/}
         <div className="map-box">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31374.170757239248!2d76.04085675!3d10.59704235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba79461cd1b5745%3A0x96c6ecd0de2d2b4!2sGuruvayur%2C%20Kerala!5e0!3m2!1sen!2sin!4v1725264365636!5m2!1sen!2sin" />
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.3188920686566!2d76.40313007509167!3d10.154712989958748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0807375d176ce7%3A0xe5e7af8c8eca5d39!2sDream%20Kerala%20Holiday&#39;s%20kochi!5e0!3m2!1sen!2sin!4v1726680643804!5m2!1sen!2sin" width="600" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"/>
         </div>
       </section>
       {/*====== End Contact Map Section ======*/}
@@ -190,12 +190,12 @@ const Contact = () => {
                       <i className="far fa-user-alt" />
                     </label>
                     <input
-                      name="guest"
-                      id="guest"
+                      name="name"
+                      id="name"
                       required
                       type="text"
                       className="form_control"
-                      placeholder="Guest"
+                      placeholder="Name"
                     />
                   </div>
                 </div>

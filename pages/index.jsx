@@ -14,8 +14,10 @@ import ModalComponent from "@/src/components/modal/ModalComponent";
 import BoatBanner from "../src/components/boatBanner/BoatBanner";
 import PopularServices from "@/src/components/popularServices/PopularServices";
 import Footer from "@/src/components/footer/Footer";
+import sabarimala from '../public/assets/images/hero/sabarimala.jpg'
 
 import WhatsappIcon from "@/public/assets/images/icon/whatsapp.svg";
+import HeroSection from "./DefaultHeroSection";
 
 const Index = () => {
   const [showModal, setShowModal] = useState(false);
@@ -42,11 +44,6 @@ const Index = () => {
     });
   }, [startTransition]);
 
-  if (isPending) {
-    // console.log(isPending)
-    <div>Loading......</div>;
-  }
-
   return (
     <Layout header={1} setShowModal={(val) => setShowModal(val)} noFooter>
       {/*====== Start Hero Section ======*/}
@@ -56,7 +53,7 @@ const Index = () => {
           {/*=== Hero Slider ===*/}
           <Slider {...home1Slider} className="hero-slider-one">
             {/*=== Single Slider ===*/}
-            {data?.map((val, index) => {
+            {data?.length !== 0 ? data?.map((val, index) => {
               return (
                 <div className="single-slider">
                   <div className="container-fluid">
@@ -122,7 +119,12 @@ const Index = () => {
                   </div>
                 </div>
               );
-            })}
+            }):
+            
+            <HeroSection setShowModal={setShowModal} />
+            
+            
+            }
             {/*=== Single Slider ===*/}
           </Slider>
         </div>
