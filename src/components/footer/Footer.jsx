@@ -54,7 +54,7 @@ function Footer() {
                   </div>
                   <div className="info">
                     <span className="title">Location</span>
-                    <p>Near Kochi Airport, Thrissur Guruvayoor.</p>
+                    <p>5C34+W78, Kanjoor-Airport Rd, Nedumbassery, Kerala 683111</p>
                   </div>
                 </div>
 
