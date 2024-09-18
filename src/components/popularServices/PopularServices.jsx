@@ -62,6 +62,7 @@ function PopularServices() {
                     }
                   </p>
                   <img
+                    loading="lazy"
                     height={266}
                     width={351}
                     src={val?.properties?.images?.files[0]?.file?.url}

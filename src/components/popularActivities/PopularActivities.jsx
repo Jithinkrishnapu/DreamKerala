@@ -21,7 +21,7 @@ function PopularActivities({images,titles}) {
                 className={`single-features-item-two mb-40 wow fadeInUp`}
               >
                 <div className="img-holder">
-                  <img width={'100%'} height={'100%'} src={feature?.file?.url} alt={titles[index]?.name} />
+                  <img loading="lazy" width={'100%'} height={'100%'} src={feature?.file?.url} alt={titles[index]?.name} />
                   <div className="item-overlay">
                     <div className="content">
                       <h3 className="title">{titles[index]?.name}</h3>
