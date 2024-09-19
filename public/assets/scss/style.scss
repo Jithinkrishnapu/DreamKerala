@@ -1,11 +1,6 @@
 /*-----------------------------------------------------------------------------------
 
-    Template Name: Gowilds - Tours and Travel HTML Template
-    Template URI: site.com
-    Description: Gowilds is a modern Adventure Tours and Travel HTML Template designed for all activities, sports, hiking, or outdoor adventures.
-    Author: WebTend 
-    Author URI: https://webtend.net/
-    Version: 1.0
+
 
 --------------------------
     CSS INDEX
@@ -34,67 +29,67 @@
 -----------------------------------------------------------------------------------*/
 
 // Global variables
-@import 'variables';
+@import "variables";
 
 // Global Mixins
-@import 'mixin';
+@import "mixin";
 
 // Global Extend
-@import 'extend';
+@import "extend";
 
 // common
-@import 'common';
+@import "common";
 
 // Header
-@import 'sections/header';
+@import "sections/header";
 
 // Hero
-@import 'sections/hero';
+@import "sections/hero";
 
 // About
-@import 'sections/about';
+@import "sections/about";
 
 // Elements
-@import 'sections/elements';
+@import "sections/elements";
 
 // Features
-@import 'sections/features';
+@import "sections/features";
 
 // Services
-@import 'sections/services';
+@import "sections/services";
 
 // Activity
-@import 'sections/activity';
+@import "sections/activity";
 
 // We
-@import 'sections/we';
+@import "sections/we";
 
 // Gallery
-@import 'sections/gallery';
+@import "sections/gallery";
 
 // Booking
-@import 'sections/booking';
+@import "sections/booking";
 
 // Places
-@import 'sections/places';
+@import "sections/places";
 
 // Testimonials
-@import 'sections/testimonials';
+@import "sections/testimonials";
 
 // Shop
-@import 'sections/shop';
+@import "sections/shop";
 
 // Blog
-@import 'sections/blog';
+@import "sections/blog";
 
 // Contact
-@import 'sections/contact';
+@import "sections/contact";
 
 // Footer
-@import 'sections/footer';
+@import "sections/footer";
 
 // Sliders
-@import 'sections/sliders';
+@import "sections/sliders";
 
 // Wrapper
-@import 'sections/wrapper';
+@import "sections/wrapper";
