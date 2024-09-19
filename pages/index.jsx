@@ -19,6 +19,9 @@ import sabarimala from '../public/assets/images/hero/sabarimala.jpg'
 import WhatsappIcon from "@/public/assets/images/icon/whatsapp.svg";
 import HeroSection from "./DefaultHeroSection";
 
+import WhatsappIcon from "@/public/assets/images/icon/whatsapp.svg";
+import HeroSection from "./DefaultHeroSection";
+
 const Index = () => {
   const [showModal, setShowModal] = useState(false);
 
