@@ -102,7 +102,7 @@ function Footer() {
               <div className="footer-text">
                 <p>
                   Copyright@ 2024{" "}
-                  <span style={{ color: "black" }}>Dream Holidays</span>, All
+                  <span style={{ color: "black" }}>Dream Kerala Holidays</span>, All
                   Right Reserved
                 </p>
               </div>

@@ -81,7 +81,7 @@ export default SliderComponent
 const FeatureItem = ({ title, imgSrc, description,onClick }) => (
     <div className="single-features-item mb-40">
       <div className="img-holder">
-        <img height={480}  src={imgSrc} alt="Features Image" />
+        <img height={400} className='object-fit-cover' src={imgSrc} alt="Features Image" />
         <div className="content">
           <div className="text">
             <h4 className="title">{title}</h4>

@@ -41,7 +41,7 @@ function Popupform() {
     );
 
     if (response.ok) {
-      console.log("Form submitted successfully!");
+      alert("Form submitted successfully!");
       window.location.reload(); // Reload the page on success
     } else {
       console.error("Error submitting form");
