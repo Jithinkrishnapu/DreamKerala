@@ -7,9 +7,13 @@ import ModalComponent from "@/src/components/modal/ModalComponent";
 import PageBanner from "@/src/components/PageBanner";
 import Popupform from "@/src/components/popupform/Popupform";
 import Layout from "@/src/layout/Layout";
+import PreLoader from "@/src/layout/PreLoader";
+import { useRouter } from "next/router";
 import { useState } from "react";
 const Contact = () => {
   const [showModal, setShowModal] = useState(false);
+  const router = useRouter();
+  const [loader, setLoader] = useState(false);
   const bookingOptions = [
     { value: "24hrs Taxi Service", label: "24hrs Taxi Service" },
     { value: "Call Drivers", label: "Call Drivers" },
@@ -34,6 +38,7 @@ const Contact = () => {
   ];
   
     async function handleSubmit(e) {
+      setLoader(true)
       e.preventDefault(); // Prevent default form submission
       const data = new FormData(e.currentTarget);
   
@@ -46,11 +51,17 @@ const Contact = () => {
       );
   
       if (response.ok) {
-        console.log("Form submitted successfully!");
-        window.location.reload(); // Reload the page on success
+        setLoader(false)
+        router.push('/thankyou') // Reload the page on success
       } else {
+        setLoader(false)
         console.error("Error submitting form");
       }
+    }
+
+
+    if(loader){
+      return <PreLoader/>
     }
 
   return (
@@ -153,7 +164,7 @@ const Contact = () => {
                   <div className="form_group">
                     <DropdownComponent
                       id="booking"
-                      name="booking"
+                      name="Booking"
                       required={true}
                       options={bookingOptions}
                       defaultOption="Booking for"
@@ -164,7 +175,7 @@ const Contact = () => {
                   <div className="form_group">
                     <input
                       id="pickup"
-                      name="pickup"
+                      name="Pickup"
                       type="text"
                       required
                       className="form_control"
@@ -176,7 +187,7 @@ const Contact = () => {
                   <div className="form_group">
                     <input
                       id="dropoff"
-                      name="dropoff"
+                      name="Dropoff"
                       type="text"
                       required
                       className="form_control"
@@ -190,7 +201,7 @@ const Contact = () => {
                       <i className="far fa-user-alt" />
                     </label>
                     <input
-                      name="name"
+                      name="Name"
                       id="name"
                       required
                       type="text"
@@ -205,7 +216,7 @@ const Contact = () => {
                       <i className="far fa-call-alt" />
                     </label>
                     <input
-                      name="contact"
+                      name="Contact"
                       id="contact"
                       required
                       type="number"
@@ -219,7 +230,7 @@ const Contact = () => {
                   <div className="form_group">
                     <DropdownComponent
                       id="language"
-                      name="language"
+                      name="Language"
                       required={true}
                       options={languageOptions}
                       defaultOption="Language"
@@ -227,29 +238,37 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="col-md-6 mt-md-0 mt-3 ">
-                  <div className="form_group">
-                    <label>
-                      <i className="far fa-date-alt" />
-                    </label>
-                   <DatePicker/>
+                <div className="col-md-6 mt-md-0 mt-3">
+                    <div className="form_group">
+                      <label>
+                        <i className="far fa-date-alt" />
+                      </label>
+                      <DatePicker name="StartDate" placeholder={"Start Date"} type={"date"} required={true} />
+                    </div>
                   </div>
-                </div>
 
-                <div className="col-md-6 ">
-                  <div className="form_group">
-                    <label>
-                      <i className="far fa-date-alt" />
-                    </label>
-                   <TimePicker/>
+                  <div className="col-md-6">
+                    <div className="form_group">
+                      <label>
+                        <i className="far fa-date-alt" />
+                      </label>
+                      <DatePicker name="EndDate" placeholder={"End Date"} type={"date"} required={true} />
+                    </div>
                   </div>
-                </div>
 
-                <div className="col-md-12 mt-20">
+                  <div className="col-md-6">
+                    <div className="form_group">
+                      <label>
+                        <i className="far fa-date-alt" />
+                      </label>
+                      <DatePicker name="Time" placeholder={"Time"} type={"time"} required={false} />
+                    </div>
+                  </div>
+
+                <div className="col-md-12 mt-10">
                   <textarea
-                    id="comments"
-                    name="comments"
-                    required
+                    id="Comments"
+                    name="Comments"
                     placeholder="Comments"
                     className="form_control"
                     cols={8}

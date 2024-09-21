@@ -65,30 +65,29 @@ const tariffs = {
   ],
 };
 
-function TariffTable({selectedModel}) {
+function TariffTable({data}) {
   // State to manage the selected car mode
   return (
-    <div style={{background:'white', borderRadius:'12px', border:'none'}} className="" >  
+    <div style={{background:'white', borderRadius:'12px', border:'none',margin:10}} className="" >  
       {/* Table to display tariffs */}
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <th>Number of Days</th>
-            <th>Km</th>
-            <th>AC Rate</th>
-          </tr>
-        </thead>
-        <tbody>
-          {/* Dynamically generate table rows based on selected model */}
-          {tariffs?.[selectedModel]?.map((tariff, index) => (
-            <tr key={index}>
-              <td>{tariff.number_of_days}</td>
-              <td>{tariff.km}</td>
-              <td>{tariff.ac_rate}</td>
-            </tr>
+      <Table striped bordered hover responsive>
+      <thead>
+        <tr>
+          {data.headers.map((header, index) => (
+            <th key={index}>{header}</th>
           ))}
-        </tbody>
-      </Table>
+        </tr>
+      </thead>
+      <tbody>
+        {data.rows.map((row, index) => (
+          <tr key={index}>
+            <td>{row.days}</td>
+            <td>{row.kilometer}</td>
+            <td>{row.rate}</td>
+          </tr>
+        ))}
+      </tbody>
+    </Table>
     </div>
   );
 }
