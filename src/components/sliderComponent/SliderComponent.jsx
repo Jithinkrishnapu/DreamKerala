@@ -26,11 +26,11 @@ export const features = [
       imgSrc: "assets/images/features/feat-3.jpg",
       description: "Customized tour packages for various destinations and interests."
     },
-    {
-      title: "Tour Operators",
-      imgSrc: "assets/images/features/tour-operator.jpeg",
-      description: "Professional tour operators to assist with planning and organizing tours."
-    },
+    // {
+    //   title: "Tour Operators",
+    //   imgSrc: "assets/images/features/tour-operator.jpeg",
+    //   description: "Professional tour operators to assist with planning and organizing tours."
+    // },
     {
       title: "Hotel Bookings",
       imgSrc: "assets/images/features/hotel-booking.jpg", 
