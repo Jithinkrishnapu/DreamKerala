@@ -40,6 +40,11 @@ function PopularServices() {
             <div className="section-title text-center mb-50">
               <span className="sub-title">Popular Services</span>
               <h2>Amazing Adventure Camping Services for Enjoyed</h2>
+              <div className="d-flex justify-content-center" >
+       <Link href={'/destination'} className="view-more-btn" >{"View More "}
+       <i className="far fa-chevron-right" />
+        </Link>
+      </div>
             </div>
           </div>
         </div>
@@ -77,7 +82,6 @@ function PopularServices() {
               </div>
             );
           })}
-         
         </Slider>
       </div>
     </section>
