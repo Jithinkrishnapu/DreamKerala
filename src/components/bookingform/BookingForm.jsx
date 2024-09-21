@@ -1,8 +1,15 @@
+import { useRouter } from "next/router";
 import DatePicker from "../DateTimePicker/DatePicker";
 import TimePicker from "../DateTimePicker/TimePicker";
 import DropdownComponent from "../DropdownComponent";
+import { useState } from "react";
+import PreLoader from "@/src/layout/PreLoader";
 
 function BookingForm() {
+
+  const router = useRouter();
+  const [loader, setLoader] = useState(false);
+
   const bookingOptions = [
     { value: "24hrs Taxi Service", label: "24hrs Taxi Service" },
     { value: "Call Drivers", label: "Call Drivers" },
@@ -27,6 +34,7 @@ function BookingForm() {
   ];
 
   async function handleSubmit(e) {
+    setLoader(true)
     e.preventDefault(); // Prevent default form submission
     const data = new FormData(e.currentTarget);
 
@@ -39,11 +47,17 @@ function BookingForm() {
     );
 
     if (response.ok) {
-      console.log("Form submitted successfully!");
-      window.location.reload(); // Reload the page on success
+      setLoader(false)
+      router.push('/thankyou')// Reload the page on success
     } else {
+      setLoader(false)
       console.error("Error submitting form");
     }
+  }
+
+
+  if(loader){
+    return <PreLoader/>
   }
 
   return (
@@ -63,7 +77,7 @@ function BookingForm() {
                     <div className="form_group">
                       <DropdownComponent
                         id="booking"
-                        name="booking"
+                        name="Booking"
                         required={true}
                         options={bookingOptions}
                         defaultOption="Booking for"
@@ -74,7 +88,7 @@ function BookingForm() {
                     <div className="form_group">
                       <input
                         id="pickup"
-                        name="pickup"
+                        name="Pickup"
                         type="text"
                         required
                         className="form_control"
@@ -86,7 +100,7 @@ function BookingForm() {
                     <div className="form_group">
                       <input
                         id="dropoff"
-                        name="dropoff"
+                        name="Dropoff"
                         type="text"
                         required
                         className="form_control"
@@ -100,7 +114,7 @@ function BookingForm() {
                         <i className="far fa-user-alt" />
                       </label>
                       <input
-                        name="name"
+                        name="Name"
                         id="name"
                         required
                         type="text"
@@ -115,7 +129,7 @@ function BookingForm() {
                         <i className="far fa-call-alt" />
                       </label>
                       <input
-                        name="contact"
+                        name="Contact"
                         id="contact"
                         required
                         type="number"
@@ -129,7 +143,7 @@ function BookingForm() {
                     <div className="form_group">
                       <DropdownComponent
                         id="language"
-                        name="language"
+                        name="Language"
                         required={true}
                         options={languageOptions}
                         defaultOption="Language"
@@ -142,7 +156,7 @@ function BookingForm() {
                       <label>
                         <i className="far fa-date-alt" />
                       </label>
-                      <DatePicker/>
+                      <DatePicker name="StartDate" placeholder={"Start Date"} type={"date"} required={true} />
                     </div>
                   </div>
 
@@ -151,15 +165,23 @@ function BookingForm() {
                       <label>
                         <i className="far fa-date-alt" />
                       </label>
-                     <TimePicker/>
+                      <DatePicker name="EndDate" placeholder={"End Date"} type={"date"} required={true} />
                     </div>
                   </div>
 
-                  <div className="col-md-12 mt-20">
+                  <div className="col-md-6">
+                    <div className="form_group">
+                      <label>
+                        <i className="far fa-date-alt" />
+                      </label>
+                      <DatePicker name="Time" placeholder={"Time"} type={"time"} required={false} />
+                    </div>
+                  </div>
+
+                  <div className="col-md-12 mt-10">
                     <textarea
                       id="comments"
-                      name="comments"
-                      required
+                      name="Comments"
                       placeholder="Comments"
                       className="form_control"
                       cols={8}

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useLayoutEffect, useState, useTransition } from "react";
 import { Nav, Tab } from "react-bootstrap";
 import TariffTable from "./TariffTable";
+import VehicleTable from "../VehicleTable";
 
 function TariffComponent() {
   const tabData = [
@@ -54,6 +55,27 @@ function TariffComponent() {
     },
   ];
 
+  const [data, setData] = useState([]);
+  const [error, setError] = useState(null);
+  const [isPending, startTransition] = useTransition();
+
+  useLayoutEffect(() => {
+    startTransition(async () => {
+      try {
+        const response = await fetch("/api/tariff");
+        if (!response.ok) {
+          throw new Error("Error fetching carousel data");
+        }
+        const result = await response.json();
+        setData(result);
+      } catch (err) {
+        setError(err.message);
+      }
+    });
+  }, [startTransition]);
+
+
+
   return (
     <section className="activity-section">
       <div className="activity-wrapper-bgc  text-white black-bg">
@@ -68,21 +90,22 @@ function TariffComponent() {
               </div>
             </div>
           </div>
-          <Tab.Container defaultActiveKey="tab1">
+          <Tab.Container defaultActiveKey="0">
             <div className="row">
               <div className="col-lg-4">
                 {/*=== Activity Nav Tab ===*/}
                 <div className="activity-nav-tab mb-50 wow fadeInLeft">
                   <Nav as="ul" className="nav nav-tabs">
-                    {tabData.map((tab) => (
-                      <Nav.Item as="li" key={tab.eventKey}>
+                    {data.map((tab,i) => (
+                      <Nav.Item as="li" key={i}>
                         <Nav.Link
                           as="a"
-                          href={`#${tab.eventKey}`}
+                          href={`#${i}`}
                           className="nav-link"
-                          eventKey={tab.eventKey}
+                          eventKey={i}
                         >
-                          {tab.title}
+                          {tab?.properties?.Headline?.rich_text[0]
+                                ?.plain_text}
                         </Nav.Link>
                       </Nav.Item>
                     ))}
@@ -92,19 +115,25 @@ function TariffComponent() {
               <div className="col-lg-8 justify-content-center align-items-center d-flex ">
                 {/*=== Tab Content ===*/}
                 <Tab.Content className="tab-content mb-50 wow fadeInRight">
-                  {tabData.map((tab) => (
+                  {data.map((tab,i) => (
                     <Tab.Pane
                       className="tab-pane fade"
-                      eventKey={tab.eventKey}
-                      key={tab.eventKey}
+                      eventKey={i}
+                      key={i}
                     >
                       <div className="row align-items-center">
                         <div className="col-md-6">
                           {/*=== Activity Content Box ===*/}
                           <div className="activity-content-box">
-                            <TariffTable
-                              selectedModel={tab?.eventKey || "tab1"}
-                            />
+                            {/* <TariffTable
+                              selectedModel={i || 0}
+                            /> */}
+
+<div>
+              { data[i]?.properties?.table?.rich_text?.length ? 
+              <TariffTable data={JSON.parse(data[i]?.properties?.table?.rich_text[0]?.plain_text)} />
+               : <></>}
+            </div>
 
                             <p
                               style={{
@@ -125,9 +154,10 @@ function TariffComponent() {
                           {/*=== Activity Image Box ===*/}
                           <div className="activity-image-box">
                             <img
-                              src={tab.imgSrc}
+                              src={data[i]?.properties?.images?.files[0]?.file?.url}
                               className="radius-12"
-                              alt={tab.title}
+                              alt={data[i]?.properties?.Headline?.rich_text[0]
+                                ?.plain_text}
                             />
                           </div>
                         </div>
