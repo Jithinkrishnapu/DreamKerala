@@ -74,8 +74,6 @@ function TariffComponent() {
     });
   }, [startTransition]);
 
-
-
   return (
     <section className="activity-section">
       <div className="activity-wrapper-bgc  text-white black-bg">
@@ -96,31 +94,35 @@ function TariffComponent() {
                 {/*=== Activity Nav Tab ===*/}
                 <div className="activity-nav-tab mb-50 wow fadeInLeft">
                   <Nav as="ul" className="nav nav-tabs">
-                    {data.map((tab,i) => (
-                      <Nav.Item as="li" key={i}>
-                        <Nav.Link
-                          as="a"
-                          href={`#${i}`}
-                          className="nav-link"
-                          eventKey={i}
-                        >
-                          {tab?.properties?.Headline?.rich_text[0]
-                                ?.plain_text}
-                        </Nav.Link>
-                      </Nav.Item>
-                    ))}
+                    {data
+                      .sort(
+                        (a, b) => a.properties.order?.rich_text[0]
+                        ?.plain_text - b.properties.order?.rich_text[0]
+                        ?.plain_text
+                      ) // Sort based on orderid
+                      .map((tab, i) => (
+                        <Nav.Item as="li" key={i}>
+                          <Nav.Link
+                            as="a"
+                            href={`#${i}`}
+                            className="nav-link"
+                            eventKey={i}
+                          >
+                            {
+                              tab?.properties?.Headline?.rich_text[0]
+                                ?.plain_text
+                            }
+                          </Nav.Link>
+                        </Nav.Item>
+                      ))}
                   </Nav>
                 </div>
               </div>
               <div className="col-lg-8 justify-content-center align-items-center d-flex ">
                 {/*=== Tab Content ===*/}
                 <Tab.Content className="tab-content mb-50 wow fadeInRight">
-                  {data.map((tab,i) => (
-                    <Tab.Pane
-                      className="tab-pane fade"
-                      eventKey={i}
-                      key={i}
-                    >
+                  {data.map((tab, i) => (
+                    <Tab.Pane className="tab-pane fade" eventKey={i} key={i}>
                       <div className="row align-items-center">
                         <div className="col-md-6">
                           {/*=== Activity Content Box ===*/}
@@ -129,11 +131,18 @@ function TariffComponent() {
                               selectedModel={i || 0}
                             /> */}
 
-<div>
-              { data[i]?.properties?.table?.rich_text?.length ? 
-              <TariffTable data={JSON.parse(data[i]?.properties?.table?.rich_text[0]?.plain_text)} />
-               : <></>}
-            </div>
+                            <div>
+                              {data[i]?.properties?.table?.rich_text?.length ? (
+                                <TariffTable
+                                  data={JSON.parse(
+                                    data[i]?.properties?.table?.rich_text[0]
+                                      ?.plain_text
+                                  )}
+                                />
+                              ) : (
+                                <></>
+                              )}
+                            </div>
 
                             <p
                               style={{
@@ -154,10 +163,14 @@ function TariffComponent() {
                           {/*=== Activity Image Box ===*/}
                           <div className="activity-image-box">
                             <img
-                              src={data[i]?.properties?.images?.files[0]?.file?.url}
+                              src={
+                                data[i]?.properties?.images?.files[0]?.file?.url
+                              }
                               className="radius-12"
-                              alt={data[i]?.properties?.Headline?.rich_text[0]
-                                ?.plain_text}
+                              alt={
+                                data[i]?.properties?.Headline?.rich_text[0]
+                                  ?.plain_text
+                              }
                             />
                           </div>
                         </div>
