@@ -25,7 +25,7 @@ const languageOptions = [
   { value: "Hindi", label: "Hindi" },
   { value: "English", label: "English" },
   { value: "Tamil", label: "Tamil" },
-  { value: "Arabic", label: "Arabic" }
+  { value: "Arabic", label: "Arabic" },
 ];
 
 function Popupform() {
@@ -33,12 +33,12 @@ function Popupform() {
   const [loader, setLoader] = useState(false);
 
   async function handleSubmit(e) {
-    setLoader(true)
+    setLoader(true);
     e.preventDefault(); // Prevent default form submission
     const data = new FormData(e.currentTarget);
 
     const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbwMTIBrt0rZYMLToUrb__ZQbmA_2v-XbyYESZX8LUcqDseIpKKLtekT1CogeLq-JmDA/exec",
+      "https://script.google.com/macros/s/AKfycby-BmDMHZCuVYYcjn34AA7571KZgwufUtzhAkC0RUjQrrZ-EXH8mtsXfZjOx1ZpxO8/exec",
       {
         method: "POST",
         body: data,
@@ -46,16 +46,16 @@ function Popupform() {
     );
 
     if (response.ok) {
-      setLoader(false)
-      router.push('/thankyou')// Reload the page on success
+      setLoader(false);
+      router.push("/thankyou"); // Reload the page on success
     } else {
-      setLoader(false)
+      setLoader(false);
       console.error("Error submitting form");
     }
   }
 
-  if(loader){
-    return <PreLoader/>
+  if (loader) {
+    return <PreLoader />;
   }
 
   return (
@@ -145,31 +145,46 @@ function Popupform() {
                 </div>
 
                 <div className="col-md-6 mt-md-0 mt-3">
-                    <div className="form_group">
-                      <label>
-                        <i className="far fa-date-alt" />
-                      </label>
-                      <DatePicker name="StartDate" placeholder={"Start Date"} type={"date"} required={true} />
-                    </div>
+                  <div className="form_group">
+                    <label>
+                      <i className="far fa-date-alt" />
+                    </label>
+                    <DatePicker
+                      name="StartDate"
+                      placeholder={"Start Date"}
+                      type={"date"}
+                      required={true}
+                    />
                   </div>
+                </div>
 
-                  <div className="col-md-6">
-                    <div className="form_group">
-                      <label>
-                        <i className="far fa-date-alt" />
-                      </label>
-                      <DatePicker name="EndDate" placeholder={"End Date"} type={"date"} required={true} />
-                    </div>
+                <div className="col-md-6">
+                  <div className="form_group">
+                    <label>
+                      <i className="far fa-date-alt" />
+                    </label>
+                    <DatePicker
+                      name="EndDate"
+                      placeholder={"End Date"}
+                      type={"date"}
+                      required={true}
+                    />
                   </div>
+                </div>
 
-                  <div className="col-md-6">
-                    <div className="form_group">
-                      <label>
-                        <i className="far fa-date-alt" />
-                      </label>
-                      <DatePicker name="Time" placeholder={"Time"} type={"time"} required={false} />
-                    </div>
+                <div className="col-md-6">
+                  <div className="form_group">
+                    <label>
+                      <i className="far fa-date-alt" />
+                    </label>
+                    <DatePicker
+                      name="Time"
+                      placeholder={"Time"}
+                      type={"time"}
+                      required={false}
+                    />
                   </div>
+                </div>
 
                 <div className="col-md-12 mt-10">
                   <textarea
