@@ -43,7 +43,7 @@ const Contact = () => {
       const data = new FormData(e.currentTarget);
   
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbwMTIBrt0rZYMLToUrb__ZQbmA_2v-XbyYESZX8LUcqDseIpKKLtekT1CogeLq-JmDA/exec",
+        "https://script.google.com/macros/s/AKfycby-BmDMHZCuVYYcjn34AA7571KZgwufUtzhAkC0RUjQrrZ-EXH8mtsXfZjOx1ZpxO8/exec",
         {
           method: "POST",
           body: data,
