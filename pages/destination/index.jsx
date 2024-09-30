@@ -50,7 +50,7 @@ const Destination = () => {
                   <p>
                     {
                       val?.properties?.Short_Description?.rich_text[0]
-                        ?.plain_text
+                        ?.plain_text?.substring(0, 80)+"..."
                     }
                   </p>
                   <img
