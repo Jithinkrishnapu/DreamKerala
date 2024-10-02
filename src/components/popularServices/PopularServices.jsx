@@ -62,7 +62,7 @@ function PopularServices() {
                   </h3>
                   <p>
                     {
-                      val?.properties?.Short_Description?.rich_text[0]
+                      val?.properties?.Description?.rich_text[0]
                         ?.plain_text?.substring(0, 80)+"..."
                     }
                   </p>
