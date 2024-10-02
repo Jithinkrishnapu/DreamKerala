@@ -92,7 +92,7 @@ function TariffComponent() {
             <div className="row">
               <div className="col-lg-4">
                 {/*=== Activity Nav Tab ===*/}
-                <div className="activity-nav-tab mb-50 wow fadeInLeft">
+                <div style={{height:"600px",overflowX:'auto'}} className="activity-nav-tab mb-50 wow fadeInLeft">
                   <Nav as="ul" className="nav nav-tabs">
                     {data
                       .sort(
