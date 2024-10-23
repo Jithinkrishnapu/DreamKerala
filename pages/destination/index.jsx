@@ -37,7 +37,12 @@ const Destination = () => {
       {/* <Slider {...sliderActive3Item} className="slider-active-3-item"> */}
           {/*=== Service Item ===*/}
           <div className="d-flex flex-row gap-5 justify-content-center flex-wrap" >
-          {data?.map((val) => {
+          {data?.sort(
+              (a, b) =>
+                a.properties.order?.rich_text[0]?.plain_text -
+                b.properties.order?.rich_text[0]?.plain_text
+            )
+            ?.map((val) => {
             return (
               <div  className="single-service-item-three mw-25 col-10 col-md-3 mb-40">
                 <div className="content">
