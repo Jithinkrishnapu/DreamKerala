@@ -50,7 +50,12 @@ function PopularServices() {
         </div>
         <Slider {...sliderActive3Item} className="slider-active-3-item">
           {/*=== Service Item ===*/}
-          {data?.slice(0,3)?.map((val) => {
+          {data?.sort(
+              (a, b) =>
+                a.properties.order?.rich_text[0]?.plain_text -
+                b.properties.order?.rich_text[0]?.plain_text
+            )
+            ?.slice(0,3)?.map((val) => {
             return (
               <div className="single-service-item-three mb-40">
                 <div className="content">

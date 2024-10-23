@@ -84,7 +84,7 @@ const DestinationDetails = () => {
                 <div className="col-lg-6">
                   <img
                     loading="lazy"
-                    src={details?.properties?.images?.files[0]?.file?.url}
+                    src={details?.properties?.images?.files[0]?.file?.url || "https://raw.githubusercontent.com/zalog/placeholder-loading/7d808bb80f09bff00d744cdf5f5f2c028e941adc/docs/imgs/placeholder-loading-demo-1.gif"}
                     className="rounded mb-40"
                     alt="Features Image"
                   />
@@ -92,7 +92,7 @@ const DestinationDetails = () => {
                 <div className="col-lg-6">
                   <img
                     loading="lazy"
-                    src={details?.properties?.images?.files[1]?.file?.url}
+                    src={details?.properties?.images?.files[1]?.file?.url || "https://raw.githubusercontent.com/zalog/placeholder-loading/7d808bb80f09bff00d744cdf5f5f2c028e941adc/docs/imgs/placeholder-loading-demo-1.gif"}
                     className="rounded mb-40"
                     alt="Features Image"
                   />
@@ -120,7 +120,7 @@ const DestinationDetails = () => {
               </div>
             </div>
 
-            <PopularActivities images={details?.properties?.Activities_Images?.files} titles={details?.properties?.Activities?.multi_select} />
+            { details?.properties?.Activities_Images?.files?.length ? <PopularActivities images={details?.properties?.Activities_Images?.files} titles={details?.properties?.Activities?.multi_select} /> : <></>}
 
             <div>
               { details?.properties?.table?.rich_text?.length ? <VehicleTable data={JSON.parse(details?.properties?.table?.rich_text[0]?.plain_text)} /> : <></>}
