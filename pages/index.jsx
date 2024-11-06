@@ -15,6 +15,7 @@ import BoatBanner from "../src/components/boatBanner/BoatBanner";
 import PopularServices from "@/src/components/popularServices/PopularServices";
 import Footer from "@/src/components/footer/Footer";
 import HeroSection from "./DefaultHeroSection";
+import HoverPlayVideo from "@/src/components/HoverToPlayVideo";
 
 const Index = () => {
   const [showModal, setShowModal] = useState(false);
@@ -141,7 +142,7 @@ const Index = () => {
           <div className="row justify-content-center">
             <div className="col-xl-6 col-lg-9">
               {/*=== About Content Box ===*/}
-              <div className="about-content-box text-center mb-55 wow fadeInDown">
+              <div className="about-content-box text-center wow fadeInDown">
                 <div className="section-title mb-30">
                   <span className="sub-title">Dream Kerala</span>
                   <h2>Your Gateway to Kerala's Enchanting Wonders</h2>
@@ -156,6 +157,9 @@ const Index = () => {
               </div>
             </div>
           </div>
+
+          <HoverPlayVideo/>
+
           <SliderComponent setShowModal={(val) => setShowModal(val)} />
         </div>
       </section>
