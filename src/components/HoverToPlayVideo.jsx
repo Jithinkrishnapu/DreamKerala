@@ -17,7 +17,7 @@ const HoverPlayVideo = () => {
   };
 
   return (
-    <Container className="w-100 my-5 rounded">
+    <Container className="w-80 my-5 rounded">
       <video
         ref={videoRef}
         className="w-100 hover-to-play rounded"
