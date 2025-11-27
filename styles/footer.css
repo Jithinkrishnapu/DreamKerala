@@ -1,0 +1,514 @@
+/* Modern Footer Styles */
+
+/* Wave Divider */
+.footer-wave-divider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin-bottom: -2px;
+}
+
+.footer-wave-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 60px;
+}
+
+/* Footer Main Container */
+.modern-footer {
+  position: relative;
+  overflow: hidden;
+  background: #0F172A !important;
+}
+
+.footer-gradient-bg {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%) !important;
+  position: relative;
+  padding: 50px 0 0;
+}
+
+.footer-gradient-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(13, 148, 136, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.footer-main-content {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 30px;
+}
+
+/* Brand Card */
+.footer-brand-card {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 100%;
+  transition: all 0.4s ease;
+}
+
+.footer-brand-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(13, 148, 136, 0.2);
+}
+
+.footer-logo-wrapper {
+  margin-bottom: 20px;
+}
+
+.footer-brand-logo {
+  max-width: 180px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.footer-brand-logo:hover {
+  transform: scale(1.05);
+}
+
+.footer-brand-description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Social Links */
+.footer-social-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-icon:hover {
+  transform: translateY(-5px) scale(1.1);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.social-icon.facebook:hover {
+  background: linear-gradient(135deg, #1877f2, #0d5dbf);
+  border-color: #1877f2;
+}
+
+.social-icon.instagram:hover {
+  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  border-color: #e6683c;
+}
+
+.social-icon.twitter:hover {
+  background: linear-gradient(135deg, #1da1f2, #0d8bd9);
+  border-color: #1da1f2;
+}
+
+.social-icon.youtube:hover {
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+  border-color: #ff0000;
+}
+
+/* Links Card */
+.footer-links-card {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 100%;
+  transition: all 0.4s ease;
+}
+
+.footer-links-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(13, 148, 136, 0.2);
+}
+
+.footer-card-title {
+  color: #0D9488;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.footer-card-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #0D9488, #059669);
+  border-radius: 2px;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links-list li {
+  margin-bottom: 8px;
+}
+
+.footer-links-list a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  padding: 5px 0;
+}
+
+.footer-links-list a i {
+  font-size: 10px;
+  color: #0D9488;
+  transition: transform 0.3s ease;
+}
+
+.footer-links-list a:hover {
+  color: #0D9488;
+  padding-left: 10px;
+}
+
+.footer-links-list a:hover i {
+  transform: translateX(5px);
+}
+
+/* Contact Card */
+.footer-contact-card {
+  padding: 25px;
+  background: rgba(13, 148, 136, 0.15) !important;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(13, 148, 136, 0.4);
+  height: 100%;
+  transition: all 0.4s ease;
+}
+
+.footer-contact-card:hover {
+  background: rgba(13, 148, 136, 0.2) !important;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(13, 148, 136, 0.4);
+}
+
+/* Ensure footer has dark background */
+footer.modern-footer {
+  background: #0F172A !important;
+}
+
+footer.modern-footer .footer-gradient-bg {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%) !important;
+}
+
+.contact-info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-info-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.contact-icon {
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0D9488, #059669);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 18px;
+  box-shadow: 0 5px 15px rgba(13, 148, 136, 0.3);
+  transition: all 0.3s ease;
+}
+
+.contact-info-item:hover .contact-icon {
+  transform: rotate(10deg) scale(1.1);
+  box-shadow: 0 8px 20px rgba(13, 148, 136, 0.5);
+}
+
+.contact-details {
+  flex: 1;
+}
+
+.contact-content{
+  color: black;
+}
+
+.contact-label {
+  display: block;
+  color: #10B981;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 6px;
+}
+
+.contact-details p,
+.contact-details a,
+.contact-details span.contact-content,
+.contact-details .contact-content {
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 400;
+}
+
+.contact-details a,
+.contact-details .contact-content {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-details a:hover,
+.contact-details .contact-content:hover {
+  color: #10B981 !important;
+  text-decoration: underline;
+}
+
+/* Ensure footer contact details are always visible */
+.modern-footer .contact-details p,
+.modern-footer .contact-details a,
+.modern-footer .contact-details span.contact-content,
+.modern-footer .contact-details .contact-content {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.modern-footer .contact-label {
+  color: #10B981 !important;
+}
+
+/* Additional specificity for contact content */
+.footer-contact-card .contact-details .contact-content {
+  color: rgba(255, 255, 255, 0.95) !important;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.footer-contact-card .contact-details span.contact-content {
+  color: rgba(255, 255, 255, 0.95) !important;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-copyright-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  margin: 0;
+}
+
+.brand-highlight {
+  color: #0D9488;
+  font-weight: 600;
+}
+
+.footer-bottom-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom-links a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+  color: #0D9488;
+}
+
+.footer-bottom-links .separator {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+  .footer-gradient-bg {
+    padding: 40px 0 0;
+  }
+
+  .footer-main-content {
+    padding-bottom: 25px;
+  }
+
+  .footer-brand-card,
+  .footer-links-card,
+  .footer-contact-card {
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+
+  .footer-card-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-wave-divider svg {
+    height: 40px;
+  }
+
+  .footer-gradient-bg {
+    padding: 30px 0 0;
+  }
+
+  .footer-brand-card,
+  .footer-links-card,
+  .footer-contact-card {
+    padding: 18px;
+  }
+
+  .footer-social-links {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    padding: 18px 0;
+  }
+
+  .footer-bottom-links {
+    margin-top: 12px;
+  }
+
+  .contact-info-item {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 16px;
+  }
+  
+  .contact-info-grid {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .footer-card-title {
+    font-size: 18px;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .contact-icon {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    font-size: 18px;
+  }
+}
+
+
+/* ===== CRITICAL VISIBILITY OVERRIDES ===== */
+/* Force white text on footer dark background */
+
+footer.modern-footer,
+footer.modern-footer * {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+footer.modern-footer .contact-content,
+footer.modern-footer .contact-details span,
+footer.modern-footer .contact-details a,
+footer.modern-footer .contact-details p {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+footer.modern-footer .contact-label {
+  color: #10B981 !important;
+}
+
+footer.modern-footer .footer-card-title {
+  color: #0D9488 !important;
+}
+
+footer.modern-footer .footer-brand-description {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+footer.modern-footer .footer-links-list a {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+footer.modern-footer .footer-copyright-text {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+footer.modern-footer .brand-highlight {
+  color: #0D9488 !important;
+}
+
+footer.modern-footer .footer-bottom-links a {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Ensure dark background is always applied */
+footer.modern-footer {
+  background-color: #0F172A !important;
+}
+
+footer.modern-footer .footer-gradient-bg {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%) !important;
+}

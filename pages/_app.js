@@ -1,5 +1,20 @@
 import PreLoader from "@/src/layout/PreLoader";
 import "@/styles/globals.css";
+import "@/styles/theme-colors.css";
+import "@/styles/modern-header.css";
+import "@/styles/modern-hero.css";
+import "@/styles/modern-about.css";
+import "@/styles/futuristic-video.css";
+import "@/styles/modern-services.css";
+import "@/styles/modern-tariff.css";
+import "@/styles/modern-destinations.css";
+import "@/styles/modern-detail.css";
+import "@/styles/modern-about-page.css";
+import "@/styles/modern-contact.css";
+import "@/styles/modern-gallery.css";
+import "@/styles/component-enhancements.css";
+// import "@/styles/visibility-fixes.css";
+import "@/styles/footer-v2.css";
 import Head from "next/head";
 import { Fragment, useEffect, useState } from "react";
 

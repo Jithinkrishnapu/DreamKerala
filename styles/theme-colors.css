@@ -1,0 +1,470 @@
+/* 
+===========================================
+DREAM KERALA HOLIDAYS - COLOR THEME
+===========================================
+Inspired by Kerala's natural beauty:
+- Tropical Teal: Backwaters & lagoons
+- Sunset Gold: Golden hour over beaches
+- Palm Green: Lush coconut groves
+- Coral: Vibrant sunsets
+- Deep Ocean: Traditional houseboats
+===========================================
+*/
+
+:root {
+  /* Primary Colors - Main Brand Identity */
+  --primary-teal: #0D9488;           /* Tropical backwater teal */
+  --primary-gold: #F59E0B;           /* Sunset gold */
+  --primary-green: #059669;          /* Palm green */
+  
+  /* Secondary Colors - Accents */
+  --secondary-coral: #F97316;        /* Coral sunset */
+  --secondary-sky: #0EA5E9;          /* Sky blue */
+  --secondary-emerald: #10B981;      /* Emerald green */
+  
+  /* Neutral Colors */
+  --dark-navy: #0F172A;              /* Deep ocean navy */
+  --dark-slate: #1E293B;             /* Slate dark */
+  --medium-gray: #475569;            /* Medium gray */
+  --light-gray: #F1F5F9;             /* Light background */
+  --off-white: #FAFAF9;              /* Off white */
+  
+  /* Gradient Combinations */
+  --gradient-tropical: linear-gradient(135deg, #0D9488 0%, #059669 100%);
+  --gradient-sunset: linear-gradient(135deg, #F59E0B 0%, #F97316 100%);
+  --gradient-ocean: linear-gradient(135deg, #0EA5E9 0%, #0D9488 100%);
+  --gradient-dark: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  
+  /* Overlay Colors */
+  --overlay-dark: rgba(15, 23, 42, 0.85);
+  --overlay-teal: rgba(13, 148, 136, 0.9);
+  --overlay-gold: rgba(245, 158, 11, 0.9);
+}
+
+/* Override existing color classes with new theme */
+
+/* Primary Button - Tropical Teal */
+.main-btn.primary-btn {
+  background: var(--gradient-tropical) !important;
+  border-color: var(--primary-teal) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 15px rgba(13, 148, 136, 0.3);
+}
+
+.main-btn.primary-btn:hover {
+  background: var(--primary-green) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(13, 148, 136, 0.4);
+}
+
+.main-btn.primary-btn i {
+  color: #000000 !important;
+}
+
+/* Secondary Button - Sunset Gold */
+.main-btn.secondary-btn {
+  background: var(--gradient-sunset) !important;
+  border-color: var(--primary-gold) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+}
+
+.main-btn.secondary-btn:hover {
+  background: var(--secondary-coral) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+}
+
+/* Header Styling */
+.header-area.header-one {
+  background: var(--gradient-tropical) !important;
+}
+
+.header-navigation.sticky {
+  background: var(--overlay-teal) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Hero Section */
+.hero-wrapper.black-bg {
+  background: var(--gradient-dark) !important;
+}
+
+.hero-content h1 {
+  color: #fff !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Titles & Accents */
+.section-title .sub-title {
+  color: var(--primary-teal) !important;
+  font-weight: 600;
+}
+
+.section-title h2 {
+  color: var(--dark-navy) !important;
+}
+
+/* Info Items & Icons */
+.single-info-item .icon {
+  background: var(--gradient-tropical) !important;
+  box-shadow: 0 5px 15px rgba(13, 148, 136, 0.3);
+}
+
+.single-info-item-two .icon {
+  color: var(--primary-teal) !important;
+}
+
+/* Service Cards */
+.single-service-item:hover .content .icon-btn {
+  background: var(--primary-teal) !important;
+  color: #fff !important;
+}
+
+.single-service-item-two .content .icon i {
+  color: var(--primary-gold) !important;
+}
+
+/* Activity & Tour Cards */
+.single-activity-item .content .main-btn i {
+  background: var(--gradient-sunset) !important;
+}
+
+.single-place-item .place-content .info .meta span i {
+  color: var(--primary-teal) !important;
+}
+
+.single-place-item .place-content .info h4.title:hover {
+  color: var(--primary-teal) !important;
+}
+
+/* Ratings & Reviews */
+.ratings li i {
+  color: var(--primary-gold) !important;
+}
+
+/* Gallery Items */
+.single-gallery-item .gallery-img .icon-btn {
+  background: var(--overlay-teal) !important;
+}
+
+.single-gallery-item .gallery-img .icon-btn:hover {
+  background: var(--primary-teal) !important;
+}
+
+/* Counter Section */
+.single-counter-item .icon {
+  background: var(--light-gray) !important;
+  color: var(--primary-teal) !important;
+}
+
+.single-counter-item:hover .icon {
+  background: var(--primary-teal) !important;
+  color: #fff !important;
+}
+
+.counter-item h2.number {
+  color: var(--primary-teal) !important;
+}
+
+/* Features */
+.single-features-item .img-holder .text .icon-btn {
+  background: var(--primary-teal) !important;
+}
+
+.fancy-icon-box .icon {
+  background: var(--light-gray) !important;
+  color: var(--primary-teal) !important;
+}
+
+.fancy-icon-box:hover .icon {
+  background: var(--gradient-tropical) !important;
+  color: #fff !important;
+}
+
+/* Booking Form */
+.booking-form label i {
+  color: var(--primary-teal) !important;
+}
+
+.booking-form .form_control:focus,
+.booking-form .nice-select:focus {
+  border-color: var(--primary-teal) !important;
+}
+
+/* Links & Hover States */
+a:hover {
+  color: var(--primary-teal) !important;
+}
+
+.btn-link:hover {
+  color: var(--primary-teal) !important;
+}
+
+/* Navigation */
+.header-navigation .main-menu ul > li:hover > a {
+  color: var(--primary-gold) !important;
+}
+
+.navigation-white.header-navigation .main-menu ul > li:hover > a {
+  color: #fff !important;
+}
+
+/* Pagination */
+.gowilds-pagination li a.active,
+.gowilds-pagination li a:hover {
+  background: var(--primary-teal) !important;
+  border-color: var(--primary-teal) !important;
+}
+
+/* Social Links */
+.social-link li a:hover {
+  background: var(--gradient-tropical) !important;
+  color: #fff !important;
+  transform: translateY(-3px);
+}
+
+/* CTA Sections */
+.single-cta-item .content .icon-btn {
+  background: var(--primary-teal) !important;
+}
+
+.single-cta-item:nth-child(2) .content .icon-btn {
+  background: var(--primary-gold) !important;
+}
+
+/* Back to Top */
+.back-to-top {
+  background: var(--gradient-tropical) !important;
+  color: #fff !important;
+}
+
+.back-to-top:hover {
+  background: var(--primary-green) !important;
+  transform: translateY(-5px);
+}
+
+/* Testimonials */
+.gw-testimonial-item .testimonial-inner-content > p {
+  color: var(--medium-gray) !important;
+}
+
+/* Blog & Posts */
+.post-meta span:hover a {
+  color: var(--primary-teal) !important;
+}
+
+.cat-btn {
+  background: var(--primary-gold) !important;
+  color: #fff !important;
+}
+
+/* Tags */
+.sidebar-widget-area .tag-cloud-widget a:hover {
+  background: var(--primary-teal) !important;
+  color: #fff !important;
+  border-color: var(--primary-teal) !important;
+}
+
+/* Progress Bars */
+.single-progress-bar .progress .progress-bar {
+  background: var(--gradient-tropical) !important;
+}
+
+/* Video Popup */
+.video-popup {
+  background: rgba(13, 148, 136, 0.95) !important;
+}
+
+/* Sliders */
+.hero-slider-one .slick-arrow:hover,
+.hero-slider-two .slick-arrow:hover {
+  background: var(--primary-teal) !important;
+  border-color: var(--primary-teal) !important;
+}
+
+ul.slick-dots li button::before {
+  background: var(--primary-teal) !important;
+}
+
+/* Ribbons & Badges */
+.ribbon {
+  background: var(--gradient-sunset) !important;
+}
+
+/* Contact Form */
+.contact-form .form_control:focus {
+  border-color: var(--primary-teal) !important;
+}
+
+/* Destination Details */
+.destination-details-wrapper .destination-info .meta span.location i {
+  color: var(--primary-teal) !important;
+}
+
+.destination-details-wrapper .destination-info .features-list li span i {
+  color: var(--primary-gold) !important;
+}
+
+/* Tour Title */
+.tour-title-wrapper .tour-widget-info .info-box .icon {
+  color: var(--primary-teal) !important;
+}
+
+.tour-title-wrapper .tour-title p i {
+  color: var(--primary-teal) !important;
+}
+
+/* Days Navigation */
+.days-area .nav-tabs .nav-link.active {
+  color: var(--primary-teal) !important;
+  border-bottom-color: var(--primary-teal) !important;
+}
+
+/* Product Details */
+.product-details-wrapper .product-info span.price {
+  color: var(--primary-gold) !important;
+}
+
+.product-details-wrapper .product-info ul.social-link li a:hover {
+  background: var(--primary-teal) !important;
+  color: #fff !important;
+}
+
+/* Description Tabs */
+.description-tabs .nav-link.active,
+.description-tabs .nav-link:hover {
+  color: var(--primary-teal) !important;
+  border-bottom-color: var(--primary-teal) !important;
+}
+
+/* Check Lists */
+.check-list li i {
+  color: var(--primary-teal) !important;
+}
+
+.activity-content-box ul.check-list li {
+  color: #fff !important;
+}
+
+/* Activity Navigation */
+.activity-nav-tab .nav-tabs li a.active {
+  background: var(--primary-teal) !important;
+  color: #fff !important;
+}
+
+/* Booking Button */
+.booking-form-two .booking-btn {
+  background: var(--gradient-tropical) !important;
+  color: #fff !important;
+}
+
+.booking-form-two .booking-btn:hover {
+  background: var(--primary-green) !important;
+}
+
+/* Place Items */
+.single-place-item-two .place-img .tour-count {
+  background: var(--gradient-sunset) !important;
+}
+
+.single-place-item-three:hover .place-content .meta .icon-btn {
+  background: var(--primary-teal) !important;
+  color: #fff !important;
+}
+
+/* Tour Area Navigation */
+.tour-area-nav .share-nav a:hover {
+  background: var(--primary-teal) !important;
+  color: #fff !important;
+}
+
+/* Related Tour Places */
+.related-tour-place .place-arrows .slick-arrow:hover {
+  color: var(--primary-teal) !important;
+}
+
+/* Sidebar Widgets */
+.sidebar-widget-area .booking-info-widget ul.info-list li span i {
+  color: var(--primary-teal) !important;
+}
+
+.sidebar-widget-area .recent-place-widget .recent-place-list .place-thumbnail-content .place-content span.price {
+  color: var(--primary-gold) !important;
+}
+
+.sidebar-widget-area .recent-place-widget .recent-place-list .place-thumbnail-content .place-content h5:hover {
+  color: var(--primary-teal) !important;
+}
+
+/* Comments & Reviews */
+.comment-rating-ul li span i {
+  color: var(--primary-gold) !important;
+}
+
+.reviews-wrapper .reviews-inner-box .rating-value .rate-score {
+  color: var(--primary-gold) !important;
+}
+
+/* Footer Newsletter */
+.footer-newsletter-widget .footer-content form label {
+  color: var(--primary-gold) !important;
+}
+
+/* Black Background Overrides */
+.black-bg {
+  background: var(--gradient-dark) !important;
+}
+
+.black-bg .sub-title {
+  color: var(--primary-gold) !important;
+}
+
+.black-bg .single-info-item .info span.title {
+  color: #fff !important;
+}
+
+.black-bg .single-cta-item .content h3.title {
+  color: #fff !important;
+}
+
+/* Fun Wrapper */
+.fun-wrapper {
+  background: var(--gradient-tropical) !important;
+}
+
+/* Skill Wrapper */
+.skill-wrapper {
+  background: var(--off-white) !important;
+}
+
+/* Preloader */
+.preloader {
+  background: var(--dark-navy) !important;
+}
+
+/* Additional Hover Effects */
+.single-service-item-four:hover .content h3.title {
+  color: var(--primary-teal) !important;
+}
+
+.single-event-item .content h3.title:hover {
+  color: var(--primary-teal) !important;
+}
+
+.single-team-item .member-info ul.social-link li a:hover {
+  color: var(--primary-teal) !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .hero-content h1 {
+    font-size: 48px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-content h1 {
+    font-size: 36px !important;
+  }
+}

@@ -1,15 +1,12 @@
-import BookingForm from "@/src/components/bookingform/BookingForm";
 import DatePicker from "@/src/components/DateTimePicker/DatePicker";
-import TimePicker from "@/src/components/DateTimePicker/TimePicker";
 import DropdownComponent from "@/src/components/DropdownComponent";
-import GallerySection from "@/src/components/GallerySection";
 import ModalComponent from "@/src/components/modal/ModalComponent";
-import PageBanner from "@/src/components/PageBanner";
 import Popupform from "@/src/components/popupform/Popupform";
 import Layout from "@/src/layout/Layout";
 import PreLoader from "@/src/layout/PreLoader";
 import { useRouter } from "next/router";
 import { useState } from "react";
+
 const Contact = () => {
   const [showModal, setShowModal] = useState(false);
   const router = useRouter();
@@ -65,99 +62,97 @@ const Contact = () => {
     }
 
   return (
-    <Layout header={1} setShowModal={(val) => setShowModal(val)} extraClass={"pt-160"}>
-      {/*====== Start Info Section ======*/}
-      <section className="contact-info-section pt-150 pb-60">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-8">
-              {/*=== Section Title ===*/}
-              <div className="section-title text-center mb-45 wow fadeInDown">
-                <span className="sub-title">Contact Us</span>
-                <h2>
-                  Ready to Get Our Best Services! Feel Free to Contact With Us
-                </h2>
+    <Layout header={1} setShowModal={(val) => setShowModal(val)}>
+      {/* Hero Section with Contact Cards */}
+      <section className="contact-hero">
+        <div className="hero-overlay"></div>
+        <div className="hero-content">
+          <div className="container">
+            <div className="hero-text">
+              <div className="hero-badge">
+                <i className="fas fa-envelope"></i>
+                <span>Get In Touch</span>
               </div>
+              <h1 className="hero-title">
+                Let's Plan Your
+                <span className="title-gradient"> Dream Journey</span>
+              </h1>
+              <p className="hero-description">
+                Have questions or ready to book? We're here to help you create 
+                the perfect Kerala experience
+              </p>
             </div>
+
           </div>
-          <div className="row justify-content-center">
-            <div className="col-lg-4 col-md-6 col-sm-12">
-              {/*=== Contact Info Item ===*/}
-              <div className="contact-info-item text-center mb-40 wow fadeInUp">
-                <div className="icon">
-                  <img src="assets/images/icon/icon-1.png" alt="icon" />
+        </div>
+      </section>
+
+      {/* Contact Info Footer */}
+      <section className="hero-contact-cards">
+        <div className="contact-info-footer">
+              <div className="hero-info-card">
+                <div className="card-icon-wrapper">
+                  <i className="fas fa-map-marker-alt"></i>
                 </div>
-                <div className="info">
-                  <span className="title">Office Location</span>
+                <div className="card-info">
+                  <h4>Office Location</h4>
                   <p>5C34+W78, Kanjoor-Airport Rd, Nedumbassery, Kerala 683111</p>
+                  <a 
+                    href="https://maps.google.com/?q=5C34+W78,+Kanjoor-Airport+Rd,+Nedumbassery,+Kerala+683111" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="card-link"
+                    style={{alignSelf:'center'}}
+                  >
+                    Get Directions <i className="fas fa-arrow-right"></i>
+                  </a>
                 </div>
               </div>
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-12">
-              {/*=== Contact Info Item ===*/}
-              <div className="contact-info-item text-center mb-40 wow fadeInDown">
-                <div className="icon">
-                  <img src="assets/images/icon/icon-2.png" alt="icon" />
+
+              <div className="hero-info-card">
+                <div className="card-icon-wrapper">
+                  <i className="fas fa-envelope"></i>
                 </div>
-                <div className="info">
-                  <span className="title">Email Address</span>
-                  <p>
-                    <a
-                      style={{ fontSize: "large" }}
-                      href="mailto:Dreamkeralaholidays24@gmail.com"
-                    >
-                      Dreamkeralaholidays24@gmail.com
-                    </a>
-                  </p>
+                <div className="card-info">
+                  <h4>Email Address</h4>
+                  <p>We'll respond within 24 hours</p>
+                  <a style={{alignSelf:'center'}} href="mailto:Dreamkeralaholidays24@gmail.com" className="card-link">
+                    Dreamkeralaholidays24@gmail.com
+                  </a>
                 </div>
               </div>
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-12">
-              {/*=== Contact Info Item ===*/}
-              <div className="contact-info-item text-center mb-40 wow fadeInUp">
-                <div className="icon">
-                  <img src="assets/images/icon/icon-3.png" alt="icon" />
+
+              <div className="hero-info-card">
+                <div className="card-icon-wrapper">
+                  <i className="fas fa-phone-alt"></i>
                 </div>
-                <div className="info">
-                  <span className="title">Hotline</span>
-                  <p>
-                    <a href="tel:+91 95671 32777">+91 95671 32777</a>
-                  </p>
-                  <p>
-                    <a href="tel:+91 90484 59086">+91 90484 59086</a>
-                  </p>
-                  <p>
-                    <a href="tel:+91 95671 23104">+91 95671 23104</a>
-                  </p>
+                <div className="card-info">
+                  <h4>Hotline</h4>
+                  <p>Available 24/7 for your convenience</p>
+                  <div style={{alignSelf:'center'}} className="phone-links">
+                    <a href="tel:+919567132777" className="card-link">+91 95671 32777</a>
+                    <a href="tel:+919048459086" className="card-link">+91 90484 59086</a>
+                    <a href="tel:+919567123104" className="card-link">+91 95671 23104</a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
         </div>
       </section>
-      {/*====== End Info Section ======*/}
-      {/*====== Start Contact Map Section ======*/}
-      <section className="contact-page-map pb-100 wow fadeInUp">
-        {/*=== Map Box ===*/}
-        <div className="map-box">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.3188920686566!2d76.40313007509167!3d10.154712989958748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0807375d176ce7%3A0xe5e7af8c8eca5d39!2sDream%20Kerala%20Holiday&#39;s%20kochi!5e0!3m2!1sen!2sin!4v1726680643804!5m2!1sen!2sin" width="600" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"/>
-        </div>
-      </section>
-      {/*====== End Contact Map Section ======*/}
-      {/*====== Start Contact Section ======*/}
-      <section className="contact-section pb-100">
+
+      {/* Form and Map Section */}
+      <section className="contact-form-section">
         <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-6">
-              <div className="section-title text-center mb-50 wow fadeInDown">
-                <span className="sub-title">Get In Touch</span>
-                <h2>Send Us Message</h2>
-              </div>
-            </div>
-          </div>
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <div className="contact-area wow fadeInUp">
+          <div className="row">
+            <div className="col-lg-6">
+              <div className="form-wrapper">
+                <div className="section-badge">
+                  <i className="fas fa-paper-plane"></i>
+                  <span>Send Message</span>
+                </div>
+                <h2 className="section-title">Book Your Journey</h2>
+                <p className="section-description">
+                  Fill out the form below and we'll get back to you with a customized itinerary
+                </p>
               <form onSubmit={handleSubmit} className="booking-form">
               <div className="row">
                 <div className="col-md-6">
@@ -288,13 +283,47 @@ const Contact = () => {
             </form>
               </div>
             </div>
+
+            <div className="col-lg-6">
+              <div className="map-wrapper">
+                <h3 className="map-title">Find Us Here</h3>
+                <div className="map-container">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.3188920686566!2d76.40313007509167!3d10.154712989958748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0807375d176ce7%3A0xe5e7af8c8eca5d39!2sDream%20Kerala%20Holiday&#39;s%20kochi!5e0!3m2!1sen!2sin!4v1726680643804!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="100%"  
+                    allowFullScreen="" 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+                <div className="map-info">
+                  <div className="info-item">
+                    <i className="fas fa-clock"></i>
+                    <div>
+                      <strong>Business Hours</strong>
+                      <p>24/7 - Always Available</p>
+                    </div>
+                  </div>
+                  <div className="info-item">
+                    <i className="fas fa-map-pin"></i>
+                    <div>
+                      <strong>Location</strong>
+                      <p>Near Cochin International Airport</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
       <ModalComponent showModal={showModal} setShowModal={setShowModal}>
         <Popupform />
       </ModalComponent>
     </Layout>
   );
 };
+
 export default Contact;

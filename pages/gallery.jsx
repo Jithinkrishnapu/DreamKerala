@@ -1,14 +1,13 @@
 import ModalComponent from "@/src/components/modal/ModalComponent";
-import PageBanner from "@/src/components/PageBanner";
 import Popupform from "@/src/components/popupform/Popupform";
 import Layout from "@/src/layout/Layout";
-import { galleryItems } from "@/src/utils/constants";
 import { useEffect, useState, useTransition } from "react";
+
 const Gallery = () => {
   const [showModal, setShowModal] = useState(false);
-
   const [data, setData] = useState([]);
-  const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [selectedImage, setSelectedImage] = useState(null);
   const [isPending, startTransition] = useTransition();
 
   useEffect(() => {
@@ -16,33 +15,99 @@ const Gallery = () => {
       try {
         const response = await fetch("/api/gallery");
         if (!response.ok) {
-          throw new Error("Error fetching carousel data");
+          throw new Error("Error fetching gallery data");
         }
         const result = await response.json();
         setData(result[0]);
+        setIsLoading(false);
       } catch (err) {
-        setError(err.message);
+        console.error(err);
+        setIsLoading(false);
       }
     });
   }, [startTransition]);
 
+  const images = data?.properties?.images?.files || [];
+
   return (
     <Layout header={1} setShowModal={(val) => setShowModal(val)}>
-      {/*====== Start Gallery Section ======*/}
-      <section className="gallery-area pt-150 pb-70">
-        <div className="container">
-          <div className="row">
-            {data?.properties?.images?.files?.map((item, index) => (
-              <GalleryItem key={index} imgSrc={item?.file.url} {...item} />
-            ))}
-          </div>
-
-          <div className="col-lg-4 col-md-6 col-sm-12">
-            {/*=== Single Gallery Item ===*/}
+      {/* Hero Section */}
+      <section className="gallery-hero">
+        <div className="hero-overlay"></div>
+        <div className="hero-content">
+          <div className="container">
+            <div className="hero-text">
+              <div className="hero-badge">
+                <i className="fas fa-camera"></i>
+                <span>Our Gallery</span>
+              </div>
+              <h1 className="hero-title">
+                Moments from
+                <span className="title-gradient"> God's Own Country</span>
+              </h1>
+              <p className="hero-description">
+                Explore the breathtaking beauty of Kerala through our curated collection 
+                of stunning photographs and memorable experiences
+              </p>
+              <div className="hero-stats">
+                <div className="stat-item">
+                  <div className="stat-icon">
+                    <i className="fas fa-images"></i>
+                  </div>
+                  <div className="stat-info">
+                    <div className="stat-number">{images.length}+</div>
+                    <div className="stat-label">Photos</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      {/*====== End Gallery Section ======*/}
+
+      {/* Gallery Grid Section */}
+      <section className="modern-gallery-section">
+        <div className="container">
+          {isLoading ? (
+            <div className="gallery-loading">
+              <div className="loading-spinner"></div>
+              <p>Loading gallery...</p>
+            </div>
+          ) : (
+            <div className="gallery-grid">
+              {images.map((item, index) => (
+                <div
+                  key={index}
+                  className={`gallery-item ${index % 7 === 0 ? 'large' : ''}`}
+                  onClick={() => setSelectedImage(item?.file?.url)}
+                >
+                  <img
+                    src={item?.file?.url}
+                    alt={`Kerala Gallery ${index + 1}`}
+                    loading="lazy"
+                  />
+                  <div className="gallery-overlay">
+                    <div className="overlay-content">
+                      <i className="fas fa-search-plus"></i>
+                      <span>View Image</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div className="image-modal" onClick={() => setSelectedImage(null)}>
+          <button className="modal-close" onClick={() => setSelectedImage(null)}>
+            <i className="fas fa-times"></i>
+          </button>
+          <img src={selectedImage} alt="Full size" />
+        </div>
+      )}
 
       <ModalComponent showModal={showModal} setShowModal={setShowModal}>
         <Popupform />
@@ -50,19 +115,5 @@ const Gallery = () => {
     </Layout>
   );
 };
-export default Gallery;
 
-const GalleryItem = ({ imgSrc, altText, linkHref, colClasses }) => (
-  <div className="col-lg-4 col-md-6 col-sm-12">
-    <div className="single-gallery-item mb-30 wow fadeInUp">
-      <div className="gallery-img">
-        <img loading="lazy" src={imgSrc} alt={altText} />
-        <div className="hover-overlay">
-          <a href={imgSrc} className="icon-btn img-popup">
-            <i className="far fa-plus" />
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-);
+export default Gallery;

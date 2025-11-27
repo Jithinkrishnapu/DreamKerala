@@ -2,137 +2,107 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="main-footer">
-      <div className="container">
-        <div className="footer-top footer-widget-area pt-75 pb-30">
-          <div className="row">
-            <div className="col-lg-3 col-md-6">
-              {/*=== Footer Widget ===*/}
-              <div className="footer-widget about-company-widget mb-40 wow fadeInUp">
-                <h4 className="widget-title">About</h4>
-                <div className="footer-content">
-                  <p>
-                    Discover effortless travel with our top-notch cab rentals
-                    and exciting tour packages, tailored for you.
-                  </p>
-                  <a href="/" className="footer-logo">
-                    <img
-                      src="assets/images/logo/logo-black.png"
-                      alt="Site Logo"
-                    />
+    <>
+      {/* Curved Divider */}
+      <div className="footer-curve-divider">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+          <path
+            fill="#0F172A"
+            d="M0,40 Q360,0 720,40 T1440,40 L1440,80 L0,80 Z"
+          />
+        </svg>
+      </div>
+
+      <footer className="modern-footer-v2">
+        <div className="footer-container">
+          <div className="container">
+            
+            {/* Main Footer - Horizontal Layout */}
+            <div className="footer-main-horizontal">
+              
+              {/* Brand & Social */}
+              <div className="footer-brand-section">
+                <a href="/" className="footer-logo-link">
+                  <img
+                    src="assets/images/logo/logo-white.png"
+                    alt="Dream Kerala Holidays"
+                    className="footer-logo-img"
+                  />
+                </a>
+                <p className="footer-tagline">
+                  Experience God's Own Country
+                </p>
+                <div className="footer-social-row">
+                  <a href="#" className="social-btn facebook" aria-label="Facebook">
+                    <i className="fab fa-facebook-f" />
+                  </a>
+                  <a href="#" className="social-btn instagram" aria-label="Instagram">
+                    <i className="fab fa-instagram" />
+                  </a>
+                  <a href="#" className="social-btn twitter" aria-label="Twitter">
+                    <i className="fab fa-twitter" />
+                  </a>
+                  <a href="#" className="social-btn youtube" aria-label="YouTube">
+                    <i className="fab fa-youtube" />
                   </a>
                 </div>
               </div>
-            </div>
 
-            <div className="col-lg-5 col-md-6">
-              {/*=== Footer Widget ===*/}
-              <div className="footer-widget service-nav-widget mb-40 pl-lg-70 wow fadeInDown">
-                <h4 className="widget-title">Services</h4>
-                <div className="footer-content">
-                  <ul className="footer-widget-nav">
-                    <li>24hrs Taxi Service</li>
-                    <li>Call Drivers</li>
-                    <li>Tour Packages</li>
-                    <li>Tour Operators</li>
-                  </ul>
-                  <ul className="footer-widget-nav">
-                    <li>Hotel Bookings</li>
-                    <li>Houseboat Booking</li>
-                    <li>Camping</li>
-                    <li>Trekking</li>
-                  </ul>
+              {/* Quick Links */}
+              <div className="footer-links-section">
+                <h5 className="footer-section-title">Quick Links</h5>
+                <div className="footer-links-grid">
+                  <a href="#" className="footer-link">24hrs Taxi</a>
+                  <a href="#" className="footer-link">Tour Packages</a>
+                  <a href="#" className="footer-link">Hotel Booking</a>
+                  <a href="#" className="footer-link">Houseboat</a>
                 </div>
               </div>
-            </div>
-            {/* Address Number Location Tiles */}
-            <div className="col-lg-4 col-md-6">
-              <div className="">
-                <div className="single-info-item mb-40">
-                  <div className="icon">
-                    <i className="far fa-map-marker-alt" />
-                  </div>
-                  <div className="info">
-                    <span className="title">Location</span>
-                    <p>5C34+W78, Kanjoor-Airport Rd, Nedumbassery, Kerala 683111</p>
-                  </div>
-                </div>
 
-                <div className="col-lg-3 col-sm-6 me-4">
-                  <div className="single-info-item mb-40">
-                    <div className="icon">
-                      <i className="far fa-envelope-open" />
-                    </div>
-                    <div className="info">
-                      <span className="title">Email</span>
-                      <p>
-                        <a href="mailto:support@gmail.com">
-                          Dreamkeralaholidays24@gmail.com
-                        </a>
-                      </p>
+              {/* Contact Info - Compact */}
+              <div className="footer-contact-section">
+                <h5 className="footer-section-title">Contact</h5>
+                <div className="footer-contact-compact">
+                  <div className="contact-item-inline">
+                    <i className="fas fa-phone-alt contact-icon-inline"></i>
+                    <div className="contact-text-inline">
+                      <a href="tel:+919048459086">+91 90484 59086</a>
+                      <a href="tel:+919567132777">+91 95671 32777</a>
                     </div>
                   </div>
-                </div>
-
-                <div className="">
-                  <div className="single-info-item mb-40">
-                    <div className="icon">
-                      <i className="far fa-map-marker-alt" />
-                    </div>
-                    <div className="info">
-                      <span className="title">Hotline</span>
-                      <p>
-                        <a href="tel:+91 90484 59086">+91 90484 59086</a>
-                      </p>
-                      <p>
-                        <a href="tel:+91 95671 32777">+91 95671 32777</a>
-                      </p>
-                    </div>
+                  <div className="contact-item-inline">
+                    <i className="fas fa-envelope contact-icon-inline"></i>
+                    <a href="mailto:Dreamkeralaholidays24@gmail.com" className="contact-text-inline">
+                      Dreamkeralaholidays24@gmail.com
+                    </a>
+                  </div>
+                  <div className="contact-item-inline">
+                    <i className="fas fa-map-marker-alt contact-icon-inline"></i>
+                    <span className="contact-text-inline">
+                      Nedumbassery, Kerala 683111
+                    </span>
                   </div>
                 </div>
               </div>
+
             </div>
+
+            {/* Footer Bottom - Single Line */}
+            <div className="footer-bottom-bar">
+              <p className="footer-copyright">
+                © 2024 <span className="brand-name">Dream Kerala Holidays</span> • All Rights Reserved
+              </p>
+              <div className="footer-legal-links">
+                <a href="#">Privacy</a>
+                <span className="dot">•</span>
+                <a href="#">Terms</a>
+              </div>
+            </div>
+
           </div>
         </div>
-        {/*=== Footer Copyright ===*/}
-        <div className="footer-copyright">
-          <div className="row">
-            <div className="col-lg-6">
-              {/*=== Footer Text ===*/}
-              <div className="footer-text">
-                <p>
-                  Copyright@ 2024{" "}
-                  <span style={{ color: "black" }}>Dream Kerala Holidays</span>, All
-                  Right Reserved
-                </p>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              {/*=== Footer Nav ===*/}
-              <div className="footer-nav float-lg-end ">
-                <ul className="social-link">
-                  <li>
-                    <a href="#">
-                      <i className="fab fa-facebook-f" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fab fa-instagram" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fab fa-twitter" />
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </>
   );
 }
 

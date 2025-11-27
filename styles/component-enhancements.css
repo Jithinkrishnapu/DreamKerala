@@ -1,0 +1,413 @@
+/* 
+===========================================
+COMPONENT ENHANCEMENTS - TROPICAL THEME
+===========================================
+Additional styling for components to match
+the new Kerala-inspired color scheme
+===========================================
+*/
+
+/* ===== BOOKING FORM ENHANCEMENTS ===== */
+.booking-section {
+  position: relative;
+}
+
+.booking-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  background: linear-gradient(180deg, rgba(13, 148, 136, 0.05) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.booking-form .form_control {
+  border: 2px solid #E5E7EB;
+  transition: all 0.3s ease;
+}
+
+.booking-form .form_control:focus {
+  border-color: #0D9488 !important;
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1) !important;
+}
+
+.booking-form label i {
+  color: #0D9488 !important;
+  font-size: 16px;
+}
+
+.booking-content-box .section-title .sub-title {
+  color: #0D9488 !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.booking-image-box img {
+  box-shadow: 0 20px 60px rgba(13, 148, 136, 0.15);
+  transition: transform 0.4s ease;
+}
+
+.booking-image-box:hover img {
+  transform: scale(1.02);
+}
+
+/* ===== FEATURES SECTION ENHANCEMENTS ===== */
+.features-section {
+  background: linear-gradient(180deg, #FAFAF9 0%, #F1F5F9 100%);
+  padding: 80px 0;
+}
+
+.fancy-icon-box {
+  background: #fff;
+  padding: 35px 30px;
+  border-radius: 16px;
+  border: 2px solid transparent;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.fancy-icon-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #0D9488, #059669);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.fancy-icon-box:hover::before {
+  transform: scaleX(1);
+}
+
+.fancy-icon-box:hover {
+  border-color: #0D9488;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(13, 148, 136, 0.15);
+}
+
+.fancy-icon-box .icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, rgba(13, 148, 136, 0.1), rgba(5, 150, 105, 0.1));
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: all 0.4s ease;
+}
+
+.fancy-icon-box .icon img {
+  width: 35px;
+  height: 35px;
+  filter: brightness(0) saturate(100%) invert(47%) sepia(73%) saturate(1000%) hue-rotate(140deg) brightness(95%) contrast(95%);
+  transition: all 0.4s ease;
+}
+
+.fancy-icon-box:hover .icon {
+  background: linear-gradient(135deg, #0D9488, #059669);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 10px 25px rgba(13, 148, 136, 0.3);
+}
+
+.fancy-icon-box:hover .icon img {
+  filter: brightness(0) saturate(100%) invert(100%);
+  transform: scale(1.1);
+}
+
+.fancy-icon-box .text h4.title {
+  color: #0F172A;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.fancy-icon-box:hover .text h4.title {
+  color: #0D9488;
+}
+
+.fancy-icon-box .text p {
+  color: #475569;
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ===== BOAT BANNER ENHANCEMENTS ===== */
+.cta-bg.overlay {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-bg.overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(13, 148, 136, 0.85) 0%, rgba(5, 150, 105, 0.85) 100%);
+  z-index: -1;
+}
+
+.cta-content-box h2 {
+  font-size: 42px;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  line-height: 1.3;
+}
+
+.cta-content-box .main-btn {
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.cta-content-box .main-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== SECTION TITLE ENHANCEMENTS ===== */
+.section-title {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.section-title .sub-title {
+  display: inline-block;
+  color: #0D9488 !important;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 50px;
+}
+
+.section-title .sub-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #0D9488, #059669);
+}
+
+.section-title h2 {
+  color: #0F172A !important;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* ===== CARD HOVER EFFECTS ===== */
+.single-service-item,
+.single-place-item,
+.single-activity-item {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.single-service-item:hover,
+.single-place-item:hover,
+.single-activity-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(13, 148, 136, 0.2);
+}
+
+/* ===== ICON BUTTONS ===== */
+.icon-btn {
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0D9488, #059669);
+  color: #fff !important;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(13, 148, 136, 0.3);
+}
+
+.icon-btn:hover {
+  transform: scale(1.15) rotate(10deg);
+  box-shadow: 0 8px 25px rgba(13, 148, 136, 0.5);
+}
+
+/* ===== FLOATING CONTACT BUTTONS ===== */
+.fixed-bottom a img {
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+}
+
+.fixed-bottom a:hover img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 6px 20px rgba(13, 148, 136, 0.4));
+}
+
+/* ===== HERO SECTION ENHANCEMENTS ===== */
+.hero-wrapper {
+  position: relative;
+}
+
+.hero-content .text-button {
+  gap: 30px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.hero-button .main-btn {
+  padding: 16px 35px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.hero-button .main-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== SLIDER DOTS ===== */
+.slick-dots li button:before {
+  background: #0D9488 !important;
+  opacity: 0.5;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+/* ===== ABOUT SECTION ===== */
+.about-section {
+  background: linear-gradient(180deg, #fff 0%, #FAFAF9 100%);
+}
+
+.about-content-box {
+  padding: 0 20px;
+}
+
+.about-content-box p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #475569;
+}
+
+/* ===== RESPONSIVE ENHANCEMENTS ===== */
+@media (max-width: 991px) {
+  .cta-content-box h2 {
+    font-size: 32px;
+  }
+  
+  .fancy-icon-box {
+    margin-bottom: 25px;
+  }
+  
+  .booking-image-box {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .cta-content-box h2 {
+    font-size: 26px;
+  }
+  
+  .section-title .sub-title {
+    padding-left: 0;
+  }
+  
+  .section-title .sub-title::before {
+    display: none;
+  }
+  
+  .hero-content h1 {
+    font-size: 32px !important;
+  }
+  
+  .hero-content p {
+    font-size: 16px;
+  }
+}
+
+/* ===== SMOOTH SCROLLING ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== SELECTION COLOR ===== */
+::selection {
+  background: #0D9488;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #0D9488;
+  color: #fff;
+}
+
+/* ===== LOADING STATES ===== */
+.loading {
+  position: relative;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  margin: -15px 0 0 -15px;
+  border: 3px solid #0D9488;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ===== FOCUS VISIBLE ===== */
+*:focus-visible {
+  outline: 2px solid #0D9488;
+  outline-offset: 2px;
+}
+
+/* ===== WAVE ANIMATION ===== */
+@keyframes wave {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-wave {
+  animation: wave 3s ease-in-out infinite;
+}
