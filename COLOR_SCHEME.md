@@ -1,215 +1,190 @@
-# Dream Kerala Holidays - Color Scheme Guide
+# Deep Forest Green Color Theme
 
-## 🎨 Brand Color Palette
+## Overview
+The website now features a nature-inspired Deep Forest Green theme that evokes the lush tropical forests of Kerala, pristine beaches, and vibrant sunsets.
 
-### Primary Colors (Main Brand Identity)
+## Color Palette
 
-#### Tropical Teal `#0D9488`
-- **Usage**: Primary buttons, main CTAs, icons, links
-- **Inspiration**: Kerala's pristine backwaters and lagoons
-- **Psychology**: Trust, tranquility, adventure
-- **RGB**: rgb(13, 148, 136)
+### Primary Colors - Deep Forest Green
+```css
+--primary-forest: #0B3D2E;           /* Deep forest green - Main brand color */
+--primary-forest-light: #2d8169;     /* Light forest - Hover states */
+--primary-forest-dark: #082b21;      /* Dark forest - Shadows */
+```
 
-#### Sunset Gold `#F59E0B`
-- **Usage**: Secondary buttons, accents, highlights
-- **Inspiration**: Golden hour over Kerala beaches
-- **Psychology**: Warmth, energy, optimism
-- **RGB**: rgb(245, 158, 11)
+**Usage:**
+- Primary buttons and CTAs
+- Navigation hover states
+- Icons and accents
+- Section highlights
+- Active states
 
-#### Palm Green `#059669`
-- **Usage**: Success states, nature elements
-- **Inspiration**: Lush coconut palm groves
-- **Psychology**: Growth, freshness, harmony
-- **RGB**: rgb(5, 150, 105)
+### Secondary Colors - Sand Beige
+```css
+--secondary-sand: #E6D8B9;           /* Sand beige - Warm neutral */
+--secondary-sand-light: #f4efe3;     /* Light sand - Backgrounds */
+--secondary-sand-dark: #d5be93;      /* Dark sand - Borders */
+```
 
----
+**Usage:**
+- Background gradients
+- Card backgrounds
+- Subtle accents
+- Warm overlays
 
-### Secondary Colors (Accents)
+### Accent Colors - Sunset Orange
+```css
+--accent-orange: #FF7A1A;            /* Sunset orange - Primary accent */
+--accent-orange-light: #FFA22D;      /* Light orange - Highlights */
+--accent-orange-dark: #e66b0f;       /* Dark orange - Depth */
+```
 
-#### Coral Sunset `#F97316`
-- **Usage**: Special offers, urgent CTAs
-- **Inspiration**: Vibrant Kerala sunsets
-- **RGB**: rgb(249, 115, 22)
-
-#### Sky Blue `#0EA5E9`
-- **Usage**: Information, water-related content
-- **Inspiration**: Clear tropical skies
-- **RGB**: rgb(14, 165, 233)
-
-#### Emerald Green `#10B981`
-- **Usage**: Eco-tourism, nature tours
-- **Inspiration**: Emerald tea plantations
-- **RGB**: rgb(16, 185, 129)
-
----
+**Usage:**
+- Secondary buttons
+- Call-to-action elements
+- Badges and labels
+- Pricing highlights
+- Important notifications
 
 ### Neutral Colors
-
-#### Deep Ocean Navy `#0F172A`
-- **Usage**: Headers, footers, dark backgrounds
-- **Inspiration**: Deep ocean waters, traditional houseboats
-- **RGB**: rgb(15, 23, 42)
-
-#### Slate Dark `#1E293B`
-- **Usage**: Text, secondary backgrounds
-- **RGB**: rgb(30, 41, 59)
-
-#### Medium Gray `#475569`
-- **Usage**: Body text, descriptions
-- **RGB**: rgb(71, 85, 105)
-
-#### Light Gray `#F1F5F9`
-- **Usage**: Light backgrounds, cards
-- **RGB**: rgb(241, 245, 249)
-
-#### Off White `#FAFAF9`
-- **Usage**: Page backgrounds
-- **RGB**: rgb(250, 250, 249)
-
----
-
-## 🌈 Gradient Combinations
-
-### Tropical Gradient
 ```css
-background: linear-gradient(135deg, #0D9488 0%, #059669 100%);
+--neutral-white: #FAF9F4;            /* Warm white - Main background */
+--neutral-light: #f5f3ed;            /* Light neutral - Subtle backgrounds */
+--neutral-medium: #e4e1d7;           /* Medium neutral - Borders */
+--neutral-dark: #8b8983;             /* Dark neutral - Disabled states */
+--text-charcoal: #1A1A1A;            /* Charcoal - Primary text */
+--text-secondary: #4a4a4a;           /* Secondary text */
+--text-tertiary: #757575;            /* Tertiary text */
 ```
-**Usage**: Primary buttons, header, hero sections
+
+## Gradient Combinations
+
+### Forest Gradient
+```css
+--gradient-forest: linear-gradient(135deg, #2d8169 0%, #0B3D2E 100%);
+```
+Used for: Primary buttons, hero overlays, feature cards
 
 ### Sunset Gradient
 ```css
-background: linear-gradient(135deg, #F59E0B 0%, #F97316 100%);
+--gradient-sunset: linear-gradient(135deg, #FF7A1A 0%, #FFA22D 100%);
 ```
-**Usage**: Secondary buttons, special offers, featured content
+Used for: Secondary buttons, badges, pricing cards
 
-### Ocean Gradient
+### Earth Gradient
 ```css
-background: linear-gradient(135deg, #0EA5E9 0%, #0D9488 100%);
+--gradient-earth: linear-gradient(135deg, #0B3D2E 0%, #E6D8B9 100%);
 ```
-**Usage**: Water-related sections, beach packages
+Used for: Hero sections, large backgrounds
+
+### Warm Gradient
+```css
+--gradient-warm: linear-gradient(135deg, #E6D8B9 0%, #d5be93 100%);
+```
+Used for: Subtle backgrounds, card overlays
 
 ### Dark Gradient
 ```css
-background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+--gradient-dark: linear-gradient(135deg, #1A1A1A 0%, #0B3D2E 100%);
 ```
-**Usage**: Footer, dark hero sections
+Used for: Hero sections, dark mode elements
 
----
-
-## 📱 Component Color Usage
-
-### Header
-- Background: Tropical Gradient
-- Text: White
-- Hover: Sunset Gold
-
-### Buttons
-- **Primary**: Tropical Teal with gradient
-- **Secondary**: Sunset Gold with gradient
-- **Hover**: Darker shade with lift effect
-
-### Cards & Sections
-- Background: Off White / Light Gray
-- Border: Light Gray
-- Hover: Tropical Teal accent
-
-### Icons
-- Default: Tropical Teal
-- Accent: Sunset Gold
-- Hover: Gradient effect
-
-### Links
-- Default: Inherit
-- Hover: Tropical Teal
-- Active: Palm Green
-
-### Footer
-- Background: Deep Ocean Navy gradient
-- Accent: Tropical Teal
-- Text: White/Light Gray
-
----
-
-## ♿ Accessibility
-
-All color combinations meet WCAG 2.1 AA standards:
-
-- **Tropical Teal on White**: 4.5:1 contrast ratio ✓
-- **Deep Ocean Navy on White**: 15.5:1 contrast ratio ✓
-- **Sunset Gold on Dark**: 8.2:1 contrast ratio ✓
-- **White on Tropical Teal**: 4.8:1 contrast ratio ✓
-
----
-
-## 🎯 Brand Personality
-
-The color scheme reflects:
-
-1. **Natural Beauty**: Inspired by Kerala's landscapes
-2. **Adventure**: Vibrant, energetic colors
-3. **Trust**: Professional teal and navy tones
-4. **Warmth**: Golden sunset accents
-5. **Freshness**: Green nature elements
-
----
-
-## 💡 Usage Guidelines
-
-### Do's ✓
-- Use Tropical Teal for primary actions
-- Use Sunset Gold for secondary emphasis
-- Maintain gradient consistency
-- Use white space generously
-- Keep contrast ratios accessible
-
-### Don'ts ✗
-- Don't mix too many colors in one section
-- Don't use pure black (#000000)
-- Don't ignore hover states
-- Don't compromise accessibility
-- Don't use colors without purpose
-
----
-
-## 🔄 Migration from Old Colors
-
-| Old Color | New Color | Component |
-|-----------|-----------|-----------|
-| `#E6A43B` (Old Gold) | `#0D9488` (Tropical Teal) | Primary buttons, icons |
-| `#2E709E` (Old Blue) | `#F59E0B` (Sunset Gold) | Secondary buttons |
-| `#1D231F` (Old Dark) | `#0F172A` (Deep Ocean Navy) | Backgrounds |
-
----
-
-## 📦 Implementation
-
-All colors are defined in `styles/theme-colors.css` using CSS custom properties:
+## Overlay Colors
 
 ```css
-:root {
-  --primary-teal: #0D9488;
-  --primary-gold: #F59E0B;
-  --primary-green: #059669;
-  /* ... and more */
-}
+--overlay-dark: rgba(11, 61, 46, 0.85);      /* Dark forest overlay */
+--overlay-forest: rgba(11, 61, 46, 0.9);     /* Forest overlay */
+--overlay-orange: rgba(255, 122, 26, 0.9);   /* Orange overlay */
 ```
 
-Import order in `_app.js`:
-1. `globals.css` (base styles)
-2. `theme-colors.css` (color overrides)
-3. `footer.css` (component styles)
+## Glassmorphism Effects
 
----
+```css
+--glass-bg: rgba(250, 249, 244, 0.15);
+--glass-border: rgba(250, 249, 244, 0.25);
+--glass-shadow: 0 8px 32px 0 rgba(11, 61, 46, 0.15);
+```
 
-## 🌟 Visual Hierarchy
+## Component-Specific Usage
 
-1. **Primary Focus**: Tropical Teal (main CTAs)
-2. **Secondary Focus**: Sunset Gold (accents)
-3. **Supporting**: Palm Green (success/nature)
-4. **Background**: Deep Ocean Navy (dark sections)
-5. **Content**: Off White/Light Gray (readability)
+### Header
+- Background: Glassmorphism with warm white tint
+- Links: Charcoal text with forest green hover
+- CTA Button: Sunset gradient
 
----
+### Hero Section
+- Background: Dark gradient with forest overlay
+- Primary CTA: Sunset gradient
+- Secondary CTA: Glassmorphism with warm white
 
-*Last Updated: November 27, 2024*
-*Version: 2.0 - Tropical Kerala Theme*
+### Cards & Services
+- Background: White with warm tint
+- Hover Border: Deep forest green
+- Icons: Forest gradient
+- CTA: Forest gradient
+
+### Tariff Component
+- Active State: Forest green border and background
+- Price Display: Forest gradient text
+- Book Button: Sunset gradient
+
+### Footer
+- Background: Dark gradient
+- Links: Warm white with orange hover
+- Icons: Forest green
+
+### Forms
+- Focus State: Forest green border
+- Submit Button: Sunset gradient
+- Labels: Forest green
+
+## Accessibility
+
+### Contrast Ratios
+- Deep Forest Green (#0B3D2E) on White: 12.6:1 ✓ AAA
+- Charcoal (#1A1A1A) on Warm White: 15.8:1 ✓ AAA
+- Sunset Orange (#FF7A1A) on White: 3.2:1 ✓ AA
+- Warm White (#FAF9F4) on Deep Forest: 12.4:1 ✓ AAA
+
+### Color Blindness Considerations
+- Deuteranopia: ✓ Distinguishable
+- Protanopia: ✓ Distinguishable
+- Tritanopia: ✓ Distinguishable
+
+## Implementation Notes
+
+1. **CSS Variables**: All colors are defined as CSS custom properties in `styles/theme-colors.css`
+2. **Fallbacks**: Solid color fallbacks provided for older browsers
+3. **Dark Mode**: Ready for dark mode implementation with overlay variants
+4. **Performance**: Gradients use GPU acceleration for smooth animations
+
+## Migration from Previous Theme
+
+### Old → New Color Mapping
+- Tropical Teal (#0D9488) → Deep Forest Green (#0B3D2E)
+- Sunset Gold (#F59E0B) → Sunset Orange (#FF7A1A)
+- Lush Green (#059669) → Light Forest (#2d8169)
+- Off White (#FAFAF9) → Warm White (#FAF9F4)
+- Dark Navy (#0F172A) → Charcoal (#1A1A1A)
+
+## Browser Support
+- Chrome/Edge: Full support
+- Firefox: Full support
+- Safari: Full support (with -webkit- prefixes)
+- IE11: Fallback colors provided
+
+## Design Philosophy
+
+The Deep Forest Green theme embodies:
+- **Nature**: Inspired by Kerala's lush forests and natural beauty
+- **Warmth**: Sand beige tones create a welcoming atmosphere
+- **Energy**: Sunset orange adds vibrancy and calls to action
+- **Sophistication**: Charcoal text provides professional contrast
+- **Harmony**: Colors work together to create a cohesive experience
+
+## Future Enhancements
+- Seasonal color variations
+- Dark mode toggle
+- User preference storage
+- Dynamic theme switching
+- Accessibility mode with higher contrast

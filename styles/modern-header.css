@@ -14,9 +14,11 @@ Glassmorphism header with smooth animations
   width: 100%;
   z-index: 999;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  background: transparent;
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.98) 0%, rgba(45, 45, 45, 0.95) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 3px solid #0D9488;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .modern-header::before {
@@ -45,10 +47,11 @@ Glassmorphism header with smooth animations
 
 /* Scrolled State */
 .modern-header.scrolled {
-  background: rgba(15, 23, 42, 0.95);
+  background: rgba(10, 10, 10, 0.98);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  border-bottom: 3px solid #0D9488;
 }
 
 /* Header Navigation */
@@ -79,6 +82,21 @@ Glassmorphism header with smooth animations
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  position: relative;
+}
+
+.header-logo::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.header-logo:hover::before {
+  opacity: 1;
 }
 
 .logo-link {
@@ -87,20 +105,29 @@ Glassmorphism header with smooth animations
   gap: 12px;
   text-decoration: none;
   transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .logo-link:hover {
   transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .logo-img {
   height: 50px;
   width: auto;
-  transition: filter 0.3s ease;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3)) brightness(1.1);
 }
 
 .modern-header.scrolled .logo-img {
-  filter: brightness(1.1);
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3)) brightness(1.2);
 }
 
 .logo-text {
@@ -109,6 +136,7 @@ Glassmorphism header with smooth animations
   color: #fff;
   letter-spacing: 0.5px;
   display: none;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Desktop Navigation */
@@ -153,15 +181,17 @@ Glassmorphism header with smooth animations
   bottom: 8px;
   left: 16px;
   right: 16px;
-  height: 2px;
-  background: #fff;
+  height: 3px;
+  background: linear-gradient(90deg, #0D9488, #FFD54F);
   transform: scaleX(0);
   transition: transform 0.3s ease;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(13, 148, 136, 0.4);
 }
 
 .header-nav-desktop .main-menu ul > li > a:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background: rgba(13, 148, 136, 0.15);
+  color: #0D9488;
 }
 
 .header-nav-desktop .main-menu ul > li > a:hover::before {
@@ -230,7 +260,7 @@ Glassmorphism header with smooth animations
 }
 
 .contact-value:hover {
-  color: #F59E0B;
+  color: #0D9488;
 }
 
 /* CTA Button */
@@ -239,15 +269,15 @@ Glassmorphism header with smooth animations
   align-items: center;
   gap: 8px;
   padding: 10px 24px;
-  background: linear-gradient(135deg, #F59E0B, #F97316);
-  color: #fff;
+  background: linear-gradient(135deg, #0D9488 0%, #059669 100%);
+  color: #0F172A;
   border: none;
   border-radius: 50px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+  box-shadow: 0 4px 15px rgba(13, 148, 136, 0.6);
   position: relative;
   overflow: hidden;
   white-space: nowrap;
@@ -274,7 +304,8 @@ Glassmorphism header with smooth animations
 
 .header-cta-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+  box-shadow: 0 6px 25px rgba(13, 148, 136, 0.8);
+  background: #0D9488;
 }
 
 .btn-text,
@@ -381,7 +412,7 @@ Glassmorphism header with smooth animations
 
 .mobile-menu-close:hover {
   background: #0D9488;
-  color: #fff;
+  color: #0F172A;
 }
 
 /* Mobile Menu Content */
@@ -411,9 +442,10 @@ Glassmorphism header with smooth animations
 }
 
 .mobile-menu-content .main-menu ul > li > a:hover {
-  background: #F1F5F9;
-  color: #0D9488;
+  background: rgba(13, 148, 136, 0.1);
+  color: #0F172A;
   padding-left: 24px;
+  border-left: 4px solid #0D9488;
 }
 
 /* Mobile Menu Footer */
@@ -431,19 +463,21 @@ Glassmorphism header with smooth animations
   gap: 10px;
   padding: 16px;
   background: linear-gradient(135deg, #0D9488, #059669);
-  color: #fff;
+  color: #0F172A;
   border: none;
   border-radius: 12px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
   margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(13, 148, 136, 0.5);
 }
 
 .mobile-cta-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(13, 148, 136, 0.3);
+  box-shadow: 0 6px 25px rgba(13, 148, 136, 0.7);
+  background: #0D9488;
 }
 
 .mobile-contact-info {
@@ -466,8 +500,8 @@ Glassmorphism header with smooth animations
 }
 
 .mobile-contact-link:hover {
-  background: #F1F5F9;
-  color: #0D9488;
+  background: rgba(13, 148, 136, 0.1);
+  color: #0F172A;
 }
 
 .mobile-contact-link i {
@@ -496,9 +530,10 @@ Glassmorphism header with smooth animations
 }
 
 .mobile-social-links a:hover {
-  background: #0D9488;
-  color: #fff;
+  background: linear-gradient(135deg, #0D9488, #059669);
+  color: #0F172A;
   transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(13, 148, 136, 0.5);
 }
 
 /* Nav Overlay */
