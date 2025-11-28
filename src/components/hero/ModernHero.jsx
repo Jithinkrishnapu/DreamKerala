@@ -65,15 +65,15 @@ const ModernHero = ({ data, setShowModal }) => {
                 </button>
               </div>
               <div className="hero-features">
-                <div className="feature-item">
+                <div className="feature-item-text">
                   <i className="fas fa-check-circle"></i>
                   <span>Best Price Guarantee</span>
                 </div>
-                <div className="feature-item">
+                <div className="feature-item-text">
                   <i className="fas fa-check-circle"></i>
                   <span>24/7 Support</span>
                 </div>
-                <div className="feature-item">
+                <div className="feature-item-text">
                   <i className="fas fa-check-circle"></i>
                   <span>Expert Guides</span>
                 </div>
@@ -156,15 +156,15 @@ const ModernHero = ({ data, setShowModal }) => {
 
                   {/* Features */}
                   <div className="hero-features" data-aos="fade-up" data-aos-delay="400">
-                    <div className="feature-item">
+                    <div className="feature-item-text">
                       <i className="fas fa-check-circle"></i>
                       <span>Best Price Guarantee</span>
                     </div>
-                    <div className="feature-item">
+                    <div className="feature-item-text">
                       <i className="fas fa-check-circle"></i>
                       <span>24/7 Support</span>
                     </div>
-                    <div className="feature-item">
+                    <div className="feature-item-text">
                       <i className="fas fa-check-circle"></i>
                       <span>Expert Guides</span>
                     </div>

@@ -1,0 +1,926 @@
+/* 
+===========================================
+MOBILE RESPONSIVE ENHANCEMENTS
+===========================================
+100% Mobile-Friendly & Responsive UI
+===========================================
+*/
+
+/* ===== BASE MOBILE OPTIMIZATIONS ===== */
+
+/* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Touch-friendly tap targets */
+* {
+  -webkit-tap-highlight-color: rgba(13, 148, 136, 0.2);
+}
+
+/* Prevent text size adjustment */
+body {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* ===== CONTAINER FIXES ===== */
+
+/* Ensure containers don't overflow */
+.container,
+.container-fluid {
+  max-width: 100%;
+  overflow-x: hidden;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Row fixes */
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+/* ===== MOBILE BREAKPOINTS ===== */
+
+/* Extra Small Devices (Portrait Phones, <576px) */
+@media (max-width: 575.98px) {
+  
+  /* Typography */
+  h1 { font-size: 28px !important; line-height: 1.3; }
+  h2 { font-size: 24px !important; line-height: 1.3; }
+  h3 { font-size: 20px !important; line-height: 1.4; }
+  h4 { font-size: 18px !important; line-height: 1.4; }
+  h5 { font-size: 16px !important; line-height: 1.4; }
+  h6 { font-size: 14px !important; line-height: 1.4; }
+  
+  p, li, span {
+    font-size: 14px !important;
+    line-height: 1.6;
+  }
+  
+  /* Buttons */
+  .btn,
+  .main-btn,
+  button {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 20px !important;
+    font-size: 14px !important;
+  }
+  
+  /* Full-width buttons on mobile */
+  .hero-btn,
+  .cta-button,
+  .book-now-btn,
+  .header-cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  /* Spacing */
+  section {
+    padding: 40px 0 !important;
+  }
+  
+  /* Cards */
+  .card,
+  .service-card,
+  .destination-card {
+    margin-bottom: 20px;
+  }
+  
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Small Devices (Landscape Phones, 576px - 767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  
+  h1 { font-size: 32px !important; }
+  h2 { font-size: 28px !important; }
+  h3 { font-size: 22px !important; }
+  
+  section {
+    padding: 50px 0 !important;
+  }
+}
+
+/* Medium Devices (Tablets, 768px - 991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  
+  h1 { font-size: 36px !important; }
+  h2 { font-size: 30px !important; }
+  h3 { font-size: 24px !important; }
+  
+  section {
+    padding: 60px 0 !important;
+  }
+}
+
+/* ===== HEADER MOBILE FIXES ===== */
+
+@media (max-width: 991.98px) {
+  
+  .modern-header {
+    padding: 0 !important;
+  }
+  
+  .header-content {
+    padding: 15px 0 !important;
+    min-height: 70px !important;
+  }
+  
+  .logo-img {
+    height: 45px !important;
+  }
+  
+  /* Mobile menu */
+  .mobile-menu {
+    width: 100% !important;
+    max-width: 320px !important;
+  }
+  
+  .mobile-menu-toggle {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  
+  .header-content {
+    padding: 12px 0 !important;
+    min-height: 60px !important;
+  }
+  
+  .logo-img {
+    height: 40px !important;
+  }
+  
+  .mobile-menu {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* ===== HERO MOBILE FIXES ===== */
+
+@media (max-width: 991.98px) {
+  
+  .modern-hero-section,
+  .modern-hero-slider,
+  .modern-hero-slide {
+    min-height: 100vh !important;
+    height: 100vh !important;
+    padding-top: 80px !important; /* Account for fixed header */
+  }
+  
+  .modern-hero-content {
+    padding: 0 20px !important;
+    text-align: center;
+    margin-top: 0 !important;
+  }
+  
+  .hero-title {
+    font-size: 36px !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .hero-description {
+    font-size: 16px !important;
+    margin-bottom: 30px !important;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px !important;
+  }
+  
+  .hero-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  /* Hide decorative elements on mobile */
+  .hero-social-links,
+  .hero-slide-counter {
+    display: none !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  
+  .modern-hero-section,
+  .modern-hero-slider,
+  .modern-hero-slide {
+    min-height: 100vh !important;
+    height: 100vh !important;
+    padding-top: 70px !important; /* Account for smaller header */
+  }
+  
+  .hero-title {
+    font-size: 28px !important;
+  }
+  
+  .hero-description {
+    font-size: 14px !important;
+  }
+  
+  .hero-badge {
+    padding: 8px 16px !important;
+    font-size: 12px !important;
+  }
+}
+
+/* ===== CARDS MOBILE FIXES ===== */
+
+@media (max-width: 991.98px) {
+  
+  /* Grid layouts to single column */
+  .services-grid,
+  .destinations-grid,
+  .gallery-grid,
+  .values-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  
+  /* Stats grid to 2 columns */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px !important;
+  }
+  
+  /* Card adjustments */
+  .service-card,
+  .destination-card,
+  .value-card {
+    margin-bottom: 20px;
+  }
+  
+  .card-image-wrapper {
+    height: 220px !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  
+  /* All grids to single column */
+  .stats-grid,
+  .services-grid,
+  .destinations-grid,
+  .gallery-grid,
+  .values-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .card-image-wrapper {
+    height: 200px !important;
+  }
+  
+  .card-content {
+    padding: 15px !important;
+  }
+  
+  .card-title {
+    font-size: 18px !important;
+  }
+}
+
+/* ===== TARIFF MOBILE FIXES ===== */
+
+@media (max-width: 991.98px) {
+  
+  .vehicle-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  
+  .pricing-details-panel {
+    padding: 20px !important;
+  }
+  
+  .panel-header {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  
+  .panel-navigation {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  
+  .vehicle-card {
+    margin-bottom: 15px;
+  }
+  
+  .vehicle-image-wrapper {
+    height: 180px !important;
+  }
+  
+  .pricing-details-panel {
+    padding: 15px !important;
+  }
+  
+  .panel-title {
+    font-size: 18px !important;
+  }
+}
+
+/* ===== FORMS MOBILE FIXES ===== */
+
+@media (max-width: 991.98px) {
+  
+  .booking-form .form_group,
+  .contact-form .form_group {
+    margin-bottom: 15px;
+  }
+  
+  .form_control,
+  input,
+  textarea,
+  select {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+    padding: 12px 15px !important;
+    min-height: 44px;
+  }
+  
+  textarea {
+    min-height: 120px !important;
+  }
+  
+  /* Submit buttons */
+  .booking-form .main-btn,
+  .contact-form .main-btn {
+    width: 100%;
+    padding: 16px !important;
+    font-size: 16px !important;
+  }
+}
+
+/* ===== FOOTER MOBILE FIXES ===== */
+
+@media (max-width: 991.98px) {
+  
+  .footer-main-horizontal {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+  
+  .footer-brand-section,
+  .footer-links-section,
+  .footer-contact-section {
+    text-align: center;
+  }
+  
+  .footer-social-row {
+    justify-content: center;
+  }
+  
+  .footer-links-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-item-inline {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  
+  .footer-curve-divider svg {
+    height: 50px !important;
+  }
+  
+  .footer-container {
+    padding: 30px 0 0 !important;
+  }
+  
+  .footer-logo-img {
+    height: 40px !important;
+  }
+  
+  .social-btn {
+    width: 42px !important;
+    height: 42px !important;
+    font-size: 16px !important;
+  }
+  
+  .footer-bottom-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+/* ===== GALLERY MOBILE FIXES ===== */
+
+@media (max-width: 991.98px) {
+  
+  /* Gallery hero padding */
+  .gallery-hero {
+    padding-top: 120px !important;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px !important;
+  }
+  
+  .gallery-item.large {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  
+  .gallery-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  
+  .gallery-item {
+    aspect-ratio: 4/3;
+  }
+}
+
+/* ===== VIDEO MOBILE FIXES ===== */
+
+@media (max-width: 991.98px) {
+  
+  .video-frame {
+    padding: 10px !important;
+  }
+  
+  .video-wrapper {
+    border-radius: 15px !important;
+  }
+  
+  .play-button-inner {
+    width: 70px !important;
+    height: 70px !important;
+    font-size: 24px !important;
+  }
+  
+  .video-info-cards {
+    position: static !important;
+    transform: none !important;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .floating-elements {
+    display: none !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  
+  .play-button-inner {
+    width: 60px !important;
+    height: 60px !important;
+    font-size: 20px !important;
+  }
+  
+  .video-info-cards {
+    flex-direction: column;
+  }
+  
+  .video-info-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* ===== CONTACT PAGE MOBILE FIXES ===== */
+
+@media (max-width: 991.98px) {
+  
+  /* Contact hero padding */
+  .contact-hero {
+    padding-top: 120px !important;
+  }
+  
+  .contact-info-footer {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .hero-info-card {
+    border-right: none !important;
+    border-bottom: 1px solid #E2E8F0;
+  }
+  
+  .hero-info-card:last-child {
+    border-bottom: none !important;
+  }
+  
+  .map-wrapper {
+    position: relative !important;
+    top: 0 !important;
+    margin-top: 30px;
+  }
+  
+  .map-container {
+    height: 300px !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  
+  .hero-contact-cards {
+    margin-top: -30px !important;
+    padding: 0 15px !important;
+  }
+  
+  .hero-info-card {
+    padding: 25px 20px !important;
+  }
+  
+  .card-icon-wrapper {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  
+  .card-icon-wrapper i {
+    font-size: 22px !important;
+  }
+}
+
+/* ===== ABOUT PAGE MOBILE FIXES ===== */
+
+@media (max-width: 991.98px) {
+  
+  /* About hero padding */
+  .about-hero {
+    padding-top: 120px !important;
+  }
+  
+  .story-image-grid {
+    grid-template-columns: 1fr !important;
+    height: auto !important;
+  }
+  
+  .image-item {
+    height: 250px !important;
+  }
+  
+  .image-item.large {
+    grid-row: span 1 !important;
+  }
+  
+  .experience-images {
+    margin-bottom: 30px;
+  }
+  
+  .image-row {
+    flex-direction: column;
+  }
+  
+  .exp-img {
+    height: 200px !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  
+  .story-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .story-stats .stat-item {
+    text-align: center;
+  }
+  
+  .image-item {
+    height: 200px !important;
+  }
+}
+
+/* ===== DESTINATIONS PAGE MOBILE FIXES ===== */
+
+@media (max-width: 991.98px) {
+  
+  .destinations-hero {
+    min-height: 60vh !important;
+    padding: 120px 20px 60px !important; /* Increased top padding for header */
+  }
+  
+  .hero-stats {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .stat-card {
+    min-width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 575.98px) {
+  
+  .destinations-hero {
+    min-height: 50vh !important;
+    padding: 100px 15px 40px !important; /* Increased top padding */
+  }
+  
+  .hero-stats {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .stat-card {
+    min-width: 100%;
+  }
+}
+
+/* ===== DETAIL PAGE MOBILE FIXES ===== */
+
+@media (max-width: 991.98px) {
+  
+  .detail-hero {
+    height: 60vh !important;
+    min-height: 500px !important;
+    padding-top: 80px !important; /* Account for header */
+  }
+  
+  .back-button {
+    top: 90px !important; /* Below header */
+    left: 15px !important;
+  }
+  
+  .why-choose-card {
+    flex-direction: column;
+    padding: 25px !important;
+  }
+  
+  .overview-content {
+    padding-right: 0 !important;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  
+  .detail-hero {
+    height: 50vh !important;
+    min-height: 400px !important;
+    padding-top: 70px !important;
+  }
+  
+  .back-button {
+    top: 80px !important; /* Below smaller header */
+    width: 44px;
+    height: 44px;
+    padding: 0 !important;
+    justify-content: center;
+  }
+  
+  .back-button span {
+    display: none;
+  }
+  
+  .tags-wrapper {
+    gap: 8px;
+  }
+  
+  .activity-tag {
+    padding: 8px 14px !important;
+    font-size: 13px !important;
+  }
+}
+
+/* ===== TOUCH OPTIMIZATIONS ===== */
+
+/* Larger touch targets */
+@media (max-width: 991.98px) {
+  
+  a, button, .btn, input[type="submit"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Icon buttons */
+  .icon-btn,
+  .social-btn,
+  .nav-arrow {
+    min-width: 44px !important;
+    min-height: 44px !important;
+  }
+  
+  /* Checkbox and radio */
+  input[type="checkbox"],
+  input[type="radio"] {
+    min-width: 24px;
+    min-height: 24px;
+  }
+}
+
+/* ===== LANDSCAPE ORIENTATION ===== */
+
+@media (max-width: 991.98px) and (orientation: landscape) {
+  
+  .modern-hero-section,
+  .modern-hero-slider,
+  .modern-hero-slide {
+    min-height: 100vh !important;
+    height: 100vh !important;
+    padding-top: 70px !important;
+  }
+  
+  .detail-hero,
+  .destinations-hero,
+  .about-hero,
+  .contact-hero,
+  .gallery-hero {
+    min-height: 100vh !important;
+    padding-top: 70px !important;
+  }
+  
+  /* Adjust hero content for landscape */
+  .modern-hero-content {
+    padding-top: 20px !important;
+  }
+}
+
+/* ===== SAFE AREA INSETS (iPhone X+) ===== */
+
+@supports (padding: max(0px)) {
+  
+  .modern-header {
+    padding-left: max(15px, env(safe-area-inset-left));
+    padding-right: max(15px, env(safe-area-inset-right));
+  }
+  
+  .footer-container {
+    padding-left: max(15px, env(safe-area-inset-left));
+    padding-right: max(15px, env(safe-area-inset-right));
+  }
+  
+  .mobile-menu {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
+
+/* ===== PERFORMANCE OPTIMIZATIONS ===== */
+
+/* Keep normal animation speeds on mobile */
+@media (max-width: 767.98px) {
+  
+  /* Keep original animation speeds - don't force 0.3s */
+  /* Only disable complex background animations */
+  .shape,
+  .floating-elements {
+    animation: none !important;
+  }
+  
+  /* Keep hero shapes but reduce complexity */
+  .hero-shapes .shape {
+    filter: blur(60px) !important;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ===== UTILITY CLASSES ===== */
+
+/* Hide on mobile */
+.hide-mobile {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .hide-mobile {
+    display: block !important;
+  }
+}
+
+/* Show only on mobile */
+.show-mobile {
+  display: block !important;
+}
+
+@media (min-width: 768px) {
+  .show-mobile {
+    display: none !important;
+  }
+}
+
+/* Mobile-only spacing */
+@media (max-width: 767.98px) {
+  .mobile-mt-1 { margin-top: 0.5rem !important; }
+  .mobile-mt-2 { margin-top: 1rem !important; }
+  .mobile-mt-3 { margin-top: 1.5rem !important; }
+  .mobile-mb-1 { margin-bottom: 0.5rem !important; }
+  .mobile-mb-2 { margin-bottom: 1rem !important; }
+  .mobile-mb-3 { margin-bottom: 1.5rem !important; }
+  .mobile-p-1 { padding: 0.5rem !important; }
+  .mobile-p-2 { padding: 1rem !important; }
+  .mobile-p-3 { padding: 1.5rem !important; }
+}
+
+/* ===== SCROLLBAR STYLING (Mobile) ===== */
+
+@media (max-width: 991.98px) {
+  
+  /* Hide scrollbar but keep functionality */
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+  
+  /* For Firefox */
+  * {
+    scrollbar-width: none;
+  }
+}
+
+/* ===== FINAL FIXES ===== */
+
+/* Prevent zoom on input focus (iOS) */
+@media (max-width: 767.98px) {
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="password"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
+/* Fix viewport height on mobile browsers */
+@media (max-width: 991.98px) {
+  
+  .vh-100 {
+    height: 100vh;
+    height: 100svh; /* Safari */
+  }
+}
+
+/* Ensure images don't break layout */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Fix table overflow */
+@media (max-width: 767.98px) {
+  
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+
+@media print {
+  
+  .modern-header,
+  .mobile-menu,
+  .footer-social-row,
+  .hero-scroll-indicator,
+  .back-to-top {
+    display: none !important;
+  }
+  
+  * {
+    background: white !important;
+    color: black !important;
+  }
+}

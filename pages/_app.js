@@ -15,6 +15,7 @@ import "@/styles/modern-gallery.css";
 import "@/styles/component-enhancements.css";
 // import "@/styles/visibility-fixes.css";
 import "@/styles/footer-v2.css";
+import "@/styles/mobile-responsive.css";
 import Head from "next/head";
 import { Fragment, useEffect, useState } from "react";
 

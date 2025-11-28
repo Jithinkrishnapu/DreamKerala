@@ -325,7 +325,7 @@ Full-screen immersive hero experience
   animation: fadeInUp 0.8s ease-out 0.8s both;
 }
 
-.feature-item {
+.feature-item-text {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -334,7 +334,7 @@ Full-screen immersive hero experience
   font-weight: 500;
 }
 
-.feature-item i {
+.feature-item-text i {
   color: #10B981;
   font-size: 18px;
 }
