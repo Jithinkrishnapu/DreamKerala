@@ -2,20 +2,25 @@ import Link from "next/link";
 import Menu from "../Menu";
 import { useEffect, useState } from "react";
 
-const Header1 = ({ setShowModal }) => {
+const Header1 = ({ setShowModal, transparentHeader }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    if (!transparentHeader) return;
     const handleScroll = () => {
       setScrolled(window.scrollY > 80);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [transparentHeader]);
+
+  const headerClass = transparentHeader
+    ? scrolled ? "header-scrolled" : "header-transparent"
+    : "header-solid";
 
   return (
     <header
-      className={`header-area sticky header-one ${scrolled ? "header-scrolled" : "header-transparent"}`}
+      className={`header-area sticky header-one ${headerClass}`}
     >
       {/*====== Header Navigation ======*/}
       <div className="header-navigation navigation-white">
@@ -27,7 +32,7 @@ const Header1 = ({ setShowModal }) => {
               <Link legacyBehavior href="/">
                 <a className="brand-logo">
                   <img
-                    src={scrolled ? "/assets/images/logo/logo-black.png" : "/assets/images/logo/logo-white.png"}
+                    src={(transparentHeader && !scrolled) ? "/assets/images/logo/logo-white.png" : "/assets/images/logo/logo-black.png"}
                     alt="Dream Kerala Holidays"
                     className="header-logo"
                   />

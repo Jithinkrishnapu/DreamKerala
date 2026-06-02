@@ -35,7 +35,7 @@ const Index = () => {
   }, [startTransition]);
 
   return (
-    <Layout header={1} setShowModal={(val) => setShowModal(val)} noFooter>
+    <Layout header={1} setShowModal={(val) => setShowModal(val)} noFooter transparentHeader>
       <Head>
         <title>Dream Kerala Holidays | Tour Packages & Vehicle Rentals in Kerala</title>
         <meta name="description" content="Book Kerala tour packages, houseboat rides, taxi services & vehicle rentals. Explore backwaters, hill stations & beaches with Dream Kerala Holidays, Kochi." />
