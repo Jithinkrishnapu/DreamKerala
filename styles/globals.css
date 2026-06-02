@@ -289,3 +289,13 @@ select option {
   border-color: #2d6a4f;
   transform: scale(1.3);
 }
+
+
+/* Fix modal z-index above navbar */
+.modal-backdrop {
+  z-index: 10000 !important;
+}
+
+.modal {
+  z-index: 10001 !important;
+}
