@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /thankyou
+
+# Host
+Host: https://dreamkeralaholidays.com
+
+# Sitemaps
+Sitemap: https://dreamkeralaholidays.com/sitemap.xml

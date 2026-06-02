@@ -8,6 +8,7 @@ import PageBanner from "@/src/components/PageBanner";
 import Popupform from "@/src/components/popupform/Popupform";
 import Layout from "@/src/layout/Layout";
 import PreLoader from "@/src/layout/PreLoader";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
 const Contact = () => {
@@ -51,6 +52,10 @@ const Contact = () => {
       );
   
       if (response.ok) {
+        // Track lead conversion with Meta Pixel
+        if (typeof window !== 'undefined' && window.fbq) {
+          fbq('track', 'Lead');
+        }
         setLoader(false)
         router.push('/thankyou') // Reload the page on success
       } else {
@@ -66,6 +71,13 @@ const Contact = () => {
 
   return (
     <Layout header={1} setShowModal={(val) => setShowModal(val)} extraClass={"pt-160"}>
+      <Head>
+        <title>Contact Us | Dream Kerala Holidays - Book Your Kerala Trip</title>
+        <meta name="description" content="Contact Dream Kerala Holidays for tour bookings, taxi services & vehicle rentals. Call +91 95671 32777. Located near Kochi Airport, Nedumbassery." />
+        <meta property="og:title" content="Contact Dream Kerala Holidays" />
+        <meta property="og:description" content="Get in touch for Kerala tour packages, taxi services, and vehicle rentals. Located near Kochi Airport." />
+        <meta property="og:type" content="website" />
+      </Head>
       {/*====== Start Info Section ======*/}
       <section className="contact-info-section pt-150 pb-60">
         <div className="container">

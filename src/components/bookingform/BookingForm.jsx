@@ -47,7 +47,11 @@ function BookingForm() {
     );
 
     if (response.ok) {
-      setLoader(false)
+      // Track lead conversion with Meta Pixel
+      if (typeof window !== 'undefined' && window.fbq) {
+        fbq('track', 'Lead');
+      }
+      setLoader(false);
       router.push('/thankyou')// Reload the page on success
     } else {
       setLoader(false)
