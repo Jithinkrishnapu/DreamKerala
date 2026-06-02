@@ -6,7 +6,7 @@ import { animation } from "../utils";
 // import Footer from "./Footer";
 import Header from "./header/Index";
 import Footer from "../components/footer/Footer";
-const Layout = ({ header, children, footerBG, noFooter, extraClass,setShowModal }) => {
+const Layout = ({ header, children, footerBG, noFooter, extraClass, setShowModal, transparentHeader }) => {
   useEffect(() => {
     animation();
   }, []);
@@ -14,7 +14,7 @@ const Layout = ({ header, children, footerBG, noFooter, extraClass,setShowModal 
     <Fragment>
       <VideoPopup />
       <ImageView />
-      <Header setShowModal={setShowModal} header={header} />
+      <Header setShowModal={setShowModal} header={header} transparentHeader={transparentHeader} />
       {children}
       {!noFooter && <Footer/>}
     </Fragment>

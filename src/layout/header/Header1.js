@@ -1,10 +1,27 @@
 import Link from "next/link";
 import Menu from "../Menu";
-import { Button } from "react-bootstrap";
+import { useEffect, useState } from "react";
 
-const Header1 = ({setShowModal}) => {
+const Header1 = ({ setShowModal, transparentHeader }) => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    if (!transparentHeader) return;
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 80);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [transparentHeader]);
+
+  const headerClass = transparentHeader
+    ? scrolled ? "header-scrolled" : "header-transparent"
+    : "header-solid";
+
   return (
-    <header style={{background:'#E6A43B'}} className="header-area sticky header-one ">
+    <header
+      className={`header-area sticky header-one ${headerClass}`}
+    >
       {/*====== Header Navigation ======*/}
       <div className="header-navigation navigation-white">
         <div className="nav-overlay" />
@@ -15,27 +32,26 @@ const Header1 = ({setShowModal}) => {
               <Link legacyBehavior href="/">
                 <a className="brand-logo">
                   <img
-                    src="assets/images/logo/logo-white.png"
-                    alt="Site Logo"
+                    src={(transparentHeader && !scrolled) ? "/assets/images/logo/logo-white.png" : "/assets/images/logo/logo-black.png"}
+                    alt="Dream Kerala Holidays"
+                    className="header-logo"
                   />
                 </a>
               </Link>
             </div>
             {/*====== Nav Menu ======*/}
             <div className="nav-menu">
-              {/*====== Site Branding ======*/}
+              {/*====== Mobile Logo ======*/}
               <div className="mobile-logo mb-30 d-block d-xl-none">
                 <Link legacyBehavior href="/">
                   <a className="brand-logo">
                     <img
-                      src="assets/images/logo/logo-black.png"
-                      alt="Site Logo"
+                      src="/assets/images/logo/logo-black.png"
+                      alt="Dream Kerala Holidays"
                     />
                   </a>
                 </Link>
               </div>
-              {/*=== Nav Search ===*/}
-              
               {/*====== main Menu ======*/}
               <Menu />
               {/*====== Menu Button ======*/}
@@ -51,7 +67,7 @@ const Header1 = ({setShowModal}) => {
             {/*====== Nav Right Item ======*/}
             <div className="nav-right-item">
               <div className="menu-button d-xl-block d-none">
-                <button className="bg-transparent" onClick={()=>setShowModal(true)} >
+                <button className="bg-transparent" onClick={() => setShowModal(true)}>
                   <a className="main-btn primary-btn">
                     Book Now
                     <i className="fas fa-paper-plane" />

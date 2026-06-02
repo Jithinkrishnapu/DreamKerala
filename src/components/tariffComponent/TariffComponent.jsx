@@ -1,61 +1,9 @@
 import React, { useLayoutEffect, useState, useTransition } from "react";
-import { Nav, Tab } from "react-bootstrap";
 import TariffTable from "./TariffTable";
-import VehicleTable from "../VehicleTable";
 
 function TariffComponent() {
-  const tabData = [
-    {
-      eventKey: "tab1",
-      title: "AC Sedan",
-      imgSrc: "assets/images/gallery/sedan.png",
-      description:
-        "Sit amet consectetur velit integer tincidunt scelerisque. Sodales volutpat neque fermeny malesuada scelerisque massa lacus",
-      checkList: ["Family Camping", "Couple Camping", "Wild Camping"],
-    },
-    {
-      eventKey: "tab2",
-      title: "Ertiga",
-      imgSrc: "assets/images/gallery/ertiga.png",
-      description:
-        "Sit amet consectetur velit integer tincidunt scelerisque. Sodales volutpat neque fermeny malesuada scelerisque massa lacus",
-      checkList: ["Family Camping", "Couple Camping", "Wild Camping"],
-    },
-    {
-      eventKey: "tab3",
-      title: "Innova",
-      imgSrc: "assets/images/gallery/innova.png",
-      description:
-        "Sit amet consectetur velit integer tincidunt scelerisque. Sodales volutpat neque fermeny malesuada scelerisque massa lacus",
-      checkList: ["Family Camping", "Couple Camping", "Wild Camping"],
-    },
-    {
-      eventKey: "tab4",
-      title: "Tempo Traveller",
-      imgSrc: "assets/images/gallery/traveller.png",
-      description:
-        "Sit amet consectetur velit integer tincidunt scelerisque. Sodales volutpat neque fermeny malesuada scelerisque massa lacus",
-      checkList: ["Family Camping", "Couple Camping", "Wild Camping"],
-    },
-    {
-      eventKey: "tab5",
-      title: "Mini Coach",
-      imgSrc: "assets/images/gallery/mini.png",
-      description:
-        "Sit amet consectetur velit integer tincidunt scelerisque. Sodales volutpat neque fermeny malesuada scelerisque massa lacus",
-      checkList: ["Family Camping", "Couple Camping", "Wild Camping"],
-    },
-    {
-      eventKey: "tab6",
-      title: "Large Coach",
-      imgSrc: "assets/images/gallery/coach.png",
-      description:
-        "Sit amet consectetur velit integer tincidunt scelerisque. Sodales volutpat neque fermeny malesuada scelerisque massa lacus",
-      checkList: ["Family Camping", "Couple Camping", "Wild Camping"],
-    },
-  ];
-
   const [data, setData] = useState([]);
+  const [activeTab, setActiveTab] = useState(0);
   const [error, setError] = useState(null);
   const [isPending, startTransition] = useTransition();
 
@@ -64,7 +12,7 @@ function TariffComponent() {
       try {
         const response = await fetch("/api/tariff");
         if (!response.ok) {
-          throw new Error("Error fetching carousel data");
+          throw new Error("Error fetching tariff data");
         }
         const result = await response.json();
         setData(result);
@@ -74,114 +22,72 @@ function TariffComponent() {
     });
   }, [startTransition]);
 
+  const sortedData = data?.sort(
+    (a, b) =>
+      a.properties.order?.rich_text[0]?.plain_text -
+      b.properties.order?.rich_text[0]?.plain_text
+  );
+
+  const activeItem = sortedData[activeTab];
+
   return (
-    <section className="activity-section">
-      <div className="activity-wrapper-bgc  text-white black-bg">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-7">
-              <div className="section-title text-center mb-50 wow fadeInDown">
-                <span className="sub-title text-white">
-                  Affordable and Flexible Pricing
-                </span>
-                <h2>Explore Your Destination with Ease and Comfort</h2>
-              </div>
-            </div>
-          </div>
-          <Tab.Container defaultActiveKey="0">
-            <div className="row">
-              <div className="col-lg-4">
-                {/*=== Activity Nav Tab ===*/}
-                <div style={{height:"600px",overflowX:'auto'}} className="activity-nav-tab mb-50 wow fadeInLeft">
-                  <Nav as="ul" className="nav nav-tabs">
-                    {data
-                      .sort(
-                        (a, b) => a.properties.order?.rich_text[0]
-                        ?.plain_text - b.properties.order?.rich_text[0]
-                        ?.plain_text
-                      ) // Sort based on orderid
-                      .map((tab, i) => (
-                        <Nav.Item as="li" key={i}>
-                          <Nav.Link
-                            as="a"
-                            href={`#${i}`}
-                            className="nav-link"
-                            eventKey={i}
-                          >
-                            {
-                              tab?.properties?.Headline?.rich_text[0]
-                                ?.plain_text
-                            }
-                          </Nav.Link>
-                        </Nav.Item>
-                      ))}
-                  </Nav>
+    <section className="tariff-section">
+      <div className="container">
+        <div className="tariff-header">
+          <span className="tariff-badge">Affordable & Flexible Pricing</span>
+          <h2>Explore Your Destination with Ease and Comfort</h2>
+          <p>Choose your vehicle type and see transparent pricing — no hidden charges</p>
+        </div>
+
+        {/* Vehicle selector pills */}
+        <div className="tariff-pills">
+          {sortedData.map((tab, i) => (
+            <button
+              key={i}
+              className={`tariff-pill ${i === activeTab ? "active" : ""}`}
+              onClick={() => setActiveTab(i)}
+            >
+              {tab?.properties?.Headline?.rich_text[0]?.plain_text}
+            </button>
+          ))}
+        </div>
+
+        {/* Active vehicle content */}
+        {activeItem && (
+          <div className="tariff-content">
+            <div className="tariff-content__left">
+              <div className="tariff-vehicle-card">
+                <img
+                  src={activeItem?.properties?.images?.files[0]?.file?.url}
+                  alt={activeItem?.properties?.Headline?.rich_text[0]?.plain_text}
+                  className="tariff-vehicle-img"
+                />
+                <div className="tariff-vehicle-info">
+                  <h3>{activeItem?.properties?.Headline?.rich_text[0]?.plain_text}</h3>
+                  <div className="tariff-features">
+                    <span><i className="fas fa-snowflake" /> AC</span>
+                    <span><i className="fas fa-shield-alt" /> Insured</span>
+                    <span><i className="fas fa-map-marker-alt" /> GPS Tracked</span>
+                  </div>
                 </div>
               </div>
-              <div className="col-lg-8 justify-content-center align-items-center d-flex ">
-                {/*=== Tab Content ===*/}
-                <Tab.Content className="tab-content mb-50 wow fadeInRight">
-                  {data.map((tab, i) => (
-                    <Tab.Pane className="tab-pane fade" eventKey={i} key={i}>
-                      <div className="row align-items-center">
-                        <div className="col-md-6">
-                          {/*=== Activity Content Box ===*/}
-                          <div className="activity-content-box">
-                            {/* <TariffTable
-                              selectedModel={i || 0}
-                            /> */}
-
-                            <div>
-                              {data[i]?.properties?.table?.rich_text?.length ? (
-                                <TariffTable
-                                  data={JSON.parse(
-                                    data[i]?.properties?.table?.rich_text[0]
-                                      ?.plain_text
-                                  )}
-                                />
-                              ) : (
-                                <></>
-                              )}
-                            </div>
-
-                            <p
-                              style={{
-                                background: "#2E709E",
-                                borderRadius: 5,
-                                opacity: 0.9,
-                              }}
-                              className="p-2 text-center"
-                            >
-                              <span>*NB : </span>Above rates include toll,
-                              parking, and driver bata, and are subject to
-                              change due to availability, fuel rates, and
-                              festive or seasonal periods.
-                            </p>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          {/*=== Activity Image Box ===*/}
-                          <div className="activity-image-box">
-                            <img
-                              src={
-                                data[i]?.properties?.images?.files[0]?.file?.url
-                              }
-                              className="radius-12"
-                              alt={
-                                data[i]?.properties?.Headline?.rich_text[0]
-                                  ?.plain_text
-                              }
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </Tab.Pane>
-                  ))}
-                </Tab.Content>
-              </div>
             </div>
-          </Tab.Container>
-        </div>
+            <div className="tariff-content__right">
+              {activeItem?.properties?.table?.rich_text?.length ? (
+                <TariffTable
+                  data={JSON.parse(
+                    activeItem?.properties?.table?.rich_text[0]?.plain_text
+                  )}
+                />
+              ) : (
+                <p className="text-muted text-center p-4">Pricing coming soon</p>
+              )}
+              <p className="tariff-note">
+                <i className="fas fa-info-circle" /> Rates include toll, parking & driver bata. Subject to change based on availability, fuel rates & seasonal demand.
+              </p>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

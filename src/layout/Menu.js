@@ -55,6 +55,9 @@ const DeskTopMenu = () => {
           <li className="menu-item has-children">
             <a href="contact">Contact us</a>
           </li>
+          <li className="menu-item">
+            <a href="/blog">Blog</a>
+          </li>
         </ul>
       </nav>
     </Fragment>
@@ -93,6 +96,11 @@ const MobileMenu = () => {
         <li className="menu-item has-children">
           <a href="contact">
             Contact us
+          </a>
+        </li>
+        <li className="menu-item">
+          <a href="/blog">
+            Blog
           </a>
         </li>
         <li className="menu-item search-item">

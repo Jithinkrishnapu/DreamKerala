@@ -248,3 +248,44 @@ select option {
   width: fit-content;
   padding: 5px 10px;
 }
+
+
+/* Testimonial Dots */
+.testimonial-dots {
+  bottom: -40px !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.testimonial-dots li {
+  width: 12px;
+  height: 12px;
+  margin: 0 !important;
+}
+
+.testimonial-dots li button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ccc;
+  border: 2px solid #aaa;
+  padding: 0;
+  font-size: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.testimonial-dots li button:before {
+  display: none !important;
+}
+
+.testimonial-dots li.slick-active button {
+  background: #2d6a4f;
+  border-color: #2d6a4f;
+  transform: scale(1.3);
+}
