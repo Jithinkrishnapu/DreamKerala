@@ -62,6 +62,8 @@ export default function App({ Component, pageProps }) {
         <link rel="stylesheet" href="/assets/css/default.css" />
         {/*====== Style css ======*/}
         <link rel="stylesheet" href="/assets/css/style.css" />
+        {/*====== Modern Homepage css ======*/}
+        <link rel="stylesheet" href="/assets/css/modern-homepage.css" />
       </Head>
       <Component {...pageProps} />
     </Fragment>
