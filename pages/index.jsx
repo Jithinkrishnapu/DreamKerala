@@ -7,6 +7,7 @@ import TariffComponent from "@/src/components/tariffComponent/TariffComponent";
 import Layout from "@/src/layout/Layout";
 import { home1Slider } from "@/src/sliderProps";
 import Link from "next/link";
+import Head from "next/head";
 import { useEffect, useLayoutEffect, useState, useTransition } from "react";
 
 import Slider from "react-slick";
@@ -16,6 +17,9 @@ import PopularServices from "@/src/components/popularServices/PopularServices";
 import Footer from "@/src/components/footer/Footer";
 import HeroSection from "./DefaultHeroSection";
 import HoverPlayVideo from "@/src/components/HoverToPlayVideo";
+import ExitIntentPopup from "@/src/components/exitIntent/ExitIntentPopup";
+import Testimonials from "@/src/components/testimonials/Testimonials";
+import FAQ from "@/src/components/faq/FAQ";
 
 const Index = () => {
   const [showModal, setShowModal] = useState(false);
@@ -44,6 +48,50 @@ const Index = () => {
 
   return (
     <Layout header={1} setShowModal={(val) => setShowModal(val)} noFooter>
+      <Head>
+        <title>Dream Kerala Holidays | Tour Packages & Vehicle Rentals in Kerala</title>
+        <meta name="description" content="Book Kerala tour packages, houseboat rides, taxi services & vehicle rentals. Explore backwaters, hill stations & beaches with Dream Kerala Holidays, Kochi." />
+        <meta property="og:title" content="Dream Kerala Holidays | Tour Packages & Vehicle Rentals" />
+        <meta property="og:description" content="Book Kerala tour packages, houseboat rides, taxi services & vehicle rentals. Explore God's Own Country with Dream Kerala Holidays." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href="https://dreamkeralaholidays.com" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "TravelAgency",
+              "name": "Dream Kerala Holidays",
+              "description": "Kerala tour packages, vehicle rentals, taxi services, houseboat bookings, camping and trekking experiences.",
+              "url": "https://dreamkeralaholidays.com",
+              "telephone": "+919567132777",
+              "email": "Dreamkeralaholidays24@gmail.com",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "5C34+W78, Kanjoor-Airport Rd",
+                "addressLocality": "Nedumbassery",
+                "addressRegion": "Kerala",
+                "postalCode": "683111",
+                "addressCountry": "IN"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 10.154712,
+                "longitude": 76.403130
+              },
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+                "opens": "00:00",
+                "closes": "23:59"
+              },
+              "priceRange": "$$",
+              "sameAs": []
+            })
+          }}
+        />
+      </Head>
       {/*====== Start Hero Section ======*/}
       <section className="hero-section">
         {/*=== Hero Wrapper ===*/}
@@ -186,30 +234,37 @@ const Index = () => {
         <Features />
       </div>
 
+      {/*====== Start Testimonials Section ======*/}
+      <Testimonials />
+
+      {/*====== Start FAQ Section ======*/}
+      <FAQ />
+
       {/*====== Start Gallery Section ======*/}
       {/* <GallerySection /> */}
       {/*====== End Gallery Section ======*/}
 
       <div  className="">
         <div  className="fixed-bottom p-2 text-end d-flex gap-2 justify-content-end align-items-end text-end flex-sm-row flex-column">
-          <a style={{width:'fit-content'}} href="tel:+91 95671 32777">
+          <a style={{width:'fit-content'}} href="tel:+91 95671 32777" onClick={() => { if(typeof window !== 'undefined' && window.fbq) fbq('track', 'Contact'); }}>
             <img
               style={{ height: "70px" }}
               className=""
               src="assets/images/icon/phone-call.svg"
-              alt=""
+              alt="Call Dream Kerala Holidays"
             />
           </a>
-          <a style={{width:'fit-content'}} href="https://api.whatsapp.com/send?phone=919567132777">
+          <a style={{width:'fit-content'}} href="https://api.whatsapp.com/send?phone=919567132777&text=Hi%2C%20I%27m%20interested%20in%20your%20Kerala%20tour%20packages.%20Please%20share%20details." onClick={() => { if(typeof window !== 'undefined' && window.fbq) fbq('track', 'Contact'); }}>
             <img
               style={{ height: "70px" }}
               src="assets/images/icon/whatsapp.svg"
-              alt=""
+              alt="WhatsApp Dream Kerala Holidays"
             />
           </a>
         </div>
       </div>
       <Footer />
+      <ExitIntentPopup />
     </Layout>
   );
 };
