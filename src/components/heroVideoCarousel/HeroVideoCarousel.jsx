@@ -80,6 +80,7 @@ const HeroVideoCarousel = ({ setShowModal }) => {
         muted
         loop
         playsInline
+        preload={currentSlide === 0 ? "auto" : "none"}
         key={slide.video}
       >
         <source src={slide.video} type="video/mp4" />
