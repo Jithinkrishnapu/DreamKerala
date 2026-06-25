@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import Head from "next/head";
 import { Fragment } from "react";
+import Chatbot from "@/src/components/chatbot/Chatbot";
 
 export default function App({ Component, pageProps }) {
   return (
@@ -64,8 +65,11 @@ export default function App({ Component, pageProps }) {
         <link rel="stylesheet" href="/assets/css/style.css" />
         {/*====== Modern Homepage css ======*/}
         <link rel="stylesheet" href="/assets/css/modern-homepage.css" />
+        {/*====== Chatbot css ======*/}
+        <link rel="stylesheet" href="/assets/css/chatbot.css" />
       </Head>
       <Component {...pageProps} />
+      <Chatbot />
     </Fragment>
   );
 }
